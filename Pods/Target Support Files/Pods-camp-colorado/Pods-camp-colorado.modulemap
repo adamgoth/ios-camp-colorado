@@ -1,0 +1,6 @@
+framework module Pods_camp_colorado {
+  umbrella header "Pods-camp-colorado-umbrella.h"
+
+  export *
+  module * { export * }
+}
