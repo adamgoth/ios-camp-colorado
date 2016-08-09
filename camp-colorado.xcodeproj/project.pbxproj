@@ -57,6 +57,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F9A376C61D5A249D0058225F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F9A376C71D5A24AA0058225F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F9A376C81D5A24AE0058225F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F9D5AC761D5A1824007E7005 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +99,9 @@
 		F9D5AC811D5A1825007E7005 /* camp-colorado */ = {
 			isa = PBXGroup;
 			children = (
+				F9A376C81D5A24AE0058225F /* Model */,
+				F9A376C71D5A24AA0058225F /* View */,
+				F9A376C61D5A249D0058225F /* Controller */,
 				F9D5AC821D5A1825007E7005 /* AppDelegate.swift */,
 				F9D5AC841D5A1825007E7005 /* ViewController.swift */,
 				F9D5AC861D5A1825007E7005 /* Main.storyboard */,
