@@ -1,0 +1,508 @@
+id,sitename,nearesttown,state,country,website,region,longitude,latitude,phone,numberofsites,distancefromtown
+1,Alamosa,La Jara,Colorado,USA,,Southwest,-106.345,37.379,719.274.8971/719-852-5941,10,22.3
+2,Almont,Almont,Colorado,USA,,Southwest,-106.858,38.654,970.641.0471/970.874.6600,10,1
+3,Alvarado,Westcliffe,Colorado,USA,,Southwest,-105.562,38.08,719.269.8500/719.545.8737,50,6.5
+4,Amphitheater,Ouray,Colorado,USA,,Southwest,-107.665,38.019,970.240.5300/970.874.6600,35,0.5
+5,Angel of Shavano,Poncha Springs,Colorado,USA,,Southwest,-106.221,38.583,719.539.3591/719.545.8737,20,9.1
+6,Ansel Watrous,Rustic,Colorado,USA,,Southwest,-105.35,40.689,970.498.1375/970.295.6600,16,12.1
+7,Arapaho Bay,Granby,Colorado,USA,,Southwest,-105.76,40.121,970.887.4100/970.295.6600,84,9.8
+8,Arkansas Point - Lake Pueblo State Park,Pueblo,Colorado,USA,,Southwest,-104.733,38.251,719.561.9320,,6.7
+9,Aspen,Gould,Colorado,USA,,Southwest,-106.032,40.517,970.723.8204/307.745.2300,7,0.7
+10,Aspen,Jefferson,Colorado,USA,,Southwest,-105.843,39.425,719.836.2031/719.545.8737,12,4
+11,Aspen Glade,Antonito,Colorado,USA,,Southwest,-106.275,37.073,719.274.8971/719-852-5941,32,14.7
+12,Aspen Glen,Fort Collins,Colorado,USA,,Southwest,-105.819,40.619,970.498.1375/970.295.6600,9,38.6
+13,Aspen Grove - Vega State Park,Collbran,Colorado,USA,,Southwest,-107.78,39.222,970.487.3407,27,9.8
+14,Aspen Meadow  - Golden Gate Canyon State Park,Golden,Colorado,USA,,Southwest,-105.416,39.864,303.582.3707,35,12.8
+15,Aspenglen - Rocky Mountain National Park,Estes Park,Colorado,USA,,Southwest,-105.594,40.4,970.586.1206,51,4.1
+16,Avalanche,Redstone,Colorado,USA,,Southwest,-107.204,39.236,970.963.2266/970.945.2521,13,4.3
+17,Baby Doe,Leadville,Colorado,USA,,Southwest,-106.351,39.27,719.486.0749/719.545.8737,50,3.4
+18,Bear Creek Lake Park,Lakewood,Colorado,USA,,Southwest,-105.177,39.654,303.697.6159,52,6.2
+19,Bear Lake,La Veta,Colorado,USA,,Southwest,-105.143,37.326,719.269.8500/719.545.8737,14,14.4
+20,Bear Lake,Yampa,Colorado,USA,,Southwest,-107.07,40.045,719.269.8500/719.545.8737,43,11.3
+21,Beaver Creek,South Fork,Colorado,USA,,Southwest,-106.676,37.617,719.655.2547/719-852-5941,,4.2
+22,Beaver Creek Unti - Hot Sulphur State Wildlife Area,Parshall,Colorado,USA,,Southwest,-106.133,40.053,303.297.1192,10,2.3
+23,Beaver Lake,Cimarron,Colorado,USA,,Southwest,-107.545,38.25,970.240.5300/970.874.6600,11,13.3
+24,Bellaire Lake,Red Feather Lakes,Colorado,USA,,Southwest,-105.617,40.771,970.498.1375/970.295.6600,26,2.6
+25,Belle of Colorado,Leadville,Colorado,USA,,Southwest,-106.349,39.269,719.486.0749/719.545.8737,19,3.3
+26,Big Bend,Fort Collins,Colorado,USA,,Southwest,-105.724,40.708,970.498.1375/970.295.6600,8,34.6
+27,Big Blue,Sapeniro,Colorado,USA,,Southwest,-107.385,38.217,970.641.0471/970.874.6600,11,17.3
+28,Big Cimarron,Cimarron,Colorado,USA,,Southwest,-107.545,38.258,,10,12.8
+29,Big Creek,Collbran,Colorado,USA,,Southwest,-107.883,39.078,970.242.8211/970.874.6600,26,12
+30,Big Creek Lakes,,Colorado,USA,,Southwest,-106.609,40.935,970.723.8204/307.745.2300,54,
+31,Big Dominguez,Whitewater,Colorado,USA,,Southwest,-108.55,38.745,,9,17.8
+32,Big Meadows,South Fork,Colorado,USA,,Southwest,-106.795,37.54,719.657.3321/719-852-5941,61,12.4
+33,Big South,Fort Collins,Colorado,USA,,Southwest,-105.807,40.633,970.498.1375/970.295.6600,4,38
+34,Blacktail Creek,Yampa,Colorado,USA,,Southwest,-106.581,40.067,970.638.4516/307.745.2300,8,18.3
+35,Blanco River,Pagosa,Colorado,USA,,Southwest,-106.885,37.145,970.264.2268/970.247.4874,6,11
+36,Blodgett,Vail,Colorado,USA,,Southwest,-106.366,39.472,970.827.5715/970.945.2521,6,11.6
+37,Blue Lake,La Veta,Colorado,USA,,Southwest,-105.139,37.313,719.269.8500/719.545.8737,16,15.1
+38,Blue Mountain,Florissant,Colorado,USA,,Southwest,-105.362,38.961,719.836.2031/719.545.8737,21,4.1
+39,Blue River,Silverthorne,Colorado,USA,,Southwest,-106.131,39.726,970.468.5400/970.945.2521,24,7.4
+40,Bockman - State Forest State Park,Walden,Colorado,USA,,Southwest,-105.965,40.56,970.723.8366,52,20.5
+41,Bogan Flats,Redstone,Colorado,USA,,Southwest,-107.262,39.1,970.963.2266/970.945.2521,36,5.7
+42,Bonham Lake City Park,,Colorado,USA,,Southwest,-107.898,39.104,903.583.8001,,
+43,Boulder County Fairground,Boulder,Colorado,USA,,Southwest,-105.126,40.155,303.678.1525,,12.4
+44,Boyd Lake State Park,Loveland,Colorado,USA,,Southwest,-105.058,40.43,970.669.1739,148,2.4
+45,Bradfield,Cortez,Colorado,USA,,Southwest,-108.738,37.657,,22,22.9
+46,Bridge,Pagosa Springs,Colorado,USA,,Southwest,-107.199,37.465,970.264.2268/970.247.4874,19,17
+47,Bristol Head,Creede,Colorado,USA,,Southwest,-107.144,37.818,719.657.3321/719-852-5941,16,12.1
+48,Browns Park,Gould,Colorado,USA,,Southwest,-105.927,40.796,970.498.1375/970.295.6600,28,19.3
+49,Brush Memorial RV Park,Brush,Colorado,USA,,Southwest,-103.625,40.249,970.842.5001,24,0.7
+50,Buckeye,Paradox,Colorado,USA,,Southwest,-109.045,38.44,435.259.7155/435.637.2817,37,6.6
+51,Buckingham,Boulder,Colorado,USA,,Southwest,-105.634,39.994,,10,19.3
+52,Buffalo,Buffalo Creek,Colorado,USA,,Southwest,-105.329,39.341,303.275.5610/719.545.8737,41,4.4
+53,Buffalo Pass,Saguache,Colorado,USA,,Southwest,-106.517,38.185,719.655.2547/719-852-5941,24,21.5
+54,Buffalo Springs,Fairplay,Colorado,USA,,Southwest,-105.987,39.032,719.836.2031/719.545.8737,18,13.3
+55,Burning Bear,Jefferson,Colorado,USA,,Southwest,-105.711,39.513,303.275.5610/719.545.8737,13,10.6
+56,Burro Bridge,Dolores,Colorado,USA,,Southwest,-108.066,37.788,,12,32.3
+57,Byers Creek,Fraser,Colorado,USA,,Southwest,-105.897,39.876,970.887.4100/970.295.6600,6,6.4
+58,Cabin Canyon,Cortez,Colorado,USA,,Southwest,-108.694,37.63,970.882.6800/970.247.4874,11,20.3
+59,Camp Dick,Ward,Colorado,USA,,Southwest,-105.521,40.128,303.541.2500/970.295.6600,41,3.9
+60,Camp Hale Memorial,Minturn,Colorado,USA,,Southwest,-106.314,39.42,970.827.5715/970.945.2521,21,13.1
+61,Carp Lake,Cedaredge,Colorado,USA,,Southwest,-107.983,39.042,970.242.8211/970.874.6600,20,10.1
+62,Carpios Ridge - Trinidad Lake State Park,Trinidad,Colorado,USA,,Southwest,-104.57,37.144,719.846.6951,63,4.2
+63,Carter Lake - North Side Campgrounds,Loveland,Colorado,USA,,Southwest,-105.22,40.355,800.397.7795,,8.2
+64,Carter Lake - South Side Campgrounds,Berthoud,Colorado,USA,,Southwest,-105.209,40.32,800.397.7795,,6.8
+65,Cascade,Nathrop,Colorado,USA,,Southwest,-106.245,38.71,719.539.3591/719.545.8737,22,9.5
+66,Casey Jones Park,Elizabeth,Colorado,USA,,Southwest,-104.584,39.364,303.646.2346,15,0.7
+67,Catamount,Eagle,Colorado,USA,,Southwest,-106.832,39.891,,,16.3
+68,Cataract Creek,Silverthorne,Colorado,USA,,Southwest,-106.307,39.837,970.468.5400/970.945.2521,5,19.1
+69,Cathedral,Del Norte,Colorado,USA,,Southwest,-106.605,37.822,719.657.3321/719-852-5941,29,16.9
+70,Cayton,Rico,Colorado,USA,,Southwest,-107.977,37.77,970.882.6800/970.247.4874,27,6.1
+71,Cebolla,Lake City,Colorado,USA,,Southwest,-107.1,38.047,,21,11.8
+72,Cement Creek,Crested Butte,Colorado,USA,,Southwest,-106.837,38.828,970.641.0471/970.874.6600,13,8.6
+73,Chalk Lake,Nathrop,Colorado,USA,,Southwest,-106.233,38.713,719.539.3591/719.545.8737,19,8.8
+74,Chambers Lake,Rustic,Colorado,USA,,Southwest,-105.852,40.597,970.498.1375/970.295.6600,44,15.9
+75,Chapman,Basalt,Colorado,USA,,Southwest,-106.637,39.309,970.963.2266/970.945.2521,84,21.6
+76,Chapman Reservoir,Yampa,Colorado,USA,,Southwest,-107.091,40.186,970.638.4516/307.745.2300,12,9.9
+77,Chatfield State Park,Littleton,Colorado,USA,,Southwest,-105.063,39.539,303.791.7275,193,5.7
+78,Cherry Creek State Park,Aurora,Colorado,USA,,Southwest,-104.829,39.647,303.690.1166,102,5.7
+79,Cheyenne Mountain State Park,Colorado Sprin,Colorado,USA,,Southwest,-104.809,38.738,719.576.2016,61,7.3
+80,Cimarron - Curecanti National Rec Area,Cimarron,Colorado,USA,,Southwest,-107.554,38.442,970.641.2337,22,0.1
+81,Cimarrona,Pagosa Springs,Colorado,USA,,Southwest,-107.209,37.539,970.264.2268/970.247.4874,21,21.6
+82,Clear Creek RV Park,Golden,Colorado,USA,,Southwest,-105.231,39.754,303.278.1437,36,0.5
+83,Clear Lake,Georgetown,Colorado,USA,,Southwest,-105.708,39.652,303.567.3000/970.295.6600,8,3.8
+84,Coaldale,Salida,Colorado,USA,,Southwest,-105.804,38.334,719.539.3591/719.545.8737,10,17.4
+85,Coffee Pot Spring,Gypsum,Colorado,USA,,Southwest,-107.204,39.676,970.328.6388/970.945.2521,10,13.5
+86,Cold Spring,Almont,Colorado,USA,,Southwest,-106.642,38.767,970.641.0471/970.874.6600,6,13.1
+87,Cold Springs,Yampa,Colorado,USA,,Southwest,-107.119,40.03,970.638.4516/307.745.2300,5,14
+88,Cold Springs,Black Hawk,Colorado,USA,,Southwest,-105.497,39.842,303.567.3000/970.295.6600,38,3.1
+89,Collbran - Cottonwood Lake,Cedaredge,Colorado,USA,,Southwest,-107.957,39.081,970.242.8211/970.874.6600,56,12.5
+90,Collegiate Peaks,Buena Vista,Colorado,USA,,Southwest,-106.316,38.813,719.539.3591/719.545.8737,56,10.1
+91,Colorado,Woodland Park,Colorado,USA,,Southwest,-105.094,39.08,719.636.1602/719.545.8737,81,6.3
+92,Columbine,Central City,Colorado,USA,,Southwest,-105.549,39.817,303.567.3000/970.295.6600,45,2.1
+93,Columbine,Montrose,Colorado,USA,,Southwest,-108.381,38.424,970.240.5300/970.874.6600,6,27.5
+94,Comanche,Ohio City,Colorado,USA,,Southwest,-106.603,38.599,,4,2.3
+95,Comstock,Monte Vista,Colorado,USA,,Southwest,-106.362,37.445,719.657.3321/719-852-5941,8,14.9
+96,Conejos,Antonito,Colorado,USA,,Southwest,-106.444,37.171,719.274.8971/719-852-5941,15,24.8
+97,Cottonwood Lake,Buena Vista,Colorado,USA,,Southwest,-106.292,38.782,719.539.3591/719.545.8737,24,9.6
+98,Cove,Woodland Park,Colorado,USA,,Southwest,-105.461,38.909,719.836.2031/719.545.8737,4,22.5
+99,Cow Creek,Silverthorne,Colorado,USA,,Southwest,-106.279,39.875,970.262.3442,40,20.2
+100,Crags,Divide,Colorado,USA,,Southwest,-105.12,38.871,719.636.1602/719.545.8737,17,5.3
+101,Crawford State Park,Crawford,Colorado,USA,,Southwest,-107.599,38.688,970.921.5721,44,1.2
+102,Crook - Browns Wildlife Area,Maybell,Colorado,USA,,Southwest,-108.923,40.81,303.297.1192,20,48.2
+103,Crosho Lake Recreation Area,Oak Creek,Colorado,USA,,Southwest,-107.052,40.17,970.638.4516/307.745.2300,10,8.8
+104,Cross Creek,South Fork,Colorado,USA,,Southwest,-106.65,37.581,719.657.3321/719-852-5941,12,6.2
+105,Crow Valley,Fort Collins,Colorado,USA,,Southwest,-104.343,40.644,970.346.5000/970.295.6600,10,39.1
+106,Davenport,Colorado City,Colorado,USA,,Southwest,-105.071,38.055,719.269.8500/719.545.8737,12,14.9
+107,Davis Springs,Silverthorne,Colorado,USA,,Southwest,-106.231,39.838,970.468.5400/970.945.2521,7,16.7
+108,Dearhamer,Basalt,Colorado,USA,,Southwest,-106.738,39.361,970.963.2266/970.945.2521,13,15.8
+109,Deep Lake,Gypsum,Colorado,USA,,Southwest,-107.302,39.772,970.328.6388/970.945.2521,35,20.5
+110,Deer Creek,Bailey,Colorado,USA,,Southwest,-105.554,39.508,303.275.5610/719.545.8737,13,8.3
+111,Deer Lakes,Lake City,Colorado,USA,,Southwest,-107.188,38.022,970.641.0471/970.874.6600,12,7
+112,Deerlodge Park - Dinosaur National Monument,Maybell,Colorado,USA,,Southwest,-108.523,40.45,,10,23.4
+113,Del Norte City Park,Del Norte,Colorado,USA,,Southwest,-106.353,37.683,,,0.3
+114,Denver Creek,Granby,Colorado,USA,,Southwest,-106.079,40.255,970.887.4100/970.295.6600,22,13.8
+115,Devils Head,Sedalia,Colorado,USA,,Southwest,-105.103,39.271,303.275.5610/719.545.8737,21,13.8
+116,Dexter,,Colorado,USA,,Southwest,-106.325,39.092,719.486.0749/719.545.8737,24,
+117,Difficult,Aspen,Colorado,USA,,Southwest,-106.774,39.141,970.963.2266/970.945.2521,47,4.2
+118,Dinner Station,Almont,Colorado,USA,,Southwest,-106.587,38.905,970.641.0471/970.874.6600,22,21.7
+119,Divide Fork,Grand Junction,Colorado,USA,,Southwest,-108.689,38.684,970.242.8211/970.874.6600,11,27.3
+120,Dorchester,Almont,Colorado,USA,,Southwest,-106.663,38.965,970.641.0471/970.874.6600,10,23
+121,Dowdy Lake,Red Feather Lakes,Colorado,USA,,Southwest,-105.557,40.791,970.498.1375/970.295.6600,70,2
+122,Dry Gulch - Curecanti Area,Gunnison,Colorado,USA,,Southwest,-107.187,38.481,970.641.2337,10,14.8
+123,Dry Lake,Steamboat Springs,Colorado,USA,,Southwest,-106.781,40.536,970.879.1870/307.745.2300,8,4.4
+124,Duffy Mountain - Yampa River State Park,Craig,Colorado,USA,,Southwest,-107.896,40.435,970.276.2061,7,19.2
+125,Dumont Lake,Steamboat Springs,Colorado,USA,,Southwest,-106.627,40.405,970.879.1870/307.745.2300,22,12.1
+126,Dutch George,Fort Collins,Colorado,USA,,Southwest,-105.444,40.697,970.498.1375/970.295.6600,20,20.4
+127,Early Settlers - Vega State Park,Collbran,Colorado,USA,,Southwest,-107.811,39.215,970.487.3407,33,8.2
+128,East Beach - Bonny Lake State Park,Idalia,Colorado,USA,,Southwest,-102.17,39.613,970.354.7306,,9.1
+129,East Cross Mountain - Yampa River State Park,Maybell,Colorado,USA,,Southwest,-108.321,40.482,970.276.2061,11,12.5
+130,East Fork,Pagosa Springs,Colorado,USA,,Southwest,-106.889,37.377,970.264.2268/970.247.4874,26,9.9
+131,East Marvine,Meeker,Colorado,USA,,Southwest,-107.426,40.011,970.878.4039/970.945.2521,7,25.8
+132,East Portal - Curecanti National Rec Area,Gunnison,Colorado,USA,,Southwest,-107.65,38.525,970.641.2337,15,39.2
+133,Echo Lake - Idaho Springs,Idaho Springs,Colorado,USA,,Southwest,-105.593,39.658,303.567.3000/970.295.6600,18,7.2
+134,Echo Park - Dinosaur National Monument,Maybell,Colorado,USA,,Southwest,-108.983,40.525,,17,47.1
+135,Eggleston,Cedaredge,Colorado,USA,,Southwest,-107.936,39.049,,6,10.2
+136,Elbert Creek,Leadville,Colorado,USA,,Southwest,-106.418,39.152,719.486.0749/719.545.8737,17,9.6
+137,Eleven Mile State Park,Lake George,Colorado,USA,,Southwest,-105.503,38.937,719.748.3401,350,8.4
+138,Elk Creek,Antonito,Colorado,USA,,Southwest,-106.368,37.126,719.274.8971/719-852-5941,31,20.1
+139,Elk Creek - Curecanti Area,Gunnison,Colorado,USA,,Southwest,-107.167,38.466,970.641.2337,160,14.2
+140,Elk Wallow,Basalt,Colorado,USA,,Southwest,-106.612,39.344,970.963.2266/970.945.2521,7,22.6
+141,Elliott Creek,Silverthorne,Colorado,USA,,Southwest,-106.325,39.874,970.468.5400/970.945.2521,15,21.6
+142,Empire City RV Parking,Emprire,Colorado,USA,,Southwest,-105.684,39.762,303.569.2978,,0
+143,Erickson Springs,Paonia,Colorado,USA,,Southwest,-107.264,38.958,970.527.4131/970.874.6600,18,18.7
+144,Farish Military - USAF Academy,Colorado Springs,Colorado,USA,,Southwest,-104.994,39.01,719.687.9098,,15.3
+145,Father Dyer,Leadville,Colorado,USA,,Southwest,-106.352,39.276,719.486.0749/719.545.8737,26,3.6
+146,Ferris Canyon,Cortez,Colorado,USA,,Southwest,-108.647,37.618,970.882.6800/970.247.4874,7,18.9
+147,Five Points - Arkansas Headwaters State Rec Area,,Colorado,USA,,Southwest,-105.536,38.441,719.539.7289,12,
+148,Flat Rocks,Sedalia,Colorado,USA,,Southwest,-105.086,39.326,303.275.5610/719.545.8737,19,10.2
+149,Flatiron Reservoir,Loveland,Colorado,USA,,Southwest,-105.233,40.372,800.387.7795,,8.5
+150,Fleming RV Park,Fleming,Colorado,USA,,Southwest,-102.845,40.681,970.265.2591?,,0.3
+151,Florida,Bayfield,Colorado,USA,,Southwest,-107.682,37.452,970.884.2512/970.247.4874,20,16.3
+152,Foster Grove - Bonny Lake State Park,Idalia,Colorado,USA,,Southwest,-102.22,39.614,970.354.7306,49,7.3
+153,Fourmile,Fairplay,Colorado,USA,,Southwest,-106.104,39.21,719.836.2031/719.545.8737,14,5.5
+154,Freeman Reservoir,Craig,Colorado,USA,,Southwest,-107.421,40.762,970.879.1870/307.745.2300,18,18.3
+155,Fruita - Colorado River State Park,Fruita,Colorado,USA,,Southwest,-108.74,39.15,970.434.3388,45,0.9
+156,Fulford Cave,Eagle,Colorado,USA,,Southwest,-106.658,39.492,970.328.6388/970.945.2521,7,14.5
+157,Garfield,Salida,Colorado,USA,,Southwest,-106.302,38.547,,11,16.4
+158,Gates of Lodore - Dinosaur National Monument,Maybell,Colorado,USA,,Southwest,-108.887,40.727,970.374.3000,17,44.4
+159,Geneva Park,Jefferson,Colorado,USA,,Southwest,-105.737,39.532,303.275.5610/719.545.8737,25,11.2
+160,Georgetown Lake,Georgetown,Colorado,USA,,Southwest,-105.689,39.734,,,1.9
+161,Glacier Basin - Rocky Mountain National Park,Estes Park,Colorado,USA,,Southwest,-105.596,40.33,970.586.1419,150,5.1
+162,Gold Creek,Gunnison,Colorado,USA,,Southwest,-106.574,38.655,970.641.0471/970.874.6600,6,20.4
+163,Gold Park,Minturn,Colorado,USA,,Southwest,-106.436,39.404,970.827.5715/970.945.2521,11,12.6
+164,Goose Creek,Woodland Park,Colorado,USA,,Southwest,-105.359,39.171,303.275.5610/719.545.8737,10,20.3
+165,Gore Creek,Vail,Colorado,USA,,Southwest,-106.275,39.627,970.827.5715/970.945.2521,25,5.4
+166,Gore Pass,Kremmling,Colorado,USA,,Southwest,-106.56,40.074,,12,9.1
+167,Gothic,Crested Butte,Colorado,USA,,Southwest,-107.006,38.982,,4,7.8
+168,Graham Creek,Bayfield,Colorado,USA,,Southwest,-107.54,37.391,970.884.2512/970.247.4874,25,11.8
+169,Grand View,Fort Collins,Colorado,USA,,Southwest,-105.772,40.503,970.498.1375/970.295.6600,9,36.5
+170,Granite,Steamboat Springs,Colorado,USA,,Southwest,-106.691,40.496,970.879.1870/307.745.2300,8,7.4
+171,Grape Creek - Temple Canyon Park,Canon City,Colorado,USA,,Southwest,-105.316,38.407,,,5.4
+172,Green Mountain,Deckers,Colorado,USA,,Southwest,-105.356,39.326,303.275.5610/719.545.8737,6,8.5
+173,Green Ridge,Granby,Colorado,USA,,Southwest,-105.844,40.206,970.887.4100/970.295.6600,78,9.7
+174,Greenhorn Meadows Park,Colorado City,Colorado,USA,,Southwest,-104.846,37.936,719.676.3059,26,0.9
+175,Grizzly Creek,Walden,Colorado,USA,,Southwest,-106.599,40.557,,12,20.5
+176,Guanella Pass,Georgetown,Colorado,USA,,Southwest,-105.716,39.613,303.567.3000/970.295.6600,18,6.5
+177,Gypsum,Glenwood Springs,Colorado,USA,,Southwest,-106.952,39.651,,,21
+178,Hahns Peak Lake,Steamboat Springs,Colorado,USA,,Southwest,-106.997,40.84,970.879.1870/307.745.2300,26,26
+179,Halfmoon,Leadville,Colorado,USA,,Southwest,-106.432,39.501,970.827.5715/970.945.2521,7,18.8
+180,Halfmoon East,Leadville,Colorado,USA,,Southwest,-106.396,39.161,719.486.0749/719.545.8737,6,8.3
+181,Halfmoon West,Leadville,Colorado,USA,,Southwest,-106.397,39.158,719.486.0749/719.545.8737,16,8.5
+182,Hall Valley,Webster,Colorado,USA,,Southwest,-105.805,39.483,303.275.5610/719.545.8737,9,5.2
+183,Handcart,Jefferson,Colorado,USA,,Southwest,-105.802,39.482,,10,7.2
+184,Hansons Mill,Creede,Colorado,USA,,Southwest,-106.737,37.813,719.657.3321/719-852-5941,5,10.6
+185,Happy Meadows,Woodland Park,Colorado,USA,,Southwest,-105.362,39.015,719.836.2031/719.545.8737,8,16.5
+186,Harvester Park,Haxtun,Colorado,USA,,Southwest,-102.624,40.646,,10,0.3
+187,Haviland Lake,Durango,Colorado,USA,,Southwest,-107.808,37.534,970.884.2512/970.247.4874,43,18.3
+188,Hayden Creek,Salida,Colorado,USA,,Southwest,-105.823,38.33,719.539.3591/719.545.8737,11,17.1
+189,Headquarters  - Yampa River State Park,Hayden,Colorado,USA,,Southwest,-107.311,40.49,970.276.2061,50,2.9
+190,Heaton Bay,Frisco,Colorado,USA,,Southwest,-106.078,39.604,970.468.5400/970.945.2521,81,2.3
+191,Hecla Junction - Arkansas Headwaters State Rec Area,Salida,Colorado,USA,,Southwest,-106.052,38.653,719.539.7289,,8.6
+192,Hermit Park Open Space,Estes Park,Colorado,USA,,Southwest,-105.464,40.335,800.397.7795,,4.2
+193,Hidden Lakes,Walden,Colorado,USA,,Southwest,-106.608,40.507,970.723.8204/307.745.2300,9,23
+194,Hidden Valley,Lake City,Colorado,USA,,Southwest,-107.133,38.041,970.641.0471/970.874.6600,4,9.9
+195,Hideaway Park,Winter Park,Colorado,USA,,Southwest,-105.784,39.919,,,2.2
+196,Highline Lake State Park,Loma,Colorado,USA,,Southwest,-108.836,39.27,970.858.7208,25,5.3
+197,Highway Springs,South Fork,Colorado,USA,,Southwest,-106.685,37.622,719.657.3321/719-852-5941,11,4.1
+198,Himes Peak,Buford,Colorado,USA,,Southwest,-107.272,40.028,970.878.4039/970.945.2521,11,18.5
+199,Hinman Park,Steamboat Springs,Colorado,USA,,Southwest,-106.834,40.749,970.879.1870/307.745.2300,13,18.2
+200,Hornsilver,Minturn,Colorado,USA,,Southwest,-106.366,39.472,970.827.5715/970.945.2521,7,8.6
+201,Horseshoe,Parshall,Colorado,USA,,Southwest,-106.096,39.9,970.638.4516/307.745.2300,7,11.6
+202,Horseshoe,Fairplay,Colorado,USA,,Southwest,-106.086,39.202,719.836.2031/719.545.8737,19,4.8
+203,Horseshoe,,Colorado,USA,,Southwest,-107.113,40.035,,7,
+204,House Creek,Dolores,Colorado,USA,,Southwest,-108.535,37.516,970.882.6800/970.247.4874,65,3.4
+205,Hovenweep National Monument,Cortez,Colorado,USA,,Southwest,-109.071,37.383,970.562.4282,30,26.8
+206,Hugo City Park,Hugo,Colorado,USA,,Southwest,-103.471,39.134,,10,0.2
+207,Idlewild,Winter Park,Colorado,USA,,Southwest,-105.778,39.904,970.887.4100/970.295.6600,24,1.1
+208,Indian Creek,Sedalia,Colorado,USA,,Southwest,-105.098,39.381,303.275.5610/719.545.8737,11,8.3
+209,Inlet Bay - Horsetooth Reservoir,Fort Collins,Colorado,USA,,Southwest,-105.161,40.527,,,5.7
+210,Irish Canyon,Maybell,Colorado,USA,,Southwest,-108.734,40.826,,,40
+211,Iron City,Nathrop,Colorado,USA,,Southwest,-106.338,38.709,719.539.3591/719.545.8737,15,14.4
+212,Iron Springs,Montrose,Colorado,USA,,Southwest,-108.164,38.317,970.240.5300/970.874.6600,8,19.2
+213,Island Acres - James M. Robb - Colorado River State Park,Palisade,Colorado,USA,,Southwest,-108.301,39.168,970.434.3388,60,4.8
+214,Island Lake,Cedaredge,Colorado,USA,,Southwest,-108.011,39.032,970.242.8211/970.874.6600,41,10.1
+215,Ivy Creek,Creede,Colorado,USA,,Southwest,-107,37.681,719.657.3321/719-852-5941,6,12.3
+216,Jacks Gulch,Rustic,Colorado,USA,,Southwest,-105.525,40.633,970.498.1375/970.295.6600,56,5.4
+217,Jackson Creek,Denver,Colorado,USA,,Southwest,-105.089,39.251,303.275.5610/719.545.8737,9,34.1
+218,Jackson Lake State Park,Orchard,Colorado,USA,,Southwest,-104.093,40.385,970.645.2551,250,4
+219,Jefferson Creek,Jefferson,Colorado,USA,,Southwest,-105.853,39.433,719.836.2031/719.545.8737,17,4.8
+220,Jumbo,Mesa,Colorado,USA,,Southwest,-108.094,39.053,970.242.8211/970.874.6600,26,8.2
+221,Junction Creek,Durango,Colorado,USA,,Southwest,-107.917,37.337,970.884.2512/970.247.4874,44,4.7
+222,Juniper Breaks - Lake Pueblo State Park,Pueblo,Colorado,USA,,Southwest,-104.755,38.277,719.561.9320,,8.1
+223,Juniper Canyon - Yampa River State Park,Craig,Colorado,USA,,Southwest,-107.953,40.47,970.276.2061,8,21.6
+224,Kelly Dahl,Nederland,Colorado,USA,,Southwest,-105.498,39.932,303.541.2500/970.295.6600,46,2.1
+225,Kelly Flats,Rustic,Colorado,USA,,Southwest,-105.483,40.681,970.498.1375/970.295.6600,29,5.3
+226,Kelsey,Bailey,Colorado,USA,,Southwest,-105.265,39.306,303.275.5610/719.545.8737,17,13.1
+227,Kenosha Pass,Jefferson,Colorado,USA,,Southwest,-105.761,39.414,303.275.5610/719.545.8737,25,3.3
+228,Kiser Creek,Cedaredge,Colorado,USA,,Southwest,-107.948,39.038,,12,9.5
+229,Kite Lake,Alma,Colorado,USA,,Southwest,-106.128,39.329,719.836.2031/719.545.8737,5,4.7
+230,Kroeger,Durango,Colorado,USA,,Southwest,-108.077,37.376,970.884.2512/970.247.4874,11,12.9
+231,La Vista - Lake Isabel,Colorado City,Colorado,USA,,Southwest,-105.059,37.984,719.269.8500/719.545.8737,29,12.5
+232,Lake Creek,Westcliffe,Colorado,USA,,Southwest,-105.662,38.265,719.269.8500/719.545.8737,11,13.9
+233,Lake Fork,Antonito,Colorado,USA,,Southwest,-106.477,37.309,719.274.8971/719-852-5941,20,30.3
+234,Lake Fork - Curecanti Area,Gunnison,Colorado,USA,,Southwest,-107.323,38.455,970.641.2337,82,22.4
+235,Lake Hasty - John Martin State Park,Hasty,Colorado,USA,,Southwest,-102.933,38.075,719.829.1801,213,2.9
+236,Lake Irwin,Crested Butte,Colorado,USA,,Southwest,-107.108,38.881,970.641.0471/970.874.6600,32,6.5
+237,Lakeview - Almont,,Colorado,USA,,Southwest,-106.58,38.818,970.641.0471/970.874.6600,35,
+238,Lakeview - Twin Lakes,Leadville,Colorado,USA,,Southwest,-106.366,39.098,719.486.0749/719.545.8737,27,11.3
+239,Lincoln Gulch,Aspen,Colorado,USA,,Southwest,-106.695,39.117,970.963.2266/970.945.2521,7,8.3
+240,Little Mattie,Basalt,Colorado,USA,,Southwest,-106.806,39.378,970.963.2266/970.945.2521,22,12.2
+241,Little Maud,Basalt,Colorado,USA,,Southwest,-106.813,39.375,970.963.2266/970.945.2521,20,11.7
+242,Lodgepole - Almont,Almont,Colorado,USA,,Southwest,-106.662,38.761,970.641.0471/970.874.6600,16,12
+243,Lodgepole - Jefferson,Jefferson,Colorado,USA,,Southwest,-105.843,39.423,719.836.2031/719.545.8737,34,3.9
+244,Lone Rock,Woodland Park,Colorado,USA,,Southwest,-105.235,39.252,303.275.5610/719.545.8737,20,20.2
+245,Long Draw,Gould,Colorado,USA,,Southwest,-105.767,40.515,970.498.1375/970.295.6600,25,13.8
+246,Longs Peak - Rocky Mountain National Park,Estes Park,Colorado,USA,,Southwest,-105.559,40.275,970.586.1206,26,7.3
+247,Lost Lake,Paonia,Colorado,USA,,Southwest,-107.208,38.87,970.527.4131/970.874.6600,19,20.6
+248,Lost Man,Aspen,Colorado,USA,,Southwest,-106.625,39.122,970.963.2266/970.945.2521,10,11.4
+249,Lost Park,Jefferson,Colorado,USA,,Southwest,-105.507,39.285,719.836.2031/719.545.8737,12,16.9
+250,Lost Trail,Creede,Colorado,USA,,Southwest,-107.349,37.768,719.657.3321/719-852-5941,7,23.7
+251,Lottis Creek,Almont,Colorado,USA,,Southwest,-106.627,38.776,970.641.0471/970.874.6600,27,14.1
+252,Lower Beaver Creek,South Fork,Colorado,USA,,Southwest,-106.676,37.616,719.657.3321/719-852-5941,23,4.2
+253,Lower Narrows,Fort Collins,Colorado,USA,,Southwest,-105.431,40.691,970.498.1375/970.295.6600,8,19.6
+254,Lower Piedra,Pagosa Springs,Colorado,USA,,Southwest,-107.343,37.242,970.264.2268/970.247.4874,17,18.4
+255,Lowry,Dillon,Colorado,USA,,Southwest,-106.031,39.623,970.468.5400/970.945.2521,24,0.8
+256,Luders Creek,Saguache,Colorado,USA,,Southwest,-106.584,38.181,719.655.2547/719-852-5941,6,24.9
+257,Lynx Pass,Toponas,Colorado,USA,,Southwest,-106.699,40.078,970.638.4516/307.745.2300,11,5.9
+258,Main - Mancos State Park,Dolores,Colorado,USA,,Southwest,-108.27,37.4,970.533.7065,24,13.8
+259,Marshall Park,Creede,Colorado,USA,,Southwest,-106.986,37.789,719.657.3321/719-852-5941,17,5.3
+260,Marvine,Buford,Colorado,USA,,Southwest,-107.426,40.007,970.878.4039/970.945.2521,22,10.2
+261,Marys Lake - USBR,Estes Park,Colorado,USA,,Southwest,-105.531,40.347,,270,2.1
+262,Matchless,Leadville,Colorado,USA,,Southwest,-106.36,39.258,719.486.0749/719.545.8737,17,3.6
+263,Matterhorn,Telluride,Colorado,USA,,Southwest,-107.881,37.845,970.327.4261/970.874.6600,28,7.4
+264,Mavreeso,Dolores,Colorado,USA,,Southwest,-108.297,37.651,970.882.6800/970.247.4874,19,16.7
+265,Maybell Bridge - Yampa River State Park,Craig,Colorado,USA,,Southwest,-108.033,40.501,970.276.2061,9,25.6
+266,Maybell City Park,Maybell,Colorado,USA,,Southwest,-108.086,40.517,,20,0
+267,Mayqueen,Leadville,Colorado,USA,,Southwest,-106.431,39.278,719.486.0749/719.545.8737,27,7.7
+268,McClure,,Colorado,USA,,Southwest,-107.872,38.059,,19,
+269,McClure,Redstone,Colorado,USA,,Southwest,-107.313,39.124,970.527.4131/970.874.6600,8,5.5
+270,Mcdonald Flats,Silverthorne,Colorado,USA,,Southwest,-106.238,39.851,970.468.5400/970.945.2521,13,17.7
+271,Mcphee,Dolores,Colorado,USA,,Southwest,-108.553,37.497,970.882.6800/970.247.4874,71,3.1
+272,Meadow Lake,Buford,Colorado,USA,,Southwest,-107.543,39.817,970.625.2371/970.945.2521,10,12.4
+273,Meadow Park,Lyons,Colorado,USA,,Southwest,-105.274,40.223,303.823.6150,,0.2
+274,Meadow Ridge,Woodland Park,Colorado,USA,,Southwest,-104.986,38.978,719.636.1602/719.545.8737,19,4
+275,Meadows,Steamboat Springs,Colorado,USA,,Southwest,-106.724,40.373,970.879.1870/307.745.2300,30,9.6
+276,Meeker City Park,Meeker,Colorado,USA,,Southwest,-107.91,40.036,,9,0.2
+277,Meeker Park Overflow,Estes Park,Colorado,USA,,Southwest,-105.534,40.242,303.541.2500/970.295.6600,29,9.4
+278,Meridian,Bailey,Colorado,USA,,Southwest,-105.535,39.51,303.275.5610/719.545.8737,18,7.9
+279,Michigan Creek,Jefferson,Colorado,USA,,Southwest,-105.883,39.411,719.836.2031/719.545.8737,12,4.9
+280,Middle Mountain - Vallecito Reservoir,Bayfield,Colorado,USA,,Southwest,-107.536,37.409,970.884.2512/970.247.4874,24,13.1
+281,Middle Quartz,Monarch,Colorado,USA,,Southwest,-106.425,38.623,970.641.0471/970.874.6600,7,8.1
+282,Mill Creek - Lake City,,Colorado,USA,,Southwest,-107.39,37.906,,22,
+283,Miller Creek,Bayfield,Colorado,USA,,Southwest,-107.661,37.405,970.884.2512/970.247.4874,12,12.8
+284,Miracle Rock,Glade Park,Colorado,USA,,Southwest,-108.872,38.981,,4,7.1
+285,Miramonte Reservoir - SWA,,Colorado,USA,,Southwest,-108.334,37.975,,50,
+286,Mirror Lake - Almont,Almont,Colorado,USA,,Southwest,-106.432,38.747,970.641.0471/970.874.6600,10,23
+287,Missile Site Park,Greeley,Colorado,USA,,Southwest,-104.863,40.43,970.304.6531,12,8.1
+288,Mix Lake,Antonito,Colorado,USA,,Southwest,-106.547,37.358,719.274.8971/719-852-5941,22,35.3
+289,Mizpah,Empire,Colorado,USA,,Southwest,-105.792,39.776,303.567.3000/970.295.6600,10,5.8
+290,Mogote,Antonito,Colorado,USA,,Southwest,-106.235,37.065,719.274.8971/719-852-5941,59,12.5
+291,Molas Lake Public Park,Silverton,Colorado,USA,,Southwest,-107.683,37.749,866.731.5204,,4.4
+292,Mollie B,Basalt,Colorado,USA,,Southwest,-106.81,39.375,970.963.2266/970.945.2521,27,11.9
+293,Molly Brown,Leadville,Colorado,USA,,Southwest,-106.353,39.264,719.486.0749/719.545.8737,49,3.4
+294,Molly Gulch,Sedalia,Colorado,USA,,Southwest,-105.344,39.194,,15,26.5
+295,Monarch Park,Poncha Springs,Colorado,USA,,Southwest,-106.325,38.516,719.539.3591/719.545.8737,37,13.4
+296,Monument Lake Park,Stonewall,Colorado,USA,,Southwest,-105.047,37.207,,,4.1
+297,Moraine Park,Estes Park,Colorado,USA,,Southwest,-105.6,40.358,970.586.1418,,4.3
+298,Morefield - Mesa Verde National Park,Mancos,Colorado,USA,,Southwest,-108.42,37.302,800-449-2288,450,7.8
+299,Mosca,Almont,Colorado,USA,,Southwest,-106.71,38.86,970.641.0471/970.874.6600,16,15.4
+300,Mount Princeton,Nathrop,Colorado,USA,,Southwest,-106.224,38.714,719.539.3591/719.545.8737,19,8.3
+301,Mountain Park,Rustic,Colorado,USA,,Southwest,-105.467,40.682,970.498.1375/970.295.6600,54,6.1
+302,Mud Springs,Glade Park,Colorado,USA,,Southwest,-108.739,38.905,,14,6.1
+303,Mueller State Park,Divide,Colorado,USA,,Southwest,-105.164,38.89,719.687.2366,90,3.6
+304,Narrows,Rustic,Colorado,USA,,Southwest,-105.431,40.691,970.295.6700,5,7.9
+305,Navajo State Park,Arboles,Colorado,USA,,Southwest,-107.418,37.004,970.883.2208,120,1.7
+306,Needle Creek Reservoir,Gunnison,Colorado,USA,,Southwest,-106.56,38.353,970.641.0471/970.874.6600,,23.8
+307,North Bank,Almont,Colorado,USA,,Southwest,-106.758,38.73,970.641.0471/970.874.6600,17,6.6
+308,North Canyon - Vallecito Reservoir,Bayfield,Colorado,USA,,Southwest,-107.539,37.394,970.884.2512/970.247.4874,21,12.1
+309,North Clear Creek,Creede,Colorado,USA,,Southwest,-107.139,37.836,719.657.3321/719-852-5941,25,11.6
+310,North Cove - Bonny Lake State Park,Idalia,Colorado,USA,,Southwest,-102.185,39.638,970.354.7306,21,7.4
+311,North Crestone Creek,Crestone,Colorado,USA,,Southwest,-105.689,38.016,719.655.2547/719-852-5941,13,1.5
+312,North Fork,Buford,Colorado,USA,,Southwest,-107.434,40.059,970.878.4039/970.945.2521,40,10.9
+313,North Fork Poudre,Livermore,Colorado,USA,,Southwest,-105.71,40.814,970.498.1375/970.295.6600,9,25.8
+314,North Fork Reservoir,Salidas,Colorado,USA,,Southwest,-106.32,38.612,719.539.3591/719.545.8737,9,18.5
+315,North Fruita Desert,De Beque,Colorado,USA,,Southwest,-108.702,39.331,,35,26
+316,North Michigan - State Forest State Park,Walden,Colorado,USA,,Southwest,-105.997,40.553,970.723.8366,48,19.5
+317,North Rim - Gunnison National Park,Montrose,Colorado,USA,,Southwest,-107.709,38.586,970.641.2337,13,11.7
+318,North Sterling State Park,Sterling,Colorado,USA,,Southwest,-103.265,40.796,970.522.3657,141,12.1
+319,Northern Plains - Lake Pueblo State Park,Pueblo,Colorado,USA,,Southwest,-104.78,38.275,719.561.9320,,9.4
+320,Oak Creek,Canon City,Colorado,USA,,Southwest,-105.269,38.296,719.269.8500/719.545.8737,15,10.2
+321,Oak Point - Vega State Park,Collbran,Colorado,USA,,Southwest,-107.789,39.231,970.487.3407,39,9.2
+322,Ohaver Lake,Poncha Springs,Colorado,USA,,Southwest,-106.143,38.428,719.539.3591/719.545.8737,35,6.9
+323,Old Timers - Vallecito Reservoir,Bayfield,Colorado,USA,,Southwest,-107.56,37.377,,11,10.7
+324,Olive Ridge,Estes Park,Colorado,USA,,Southwest,-105.523,40.208,303.541.2500/970.295.6600,56,11.7
+325,One Mile,Almont,Colorado,USA,,Southwest,-106.759,38.728,970.641.0471/970.874.6600,25,6.4
+326,Ophir Creek,Colorado City,Colorado,USA,,Southwest,-105.107,38.061,719.269.8500/719.545.8737,31,16.8
+327,Osprey,Woodland Park,Colorado,USA,,Southwest,-105.177,39.349,303.275.5610/719.545.8737,13,25.4
+328,Ouzel,Woodland Park,Colorado,USA,,Southwest,-105.188,39.32,303.275.5610/719.545.8737,13,23.6
+329,Painted Rocks,Woodland Park,Colorado,USA,,Southwest,-105.105,39.084,719.636.1602/719.545.8737,18,6.7
+330,Palisade - South Fork,South Fork,Colorado,USA,,Southwest,-106.765,37.751,719.657.3321/719-852-5941,12,8.8
+331,Palisades Senior RV Park,Gunnison,Colorado,USA,,Southwest,-106.946,38.547,970.641.4951,59,1.1
+332,Paonia State Park,Crawford,Colorado,USA,,Southwest,-107.348,38.987,970.921.5721,13,24.1
+333,Park Creek - South Fork,South Fork,Colorado,USA,,Southwest,-106.729,37.592,719.657.3321/719-852-5941,16,7.3
+334,Parry Peak,,Colorado,USA,,Southwest,-106.41,39.068,719.486.0749/719.545.8737,26,
+335,Pawnee,Nederland,Colorado,USA,,Southwest,-105.569,40.079,303.541.2500/970.295.6600,55,8.7
+336,Peaceful Valley,Nederland,Colorado,USA,,Southwest,-105.506,40.131,303.541.2500/970.295.6600,17,11.8
+337,Peak One,Frisco,Colorado,USA,,Southwest,-106.071,39.584,970.468.5400/970.945.2521,74,1.5
+338,Pearl Lake State Park,Clark,Colorado,USA,,Southwest,-106.892,40.789,970.879.3922,38,5.9
+339,Penitente Canyon,La Garita,Colorado,USA,,Southwest,-106.282,37.843,719.852.5941,,36.1
+340,Peregrine Pines Military - USAF Academy,,Colorado,USA,,Southwest,-104.84,39.006,719.333.498,,
+341,Pine Cove,Frisco,Colorado,USA,,Southwest,-106.069,39.588,970.468.5400/970.945.2521,56,1.8
+342,Pine Point - Vallecito Reservoir,Bayfield,Colorado,USA,,Southwest,-107.535,37.4,970.884.2512/970.247.4874,30,12.6
+343,Pine River,Durango,Colorado,USA,,Southwest,-107.505,37.447,970.884.2512/970.247.4874,6,23.8
+344,Pines,Rustic,Colorado,USA,,Southwest,-106.008,40.492,970.723.8204/307.745.2300,11,26.6
+345,Pinewood Reservoir,Loveland,Colorado,USA,,Southwest,-105.283,40.364,800.397.7795,22,11.2
+346,Pinon - Lathrop State Park,Walsenburg,Colorado,USA,,Southwest,-104.831,37.617,719.738.2376,82,2.8
+347,Pinyon Flats - Sand Dunes National Monument,Mosca,Colorado,USA,,Southwest,-105.505,37.745,719.378.6399,88,21.1
+348,Pioneer - Vega State Park,Collbran,Colorado,USA,,Southwest,-107.813,39.212,970.487.3407,10,9.2
+349,Pioneer Park,Hot Sulphur Sp,Colorado,USA,,Southwest,-106.103,40.079,,18,
+350,Pioneer Park,Sterling,Colorado,USA,,Southwest,-103.246,40.626,,,
+351,Pitkin,Pitkin,Colorado,USA,,Southwest,-106.5,38.61,970.641.0471/970.874.6600,22,0.9
+352,Platte River,Woodland Park,Colorado,USA,,Southwest,-105.204,39.294,303.275.5610/719.545.8737,10,22.2
+353,Point - John Martin State Park,Mcclave,Colorado,USA,,Southwest,-102.959,38.085,719.829.1801,65,6.9
+354,Ponderosa - Curecanti Area,Sapinero,Colorado,USA,,Southwest,-107.303,38.521,970.641.2337,20,4.2
+355,Portal,Aspen,Colorado,USA,,Southwest,-106.612,39.076,970.963.2266/970.945.2521,5,13.6
+356,Poso,Saguache,Colorado,USA,,Southwest,-106.427,37.908,719.655.2547/719-852-5941,11,19.9
+357,Prairie Point,Dillon,Colorado,USA,,Southwest,-106.232,39.843,970.468.5400/970.945.2521,33,17.8
+358,Prospector,Dillon,Colorado,USA,,Southwest,-106.043,39.6,970.468.5400/970.945.2521,107,2.1
+359,Pumphouse,Kremmling,Colorado,USA,,Southwest,-106.492,39.996,,14,7
+360,Purgatoire,La Veta,Colorado,USA,,Southwest,-105.11,37.253,719.269.8500/719.545.8737,23,18.3
+361,Purgatory,Durango,Colorado,USA,,Southwest,-107.807,37.629,,14,24.8
+362,Quartz,Pitkin,Colorado,USA,,Southwest,-106.469,38.638,970.641.0471/970.874.6600,10,3.3
+363,Rabbit Valley,Grand Junction,Colorado,USA,,Southwest,-109.021,39.172,,8,26.3
+364,Railroad Bridge - Arkansas Headwaters State Rec Area,Buena Vista,Colorado,USA,,Southwest,-106.142,38.869,719.539.7289,,1.9
+365,Rainbow Lakes,Nederland,Colorado,USA,,Southwest,-105.571,40.01,303.541.2500/970.295.6600,16,4.6
+366,Rangely Camper Park,Rangely,Colorado,USA,,Southwest,-108.789,40.089,970.675.8211,23,0.8
+367,Ranger Lakes - State Forest State Park,Walden,Colorado,USA,,Southwest,-105.971,40.503,970.723.8366,32,22.8
+368,Red Bridge,Powderhorn,Colorado,USA,,Southwest,-107.225,38.322,,7,7.7
+369,Red Creek - Curecanti Area,Gunnison,Colorado,USA,,Southwest,-107.23,38.479,970.641.2337,7,17.1
+370,Redstone,Redstone,Colorado,USA,,Southwest,-107.229,39.201,970.963.2266/970.945.2521,17,1.5
+371,Reverends Ridge - Golden Gate State Park,Golden,Colorado,USA,,Southwest,-105.45,39.878,303.582.3707,106,14.8
+372,Ridgway State Park,Ridgway,Colorado,USA,,Southwest,-107.736,38.214,970.626.5822,283,4.3
+373,Rifle Falls State Park,Rifle,Colorado,USA,,Southwest,-107.699,39.676,970.625.1607,18,10.7
+374,Rifle Gap State Park,Rifle,Colorado,USA,,Southwest,-107.751,39.633,970.625.1607,146,7
+375,Rifle Mountain County Park,Rifle,Colorado,USA,,Southwest,-107.687,39.731,,30,14.5
+376,Rincon - Arkansas Headwaters State Rec Area,Wellsville,Colorado,USA,,Southwest,-105.877,38.473,719.539.7289,10,2
+377,Rio Blanco Lake Area - SWA,Meeker,Colorado,USA,,Southwest,-108.21,40.092,,,16.1
+378,Rio Grande,Creede,Colorado,USA,,Southwest,-107.012,37.763,719.657.3321/719-852-5941,4,7.6
+379,Rito Hondo,Lake City,Colorado,USA,,Southwest,-107.177,37.891,,35,12.2
+380,River Hill,Creede,Colorado,USA,,Southwest,-107.23,37.73,719.657.3321/719-852-5941,20,18.5
+381,Rivers End,Almont,Colorado,USA,,Southwest,-106.569,38.858,970.641.0471/970.874.6600,15,20
+382,Riverside,Florissant,Colorado,USA,,Southwest,-105.375,38.96,719.836.2031/719.545.8737,18,4.7
+383,Riverside RV Park,Fort Morgan,Colorado,USA,,Southwest,-103.8,40.267,970.542.0224,25,1.2
+384,Road Canyon,Creede,Colorado,USA,,Southwest,-107.193,37.755,719.657.3321/719-852-5941,6,15.9
+385,Robbers Roost,Winter Park,Colorado,USA,,Southwest,-105.756,39.834,970.887.4100/970.295.6600,11,4
+386,Rock Creek - Monte Vista,Monte Vista,Colorado,USA,,Southwest,-106.332,37.469,719.657.3321/719-852-5941,23,12.7
+387,Rosy Lane,Almont,Colorado,USA,,Southwest,-106.747,38.731,970.641.0471/970.874.6600,20,7
+388,Round Mountain,Florissant,Colorado,USA,,Southwest,-105.433,39.03,719.836.2031/719.545.8737,15,9.6
+389,Ruby Mountain - Arkansas Headwaters State Rec Area,Buena Vista,Colorado,USA,,Southwest,-106.073,38.754,719.539.7289,,6.8
+390,Saddlehorn - Colorado National Monument,Fruita,Colorado,USA,,Southwest,-108.732,39.121,,80,2.6
+391,San Luis State Park,Mosca,Colorado,USA,,Southwest,-105.735,37.668,719.738.2020,51,7.7
+392,Sawmill Creek,Craig,Colorado,USA,,Southwest,-107.331,40.758,,6,20.2
+393,Sawmill Gulch,Granby,Colorado,USA,,Southwest,-106.057,40.228,970.887.4100/970.295.6600,5,11.6
+394,Seedhouse,Steamboat Springs,Colorado,USA,,Southwest,-106.768,40.774,970.879.1870/307.745.2300,24,20.3
+395,Selkirk,Fairplay,Colorado,USA,,Southwest,-105.951,39.372,719.836.2031/719.545.8737,15,10.5
+396,Sheriffs Reservoir,Yampa,Colorado,USA,,Southwest,-107.138,40.142,970.638.4516/307.745.2300,6,12.1
+397,Sig Creek,Durango,Colorado,USA,,Southwest,-107.884,37.634,970.884.2512/970.247.4874,9,24.8
+398,Silver Bar,Aspen,Colorado,USA,,Southwest,-106.884,39.158,970.963.2266/970.945.2521,4,4.2
+399,Silver Bell,Aspen,Colorado,USA,,Southwest,-106.895,39.143,970.963.2266/970.945.2521,14,5.3
+400,Silver Dollar,Leadville,Colorado,USA,,Southwest,-106.354,39.26,719.486.0749/719.545.8737,43,3.3
+401,Silver Jack,Cimarron,Colorado,USA,,Southwest,-107.538,38.236,970.240.5300/970.874.6600,60,14.3
+402,Silver Queen,Aspen,Colorado,USA,,Southwest,-106.901,39.13,970.963.2266/970.945.2521,6,6.2
+403,Silver Thread,Creede,Colorado,USA,,Southwest,-107.156,37.828,719.657.3321/719-852-5941,11,12.6
+404,Sleeping Elephant,Rustic,Colorado,USA,,Southwest,-105.774,40.683,970.498.1375/970.295.6600,15,10.2
+405,Slumgullion,Lake City,Colorado,USA,,Southwest,-107.225,37.985,970.641.0471/970.874.6600,21,5.8
+406,Snowblind,Sargents,Colorado,USA,,Southwest,-106.415,38.521,970.641.0471/970.874.6600,23,8.1
+407,Snowslide,Durango,Colorado,USA,,Southwest,-108.08,37.363,970.884.2512/970.247.4874,13,12.5
+408,Soap Creek,Sapeniro,Colorado,USA,,Southwest,-107.316,38.547,970.641.0471/970.874.6600,21,6.1
+409,South Bay - Horsetooth Reservoir,Fort Collins,Colorado,USA,,Southwest,-105.154,40.509,,,6.4
+410,South Beach - Yampa River State Park,Craig,Colorado,USA,,Southwest,-107.554,40.495,970.276.2061,6,1.5
+411,South Fork,Parshall,Colorado,USA,,Southwest,-106.029,39.796,,21,19.6
+412,South Fork,,Colorado,USA,,Southwest,-107.534,39.867,970.878.4039/970.945.2521,18,
+413,South Meadows,Woodland Park,Colorado,USA,,Southwest,-105.092,39.065,719.636.1602/719.545.8737,64,5.3
+414,South Mineral,Silverton,Colorado,USA,,Southwest,-107.775,37.806,970.884.2512/970.247.4874,26,6.1
+415,South Rim - Gunnison National Park,Montrose,Colorado,USA,,Southwest,-107.688,38.544,970.641.2337,88,11.2
+416,South Shore - Trinidad Lake State Park,Trinidad,Colorado,USA,,Southwest,-104.564,37.133,719.846.6951,10,4.3
+417,Southside - Lake Isabel,Pueblo,Colorado,USA,,Southwest,-105.056,37.983,719.269.8500/719.545.8737,8,30.7
+418,Spectacle Lake,Antonito,Colorado,USA,,Southwest,-106.439,37.168,719.274.8971/719-852-5941,24,24.5
+419,Spillway,Florissant,Colorado,USA,,Southwest,-105.469,38.907,719.836.2031/719.545.8737,23,10
+420,Spring Creek,Almont,Colorado,USA,,Southwest,-106.767,38.75,970.641.0471/970.874.6600,12,7.3
+421,Springdale,Woodland Park,Colorado,USA,,Southwest,-105.022,38.998,719.636.1602/719.545.8737,13,1.9
+422,Springer Gulch,Florissant,Colorado,USA,,Southwest,-105.429,38.93,719.836.2031/719.545.8737,15,7.6
+423,Spruce,Lake City,Colorado,USA,,Southwest,-107.117,38.047,970.641.0471/970.874.6600,9,10.9
+424,Spruce Grove - Lake George,Florissant,Colorado,USA,,Southwest,-105.462,39.138,719.836.2031/719.545.8737,27,16.2
+425,Spruce Grove - Mesa,Mesa,Colorado,USA,,Southwest,-108.083,39.05,970.242.8211/970.874.6600,16,8.6
+426,St. Charles,,Colorado,USA,,Southwest,-105.066,37.981,719.269.8500/719.545.8737,15,
+427,St. Louis Creek,Fraser,Colorado,USA,,Southwest,-105.861,39.923,970.887.4100/970.295.6600,17,2.8
+428,St. Vrain State Park,Firestone,Colorado,USA,,Southwest,-104.999,40.161,303.678.9402,87,4.7
+429,Stagecoach State Park,Oak Creek,Colorado,USA,,Southwest,-106.866,40.285,970.736.2436,100,4.9
+430,Standley Lake,Westminster,Colorado,USA,,Southwest,-105.127,39.875,,,5.4
+431,Steamboat Lake State Park,Clark,Colorado,USA,,Southwest,-106.964,40.814,970.879.3922,178,7.9
+432,Stevens Creek - Curecanti Recreation Area,Gunnison,Colorado,USA,,Southwest,-107.092,38.487,970.641.2337,54,9.9
+433,Stillwater,Granby,Colorado,USA,,Southwest,-105.887,40.18,970.887.4100/970.295.6600,129,7
+434,Stone Cellar,Saguache,Colorado,USA,,Southwest,-106.677,38.019,719.655.2547/719-852-5941,5,29.5
+435,Storm King,Saguache,Colorado,USA,,Southwest,-106.431,37.959,719.655.2547/719-852-5941,11,18.1
+436,Stove Prairie,Fort Collins,Colorado,USA,,Southwest,-105.396,40.684,970.498.1375/970.295.6600,9,17.7
+437,Stunner,La Jara,Colorado,USA,,Southwest,-106.574,37.378,719.274.8971/719-852-5941,10,34.5
+438,Sugar Loaf,Hot Sulphur Springs,Colorado,USA,,Southwest,-106.023,39.789,,11,20.1
+439,Summit Lake,Walden,Colorado,USA,,Southwest,-106.684,40.545,970.879.1870/307.745.2300,15,24.7
+440,Sunset Point,Granby,Colorado,USA,,Southwest,-105.876,40.147,970.887.4100/970.295.6600,25,5.4
+441,Sunshine,Telluride,Colorado,USA,,Southwest,-107.89,37.889,970.327.4261/970.874.6600,15,5.4
+442,Supply Basin,Dotsero,Colorado,USA,,Southwest,-107.32,39.759,970.328.6388/970.945.2521,7,16
+443,Sweetwater Lake,Dotsero,Colorado,USA,,Southwest,-107.161,39.797,970.328.6388/970.945.2521,9,11.6
+444,Swinging Bridge - Browns Wildlife Area,,Colorado,USA,,Southwest,-109.039,40.836,303.297.1192,15,
+445,Sylvan Lake State Park,Gypsum,Colorado,USA,,Southwest,-106.734,39.48,970.328.2021,44,16.3
+446,Tabor,Leadville,Colorado,USA,,Southwest,-106.356,39.275,719.486.0749/719.545.8737,44,3.8
+447,Target Tree,Mancos,Colorado,USA,,Southwest,-108.187,37.341,970.882.6800/970.247.4874,25,5.6
+448,Taylor Canyon,Gunnison,Colorado,USA,,Southwest,-106.766,38.727,,7,15.2
+449,Teal,Pagosa Springs,Colorado,USA,,Southwest,-107.229,37.51,970.264.2268/970.247.4874,16,20.5
+450,Teal Lake,Walden,Colorado,USA,,Southwest,-106.605,40.585,970.723.8204/307.745.2300,17,19.7
+451,Telluride Town Park,Telluride,Colorado,USA,,Southwest,-107.806,37.935,970.728.2173,28,0.4
+452,The Crags - State Forest State Park,Walden,Colorado,USA,,Southwest,-105.89,40.502,970.723.8366,26,26
+453,The Gate,Powderhorn,Colorado,USA,,Southwest,-107.259,38.248,,8,9.1
+454,Thirtymile,Creede,Colorado,USA,,Southwest,-107.258,37.724,719.657.3321/719-852-5941,49,20.1
+455,Thistledown,Ridgway,Colorado,USA,,Southwest,-107.694,38.002,970.240.5300/970.874.6600,9,10.9
+456,Three Forks,New Castle,Colorado,USA,,Southwest,-107.694,39.764,,4,15.6
+457,Thunder Ridge,Woodland Park,Colorado,USA,,Southwest,-104.983,38.977,719.636.1602/719.545.8737,21,4.2
+458,Tigiwon,Vail,Colorado,USA,,Southwest,-106.422,39.523,,9,8.5
+459,Timber Creek - Rocky Mountain National Park,Grand Lake,Colorado,USA,,Southwest,-105.852,40.379,970.586.1206,100,8.9
+460,Tom Bennett,Rustic,Colorado,USA,,Southwest,-105.583,40.575,970.498.1375/970.295.6600,10,8.6
+461,Trail Creek,Woodland Park,Colorado,USA,,Southwest,-105.179,39.119,,,10.9
+462,Transfer,Mancos,Colorado,USA,,Southwest,-108.209,37.468,970.882.6800/970.247.4874,12,9.5
+463,Transfer Park,Bayfield,Colorado,USA,,Southwest,-107.681,37.462,970.884.2512/970.247.4874,25,17
+464,Trappers Lake,Buford,Colorado,USA,,Southwest,-107.24,39.993,970.878.4039/970.945.2521,35,20
+465,Trout Creek,Yampa,Colorado,USA,,Southwest,-107.096,40.241,970.638.4516/307.745.2300,6,11.6
+466,Trujillo Meadows,,Colorado,USA,,Southwest,-106.449,37.047,719.274.8971/719-852-5941,50,
+467,Tucker Ponds,South Fork,Colorado,USA,,Southwest,-106.761,37.494,719.657.3321/719-852-5941,16,13.9
+468,Tunnel,Rustic,Colorado,USA,,Southwest,-105.858,40.674,970.498.1375/970.295.6600,49,14.6
+469,Turkey Creek Military - Fort Carson,Colorado Springs,Colorado,USA,,Southwest,-104.882,38.609,719.526.3905,,15.9
+470,Twin Eagles,Lake George,Colorado,USA,,Southwest,-105.478,39.153,719.836.2031/719.545.8737,9,13.6
+471,Twin Lake,Cedaredge,Colorado,USA,,Southwest,-107.842,39.065,,13,12.1
+472,Twin Peaks,,Colorado,USA,,Southwest,-106.421,39.067,719.486.0749/719.545.8737,37,
+473,Union Reservoir,Longmont,Colorado,USA,,Southwest,-105.047,40.174,303.772.1265,42,3
+474,Upper Beaver Creek,South Fork,Colorado,USA,,Southwest,-106.677,37.606,719.657.3321/719-852-5941,14,4.9
+475,Upper Colorado Rec Area,Gypsum,Colorado,USA,,Southwest,-107.071,39.663,,,6.4
+476,Upper Narrows,Fort Collins,Colorado,USA,,Southwest,-105.431,40.691,970.498.1375/970.295.6600,7,19.6
+477,Ute,Pagosa Springs,Colorado,USA,,Southwest,-107.273,37.215,970.264.2268/970.247.4874,26,14.9
+478,Vallecito,Vallecito,Colorado,USA,,Southwest,-107.547,37.478,970.884.2512/970.247.4874,80,7.4
+479,Vaughn Lake,Yampa,Colorado,USA,,Southwest,-107.261,40.134,970.638.4516/307.745.2300,6,18.7
+480,Wagon Wheel - Bonny Lake State Park,Idalia,Colorado,USA,,Southwest,-102.185,39.608,970.354.7306,87,8.8
+481,Walton Creek,,Colorado,USA,,Southwest,-106.685,40.381,,14,
+482,Ward Lake,Cedaredge,Colorado,USA,,Southwest,-107.979,39.04,970.242.8211/970.874.6600,27,9.9
+483,Weir and Johnson,Collbran,Colorado,USA,,Southwest,-107.831,39.066,970.242.8211/970.874.6600,12,13.9
+484,Weller,Aspen,Colorado,USA,,Southwest,-106.72,39.121,970.963.2266/970.945.2521,11,7.1
+485,West - Mancos State Park,Dolores,Colorado,USA,,Southwest,-108.265,37.409,970.533.7065,9,13.9
+486,West Chicago Creek,Idaho Springs,Colorado,USA,,Southwest,-105.657,39.679,303.567.3000/970.295.6600,16,8.8
+487,West Dolores,Dolores,Colorado,USA,,Southwest,-108.276,37.66,970.882.6800/970.247.4874,18,17.9
+488,West Fork,Pagosa Springs,Colorado,USA,,Southwest,-106.903,37.445,970.264.2268/970.247.4874,28,13.5
+489,West Lake,Red Feather Lakes,Colorado,USA,,Southwest,-105.568,40.79,970.498.1375/970.295.6600,36,1.5
+490,Weston Pass,Fairplay,Colorado,USA,,Southwest,-106.136,39.078,719.836.2031/719.545.8737,14,12.4
+491,White Owl,Dotsero,Colorado,USA,,Southwest,-107.3,39.747,970.328.6388/970.945.2521,6,14.6
+492,White Star,,Colorado,USA,,Southwest,-106.367,39.09,719.486.0749/719.545.8737,66,
+493,Whiteside,Grant,Colorado,USA,,Southwest,-105.694,39.482,303.275.5610/719.545.8737,5,2.3
+494,Wigwam,Sedalia,Colorado,USA,,Southwest,-105.266,39.242,,10,21.2
+495,Wildhorn,Divide,Colorado,USA,,Southwest,-105.253,39.055,,9,9.3
+496,Williams Creek,Pagosa Springs,Colorado,USA,,Southwest,-107.336,37.922,970.641.0471/970.874.6600,23,48.5
+497,Williams Creek - Pagosa Springs,Pagosa Springs,Colorado,USA,,Southwest,-107.224,37.495,970.264.2268/970.247.4874,67,19.5
+498,Williams Fork Reservoir - SWA,Parshall,Colorado,USA,,Southwest,-106.217,40.009,,24,4
+499,Willow Creek,Granby,Colorado,USA,,Southwest,-105.951,40.144,970.887.4100/970.295.6600,35,4
+500,Willows,Silverthorne,Colorado,USA,,Southwest,-106.309,39.889,970.468.5400/970.945.2521,35,21.9
+501,Wolcott,Dotsero,Colorado,USA,,Southwest,-106.676,39.7,,,20.5
+502,Wolf Creek,Pagosa Springs,Colorado,USA,,Southwest,-106.887,37.441,,26,13.6
+503,Woods Lake,Placerville,Colorado,USA,,Southwest,-108.055,37.885,970.327.4261/970.874.6600,41,9.1
+504,Wupperman,Lake City,Colorado,USA,,Southwest,-107.287,37.973,970.944.2319,,4.2
+505,Wye,Colorado Springs,Colorado,USA,,Southwest,-104.94,38.737,719.636.1602/719.545.8737,21,9.3
+506,Yeoman Park,Eagle,Colorado,USA,,Southwest,-106.678,39.502,970.328.6388/970.945.2521,24,13.3
+507,Yucca - Lathrop State Park,Walsenburg,Colorado,USA,,Southwest,-104.833,37.601,719.738.2376,21,3.3

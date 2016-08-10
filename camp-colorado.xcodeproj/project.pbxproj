@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B9CF842827414BDA1A077CAB /* Pods_camp_colorado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEE0D200283C709E0E8488C /* Pods_camp_colorado.framework */; };
+		F95A5F8C1D5B60640027D3FC /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A5F8B1D5B60640027D3FC /* csv.swift */; };
+		F95A5F8E1D5B631C0027D3FC /* campsites-colorado.csv in Resources */ = {isa = PBXBuildFile; fileRef = F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */; };
+		F9A376CA1D5A25560058225F /* Campsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A376C91D5A25560058225F /* Campsite.swift */; };
 		F9D5AC831D5A1825007E7005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5AC821D5A1825007E7005 /* AppDelegate.swift */; };
 		F9D5AC851D5A1825007E7005 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5AC841D5A1825007E7005 /* ViewController.swift */; };
 		F9D5AC881D5A1825007E7005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC861D5A1825007E7005 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 		2264B4780133B8187B232A6C /* Pods-camp-colorado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-colorado.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-colorado/Pods-camp-colorado.debug.xcconfig"; sourceTree = "<group>"; };
 		2CEE0D200283C709E0E8488C /* Pods_camp_colorado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_camp_colorado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9704D41BED8EB2A67C02C8 /* Pods-camp-colorado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-colorado.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-colorado/Pods-camp-colorado.release.xcconfig"; sourceTree = "<group>"; };
+		F95A5F8B1D5B60640027D3FC /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "campsites-colorado.csv"; sourceTree = "<group>"; };
+		F9A376C91D5A25560058225F /* Campsite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campsite.swift; sourceTree = "<group>"; };
 		F9D5AC7F1D5A1825007E7005 /* camp-colorado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "camp-colorado.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5AC821D5A1825007E7005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D5AC841D5A1825007E7005 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,9 +63,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F95A5F8A1D5B601B0027D3FC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F95A5F8B1D5B60640027D3FC /* csv.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		F9A376C61D5A249D0058225F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F9D5AC841D5A1825007E7005 /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -74,8 +89,17 @@
 		F9A376C81D5A24AE0058225F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F9A376C91D5A25560058225F /* Campsite.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F9A376CB1D5A27860058225F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		F9D5AC761D5A1824007E7005 = {
@@ -102,8 +126,9 @@
 				F9A376C81D5A24AE0058225F /* Model */,
 				F9A376C71D5A24AA0058225F /* View */,
 				F9A376C61D5A249D0058225F /* Controller */,
+				F9A376CB1D5A27860058225F /* Resources */,
+				F95A5F8A1D5B601B0027D3FC /* Util */,
 				F9D5AC821D5A1825007E7005 /* AppDelegate.swift */,
-				F9D5AC841D5A1825007E7005 /* ViewController.swift */,
 				F9D5AC861D5A1825007E7005 /* Main.storyboard */,
 				F9D5AC891D5A1825007E7005 /* Assets.xcassets */,
 				F9D5AC8B1D5A1825007E7005 /* LaunchScreen.storyboard */,
@@ -174,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D5AC8D1D5A1825007E7005 /* LaunchScreen.storyboard in Resources */,
+				F95A5F8E1D5B631C0027D3FC /* campsites-colorado.csv in Resources */,
 				F9D5AC8A1D5A1825007E7005 /* Assets.xcassets in Resources */,
 				F9D5AC881D5A1825007E7005 /* Main.storyboard in Resources */,
 			);
@@ -234,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95A5F8C1D5B60640027D3FC /* csv.swift in Sources */,
 				F9D5AC851D5A1825007E7005 /* ViewController.swift in Sources */,
+				F9A376CA1D5A25560058225F /* Campsite.swift in Sources */,
 				F9D5AC831D5A1825007E7005 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
