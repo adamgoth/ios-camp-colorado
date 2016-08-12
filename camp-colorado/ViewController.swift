@@ -25,7 +25,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         centerMapOnLocation(initialLocation)
         
         parseCampsitesCSV()
-        print(campsites)
+        createAnnotations()
     }
     
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -55,6 +55,19 @@ class ViewController: UIViewController, MKMapViewDelegate {
         } catch let err as NSError {
             print(err.debugDescription)
         }
+    }
+    
+    func createAnnotations() {
+        for campsite in campsites {
+            let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
+            let anno = MKPointAnnotation()
+            anno.coordinate = location.coordinate
+            map.addAnnotation(anno)
+        }
+    }
+    
+    func createLocationFromCoordinates(latitude: CLLocationDegrees, longitude: CLLocationDegrees) -> CLLocation {
+        return CLLocation(latitude: latitude, longitude: longitude)
     }
 
 }
