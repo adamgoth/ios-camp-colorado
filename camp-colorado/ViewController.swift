@@ -62,6 +62,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
             let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
             let anno = MKPointAnnotation()
             anno.coordinate = location.coordinate
+            anno.title = campsite.sitename
+            anno.subtitle = "Subtitle"
             map.addAnnotation(anno)
         }
     }
