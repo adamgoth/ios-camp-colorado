@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 import MapKit
 
 class Campsite {

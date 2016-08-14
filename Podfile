@@ -6,6 +6,5 @@ target 'camp-colorado' do
   use_frameworks!
 
   # Pods for camp-colorado
-  pod 'Alamofire', '~> 3.4'
 
 end
