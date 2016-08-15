@@ -16,6 +16,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let regionRadius: CLLocationDistance = 1000
     
     var campsites = [Campsite]()
+    var selectedAnnotation: CampsiteAnnotation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,34 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         print(map.region.center)
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let reuseId = "pin"
+        var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        
+        if view == nil {
+            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            view?.canShowCallout = true
+            view?.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+        } else {
+            view?.annotation = annotation
+        }
+        
+        return view
+    }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            selectedAnnotation = view.annotation as? CampsiteAnnotation
+            performSegueWithIdentifier("showCampsiteDetail", sender: self)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? CampsiteDetailViewController {
+            destination.annotation = selectedAnnotation
+        }
     }
 
     func centerMapOnLocation(location: CLLocation) {
@@ -60,7 +89,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     func createAnnotations() {
         for campsite in campsites {
             let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
-            let anno = MKPointAnnotation()
+            let anno = CampsiteAnnotation(sitename: campsite.sitename, campsiteId: campsite.campsiteId)
             anno.coordinate = location.coordinate
             anno.title = campsite.sitename
             anno.subtitle = "Subtitle"

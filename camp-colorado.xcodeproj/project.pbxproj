@@ -16,6 +16,8 @@
 		F9D5AC881D5A1825007E7005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC861D5A1825007E7005 /* Main.storyboard */; };
 		F9D5AC8A1D5A1825007E7005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC891D5A1825007E7005 /* Assets.xcassets */; };
 		F9D5AC8D1D5A1825007E7005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC8B1D5A1825007E7005 /* LaunchScreen.storyboard */; };
+		F9FD98CE1D62693D009786A0 /* CampsiteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FD98CD1D62693D009786A0 /* CampsiteDetailViewController.swift */; };
+		F9FD98D01D62735A009786A0 /* CampsiteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FD98CF1D62735A009786A0 /* CampsiteAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F9D5AC891D5A1825007E7005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9D5AC8C1D5A1825007E7005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9D5AC8E1D5A1825007E7005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9FD98CD1D62693D009786A0 /* CampsiteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampsiteDetailViewController.swift; sourceTree = "<group>"; };
+		F9FD98CF1D62735A009786A0 /* CampsiteAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampsiteAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				F9D5AC841D5A1825007E7005 /* ViewController.swift */,
+				F9FD98CD1D62693D009786A0 /* CampsiteDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F9A376C91D5A25560058225F /* Campsite.swift */,
+				F9FD98CF1D62735A009786A0 /* CampsiteAnnotation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -262,8 +268,10 @@
 			files = (
 				F95A5F8C1D5B60640027D3FC /* csv.swift in Sources */,
 				F9D5AC851D5A1825007E7005 /* ViewController.swift in Sources */,
+				F9FD98D01D62735A009786A0 /* CampsiteAnnotation.swift in Sources */,
 				F9A376CA1D5A25560058225F /* Campsite.swift in Sources */,
 				F9D5AC831D5A1825007E7005 /* AppDelegate.swift in Sources */,
+				F9FD98CE1D62693D009786A0 /* CampsiteDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
