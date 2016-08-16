@@ -6,5 +6,6 @@ target 'camp-colorado' do
   use_frameworks!
 
   # Pods for camp-colorado
+  pod 'Firebase'
 
 end

@@ -18,6 +18,7 @@
 		F9D5AC8D1D5A1825007E7005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC8B1D5A1825007E7005 /* LaunchScreen.storyboard */; };
 		F9FD98CE1D62693D009786A0 /* CampsiteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FD98CD1D62693D009786A0 /* CampsiteDetailViewController.swift */; };
 		F9FD98D01D62735A009786A0 /* CampsiteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FD98CF1D62735A009786A0 /* CampsiteAnnotation.swift */; };
+		F9FD98D21D62773F009786A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9FD98D11D62773F009786A0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F9D5AC8E1D5A1825007E7005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9FD98CD1D62693D009786A0 /* CampsiteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampsiteDetailViewController.swift; sourceTree = "<group>"; };
 		F9FD98CF1D62735A009786A0 /* CampsiteAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampsiteAnnotation.swift; sourceTree = "<group>"; };
+		F9FD98D11D62773F009786A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				F9D5AC891D5A1825007E7005 /* Assets.xcassets */,
 				F9D5AC8B1D5A1825007E7005 /* LaunchScreen.storyboard */,
 				F9D5AC8E1D5A1825007E7005 /* Info.plist */,
+				F9FD98D11D62773F009786A0 /* GoogleService-Info.plist */,
 			);
 			path = "camp-colorado";
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			files = (
 				F9D5AC8D1D5A1825007E7005 /* LaunchScreen.storyboard in Resources */,
 				F95A5F8E1D5B631C0027D3FC /* campsites-colorado.csv in Resources */,
+				F9FD98D21D62773F009786A0 /* GoogleService-Info.plist in Resources */,
 				F9D5AC8A1D5A1825007E7005 /* Assets.xcassets in Resources */,
 				F9D5AC881D5A1825007E7005 /* Main.storyboard in Resources */,
 			);
