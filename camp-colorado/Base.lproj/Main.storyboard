@@ -64,7 +64,7 @@
                                                             <constraint firstAttribute="width" constant="200" id="Og0-bZ-Kfh"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -73,6 +73,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnm-ib-Juk">
                                         <rect key="frame" x="118" y="105" width="47" height="30"/>
                                         <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInPressed" destination="2GG-9E-TZ5" eventType="touchUpInside" id="XnV-mb-lrP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -122,7 +125,7 @@
                                                             <constraint firstAttribute="width" constant="200" id="HRg-eB-8lg"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -150,6 +153,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9i-xk-Cir">
                                         <rect key="frame" x="91" y="140" width="107" height="30"/>
                                         <state key="normal" title="Create Account"/>
+                                        <connections>
+                                            <action selector="createAccountPressed" destination="2GG-9E-TZ5" eventType="touchUpInside" id="FTV-tE-tAa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -163,7 +169,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="MUU-5L-sZj"/>
+                        <outlet property="signInEmail" destination="50h-kW-q8g" id="04p-Hb-bkS"/>
+                        <outlet property="signInPassword" destination="ydq-Vt-19H" id="Ua0-ua-ZkQ"/>
+                        <outlet property="signUpEmail" destination="16n-Ud-wf5" id="ewv-o0-AAF"/>
+                        <outlet property="signUpPassword" destination="klk-WJ-4vk" id="f4I-CL-GMB"/>
+                        <outlet property="signUpUsername" destination="yRN-Oo-Is2" id="zIj-su-5va"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="login" id="MUU-5L-sZj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vbm-g5-BcS" userLabel="First Responder" sceneMemberID="firstResponder"/>

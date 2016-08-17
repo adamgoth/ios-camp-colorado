@@ -8,5 +8,6 @@ target 'camp-colorado' do
   # Pods for camp-colorado
   pod 'Firebase'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end

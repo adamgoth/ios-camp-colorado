@@ -17,9 +17,11 @@
 		F9D5AC881D5A1825007E7005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC861D5A1825007E7005 /* Main.storyboard */; };
 		F9D5AC8A1D5A1825007E7005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC891D5A1825007E7005 /* Assets.xcassets */; };
 		F9D5AC8D1D5A1825007E7005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC8B1D5A1825007E7005 /* LaunchScreen.storyboard */; };
+		F9E3DA711D648B9B005B7E8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E3DA701D648B9B005B7E8C /* Constants.swift */; };
+		F9E3DA741D648D34005B7E8C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E3DA731D648D34005B7E8C /* DataService.swift */; };
+		F9E3DA761D6491B0005B7E8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9E3DA751D6491B0005B7E8C /* GoogleService-Info.plist */; };
 		F9FD98CE1D62693D009786A0 /* CampsiteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FD98CD1D62693D009786A0 /* CampsiteDetailViewController.swift */; };
 		F9FD98D01D62735A009786A0 /* CampsiteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FD98CF1D62735A009786A0 /* CampsiteAnnotation.swift */; };
-		F9FD98D21D62773F009786A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9FD98D11D62773F009786A0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +39,11 @@
 		F9D5AC891D5A1825007E7005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9D5AC8C1D5A1825007E7005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9D5AC8E1D5A1825007E7005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E3DA701D648B9B005B7E8C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F9E3DA731D648D34005B7E8C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F9E3DA751D6491B0005B7E8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F9FD98CD1D62693D009786A0 /* CampsiteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampsiteDetailViewController.swift; sourceTree = "<group>"; };
 		F9FD98CF1D62735A009786A0 /* CampsiteAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampsiteAnnotation.swift; sourceTree = "<group>"; };
-		F9FD98D11D62773F009786A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +86,9 @@
 		F9A376C61D5A249D0058225F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F9513B881D6345EA00BFDB8B /* LoginViewController.swift */,
 				F9D5AC841D5A1825007E7005 /* ViewController.swift */,
 				F9FD98CD1D62693D009786A0 /* CampsiteDetailViewController.swift */,
-				F9513B881D6345EA00BFDB8B /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -134,6 +138,8 @@
 		F9D5AC811D5A1825007E7005 /* camp-colorado */ = {
 			isa = PBXGroup;
 			children = (
+				F9E3DA721D648D16005B7E8C /* Services */,
+				F9E3DA6F1D648B73005B7E8C /* Util */,
 				F9A376C81D5A24AE0058225F /* Model */,
 				F9A376C71D5A24AA0058225F /* View */,
 				F9A376C61D5A249D0058225F /* Controller */,
@@ -144,9 +150,25 @@
 				F9D5AC891D5A1825007E7005 /* Assets.xcassets */,
 				F9D5AC8B1D5A1825007E7005 /* LaunchScreen.storyboard */,
 				F9D5AC8E1D5A1825007E7005 /* Info.plist */,
-				F9FD98D11D62773F009786A0 /* GoogleService-Info.plist */,
+				F9E3DA751D6491B0005B7E8C /* GoogleService-Info.plist */,
 			);
 			path = "camp-colorado";
+			sourceTree = "<group>";
+		};
+		F9E3DA6F1D648B73005B7E8C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F9E3DA701D648B9B005B7E8C /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		F9E3DA721D648D16005B7E8C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F9E3DA731D648D34005B7E8C /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +234,7 @@
 			files = (
 				F9D5AC8D1D5A1825007E7005 /* LaunchScreen.storyboard in Resources */,
 				F95A5F8E1D5B631C0027D3FC /* campsites-colorado.csv in Resources */,
-				F9FD98D21D62773F009786A0 /* GoogleService-Info.plist in Resources */,
+				F9E3DA761D6491B0005B7E8C /* GoogleService-Info.plist in Resources */,
 				F9D5AC8A1D5A1825007E7005 /* Assets.xcassets in Resources */,
 				F9D5AC881D5A1825007E7005 /* Main.storyboard in Resources */,
 			);
@@ -273,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E3DA741D648D34005B7E8C /* DataService.swift in Sources */,
 				F9513B891D6345EA00BFDB8B /* LoginViewController.swift in Sources */,
 				F95A5F8C1D5B60640027D3FC /* csv.swift in Sources */,
 				F9D5AC851D5A1825007E7005 /* ViewController.swift in Sources */,
@@ -280,6 +303,7 @@
 				F9A376CA1D5A25560058225F /* Campsite.swift in Sources */,
 				F9D5AC831D5A1825007E7005 /* AppDelegate.swift in Sources */,
 				F9FD98CE1D62693D009786A0 /* CampsiteDetailViewController.swift in Sources */,
+				F9E3DA711D648B9B005B7E8C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
