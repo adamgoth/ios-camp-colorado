@@ -13,7 +13,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var map: MKMapView!
     
+    let locationManager = CLLocationManager()
+    
     let regionRadius: CLLocationDistance = 1000
+    let initialLocation = CLLocation(latitude: 39.12921, longitude: -105.693681)
     
     var campsites = [Campsite]()
     var selectedAnnotation: CampsiteAnnotation!
@@ -22,11 +25,28 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         map.delegate = self
-        let initialLocation = CLLocation(latitude: 39.12921, longitude: -105.693681)
         centerMapOnLocation(initialLocation)
         
         parseCampsitesCSV()
         createAnnotations()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        locationAuthStatus()
+    }
+    
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+            map.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        if let loc = userLocation.location {
+            print(loc)
+        }
     }
     
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -34,6 +54,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
         let reuseId = "pin"
         var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
         
