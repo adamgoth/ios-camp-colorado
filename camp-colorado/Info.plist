@@ -45,5 +45,12 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location needed to check for nearby campsites</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSans-Bold.ttf</string>
+		<string>NotoSans-BoldItalic.ttf</string>
+		<string>NotoSans-Italic.ttf</string>
+		<string>NotoSans-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

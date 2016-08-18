@@ -12,6 +12,10 @@
 		F95A5F8C1D5B60640027D3FC /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A5F8B1D5B60640027D3FC /* csv.swift */; };
 		F95A5F8E1D5B631C0027D3FC /* campsites-colorado.csv in Resources */ = {isa = PBXBuildFile; fileRef = F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */; };
 		F9A376CA1D5A25560058225F /* Campsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A376C91D5A25560058225F /* Campsite.swift */; };
+		F9BCB5D01D65E4AF004C2AA5 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BCB5CC1D65E4AF004C2AA5 /* NotoSans-Bold.ttf */; };
+		F9BCB5D11D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BCB5CD1D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf */; };
+		F9BCB5D21D65E4AF004C2AA5 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BCB5CE1D65E4AF004C2AA5 /* NotoSans-Italic.ttf */; };
+		F9BCB5D31D65E4AF004C2AA5 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BCB5CF1D65E4AF004C2AA5 /* NotoSans-Regular.ttf */; };
 		F9D5AC831D5A1825007E7005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5AC821D5A1825007E7005 /* AppDelegate.swift */; };
 		F9D5AC851D5A1825007E7005 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5AC841D5A1825007E7005 /* ViewController.swift */; };
 		F9D5AC881D5A1825007E7005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC861D5A1825007E7005 /* Main.storyboard */; };
@@ -32,6 +36,10 @@
 		F95A5F8B1D5B60640027D3FC /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "campsites-colorado.csv"; sourceTree = "<group>"; };
 		F9A376C91D5A25560058225F /* Campsite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campsite.swift; sourceTree = "<group>"; };
+		F9BCB5CC1D65E4AF004C2AA5 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		F9BCB5CD1D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F9BCB5CE1D65E4AF004C2AA5 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		F9BCB5CF1D65E4AF004C2AA5 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		F9D5AC7F1D5A1825007E7005 /* camp-colorado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "camp-colorado.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5AC821D5A1825007E7005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D5AC841D5A1825007E7005 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +125,17 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		F9BCB5CB1D65E49A004C2AA5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9BCB5CC1D65E4AF004C2AA5 /* NotoSans-Bold.ttf */,
+				F9BCB5CD1D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf */,
+				F9BCB5CE1D65E4AF004C2AA5 /* NotoSans-Italic.ttf */,
+				F9BCB5CF1D65E4AF004C2AA5 /* NotoSans-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		F9D5AC761D5A1824007E7005 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +157,7 @@
 		F9D5AC811D5A1825007E7005 /* camp-colorado */ = {
 			isa = PBXGroup;
 			children = (
+				F9BCB5CB1D65E49A004C2AA5 /* Resources */,
 				F9E3DA721D648D16005B7E8C /* Services */,
 				F9E3DA6F1D648B73005B7E8C /* Util */,
 				F9A376C81D5A24AE0058225F /* Model */,
@@ -233,11 +253,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BCB5D31D65E4AF004C2AA5 /* NotoSans-Regular.ttf in Resources */,
+				F9BCB5D01D65E4AF004C2AA5 /* NotoSans-Bold.ttf in Resources */,
 				F9D5AC8D1D5A1825007E7005 /* LaunchScreen.storyboard in Resources */,
 				F95A5F8E1D5B631C0027D3FC /* campsites-colorado.csv in Resources */,
+				F9BCB5D11D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf in Resources */,
 				F9E3DA761D6491B0005B7E8C /* GoogleService-Info.plist in Resources */,
 				F9D5AC8A1D5A1825007E7005 /* Assets.xcassets in Resources */,
 				F9D5AC881D5A1825007E7005 /* Main.storyboard in Resources */,
+				F9BCB5D21D65E4AF004C2AA5 /* NotoSans-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
