@@ -11,30 +11,31 @@ import MapKit
 
 class CampsiteDetailViewController: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var sitenameLbl: UILabel!
+    @IBOutlet weak var distanceToTownLbl: UILabel!
+    @IBOutlet weak var nearestTownLbl: UILabel!
+    @IBOutlet weak var stateLbl: UILabel!
+    @IBOutlet weak var countryLbl: UILabel!
+    @IBOutlet weak var numberOfSitesLbl: UILabel!
+    @IBOutlet weak var phoneLbl: UILabel!
+    @IBOutlet weak var websiteLbl: UILabel!
     
     var annotation: CampsiteAnnotation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        label.text = annotation.sitename
+        sitenameLbl.text = annotation.sitename
+        distanceToTownLbl.text = annotation.distanceToNearestTown
+        nearestTownLbl.text = annotation.nearestTown
+        stateLbl.text = annotation.state
+        countryLbl.text = annotation.country
+        numberOfSitesLbl.text = annotation.numberOfSites
+        phoneLbl.text = annotation.phone
+        websiteLbl.text = annotation.website
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func backButtonPressed() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

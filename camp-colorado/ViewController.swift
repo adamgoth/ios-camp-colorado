@@ -103,7 +103,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 let sitename = row["sitename"]!
                 let latitude = CLLocationDegrees(row["latitude"]!)!
                 let longitude = CLLocationDegrees(row["longitude"]!)!
-                let campsite = Campsite(campsiteId: campsiteId, sitename: sitename, latitude: latitude, longitude: longitude)
+                let state = row["state"]!
+                let country = row["country"]!
+                let nearestTown = row["nearesttown"]!
+                let distanceToNearestTown = row["distancefromtown"]!
+                let numberOfSites = row["numberofsites"]!
+                let phone = row["phone"]!
+                let website = row["website"]!
+                let campsite = Campsite(campsiteId: campsiteId, sitename: sitename, latitude: latitude, longitude: longitude, state: state, country: country, nearestTown: nearestTown, distanceToNearestTown: distanceToNearestTown, numberOfSites: numberOfSites, phone: phone, website: website)
                 campsites.append(campsite)
             }
         } catch let err as NSError {
@@ -114,7 +121,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     func createAnnotations() {
         for campsite in campsites {
             let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
-            let anno = CampsiteAnnotation(sitename: campsite.sitename, campsiteId: campsite.campsiteId)
+            let anno = CampsiteAnnotation(sitename: campsite.sitename, campsiteId: campsite.campsiteId, latitude: campsite.latitude, longitude: campsite.longitude, state: campsite.state, country: campsite.country, nearestTown: campsite.nearestTown, distanceToNearestTown: campsite.distanceToNearestTown, numberOfSites: campsite.numberOfSites, phone: campsite.phone, website: campsite.website)
             anno.coordinate = location.coordinate
             anno.title = campsite.sitename
             anno.subtitle = "Subtitle"
