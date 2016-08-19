@@ -18,8 +18,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let regionRadius: CLLocationDistance = 1000
     let initialLocation = CLLocation(latitude: 39.12921, longitude: -105.693681)
     
+    
     var campsites = [Campsite]()
     var selectedAnnotation: CampsiteAnnotation!
+    var distanceFromUser: CLLocationDistance = 0.0
+    var userCurrentLocation: CLLocation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +31,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
         centerMapOnLocation(initialLocation)
         
         parseCampsitesCSV()
-        createAnnotations()
     }
     
     override func viewDidAppear(animated: Bool) {
         locationAuthStatus()
+        createAnnotations()
     }
     
     func locationAuthStatus() {
@@ -45,6 +48,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         if let loc = userLocation.location {
+            userCurrentLocation = loc
             print(loc)
         }
     }
@@ -122,15 +126,28 @@ class ViewController: UIViewController, MKMapViewDelegate {
         for campsite in campsites {
             let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
             let anno = CampsiteAnnotation(sitename: campsite.sitename, campsiteId: campsite.campsiteId, latitude: campsite.latitude, longitude: campsite.longitude, state: campsite.state, country: campsite.country, nearestTown: campsite.nearestTown, distanceToNearestTown: campsite.distanceToNearestTown, numberOfSites: campsite.numberOfSites, phone: campsite.phone, website: campsite.website)
+            print(userCurrentLocation)
+            if let userLocation = userCurrentLocation {
+                let distance = getDistanceFromUser(userLocation, locationB: location)
+                anno.subtitle = "\(distance) miles away"
+            } else {
+                
+                anno.subtitle = "Distance from user unknown"
+            }
             anno.coordinate = location.coordinate
             anno.title = campsite.sitename
-            anno.subtitle = "Subtitle"
             map.addAnnotation(anno)
         }
     }
     
     func createLocationFromCoordinates(latitude: CLLocationDegrees, longitude: CLLocationDegrees) -> CLLocation {
         return CLLocation(latitude: latitude, longitude: longitude)
+    }
+    
+    func getDistanceFromUser(locationA: CLLocation, locationB: CLLocation) -> Int {
+        let distanceInMeters = locationA.distanceFromLocation(locationB)
+        let distanceInMiles = distanceInMeters * 0.000621371
+        return Int(round(distanceInMiles))
     }
 
 }
