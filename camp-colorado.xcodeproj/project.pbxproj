@@ -18,6 +18,7 @@
 		F9BCB5D11D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BCB5CD1D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf */; };
 		F9BCB5D21D65E4AF004C2AA5 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BCB5CE1D65E4AF004C2AA5 /* NotoSans-Italic.ttf */; };
 		F9BCB5D31D65E4AF004C2AA5 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BCB5CF1D65E4AF004C2AA5 /* NotoSans-Regular.ttf */; };
+		F9C583E01D6A0CC8004DA9D9 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C583DF1D6A0CC8004DA9D9 /* CustomView.swift */; };
 		F9D5AC831D5A1825007E7005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5AC821D5A1825007E7005 /* AppDelegate.swift */; };
 		F9D5AC851D5A1825007E7005 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5AC841D5A1825007E7005 /* ViewController.swift */; };
 		F9D5AC881D5A1825007E7005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5AC861D5A1825007E7005 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		F9BCB5CD1D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F9BCB5CE1D65E4AF004C2AA5 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		F9BCB5CF1D65E4AF004C2AA5 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		F9C583DF1D6A0CC8004DA9D9 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		F9D5AC7F1D5A1825007E7005 /* camp-colorado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "camp-colorado.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5AC821D5A1825007E7005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D5AC841D5A1825007E7005 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F94E95D21D6746EA00B52D46 /* ReviewCell.swift */,
+				F9C583DF1D6A0CC8004DA9D9 /* CustomView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				F94E95D51D676F7A00B52D46 /* Review.swift in Sources */,
 				F9A376CA1D5A25560058225F /* Campsite.swift in Sources */,
 				F9D5AC831D5A1825007E7005 /* AppDelegate.swift in Sources */,
+				F9C583E01D6A0CC8004DA9D9 /* CustomView.swift in Sources */,
 				F9FD98CE1D62693D009786A0 /* CampsiteDetailViewController.swift in Sources */,
 				F9E3DA711D648B9B005B7E8C /* Constants.swift in Sources */,
 			);
