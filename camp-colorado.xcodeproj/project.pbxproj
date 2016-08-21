@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B9CF842827414BDA1A077CAB /* Pods_camp_colorado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEE0D200283C709E0E8488C /* Pods_camp_colorado.framework */; };
+		F94E95D31D6746EA00B52D46 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E95D21D6746EA00B52D46 /* ReviewCell.swift */; };
+		F94E95D51D676F7A00B52D46 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E95D41D676F7A00B52D46 /* Review.swift */; };
 		F9513B891D6345EA00BFDB8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9513B881D6345EA00BFDB8B /* LoginViewController.swift */; };
 		F95A5F8C1D5B60640027D3FC /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A5F8B1D5B60640027D3FC /* csv.swift */; };
 		F95A5F8E1D5B631C0027D3FC /* campsites-colorado.csv in Resources */ = {isa = PBXBuildFile; fileRef = F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */; };
@@ -32,6 +34,8 @@
 		2264B4780133B8187B232A6C /* Pods-camp-colorado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-colorado.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-colorado/Pods-camp-colorado.debug.xcconfig"; sourceTree = "<group>"; };
 		2CEE0D200283C709E0E8488C /* Pods_camp_colorado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_camp_colorado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9704D41BED8EB2A67C02C8 /* Pods-camp-colorado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-colorado.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-colorado/Pods-camp-colorado.release.xcconfig"; sourceTree = "<group>"; };
+		F94E95D21D6746EA00B52D46 /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		F94E95D41D676F7A00B52D46 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		F9513B881D6345EA00BFDB8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F95A5F8B1D5B60640027D3FC /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "campsites-colorado.csv"; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		F9A376C71D5A24AA0058225F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F94E95D21D6746EA00B52D46 /* ReviewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				F9A376C91D5A25560058225F /* Campsite.swift */,
 				F9FD98CF1D62735A009786A0 /* CampsiteAnnotation.swift */,
+				F94E95D41D676F7A00B52D46 /* Review.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -321,10 +327,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E3DA741D648D34005B7E8C /* DataService.swift in Sources */,
+				F94E95D31D6746EA00B52D46 /* ReviewCell.swift in Sources */,
 				F9513B891D6345EA00BFDB8B /* LoginViewController.swift in Sources */,
 				F95A5F8C1D5B60640027D3FC /* csv.swift in Sources */,
 				F9D5AC851D5A1825007E7005 /* ViewController.swift in Sources */,
 				F9FD98D01D62735A009786A0 /* CampsiteAnnotation.swift in Sources */,
+				F94E95D51D676F7A00B52D46 /* Review.swift in Sources */,
 				F9A376CA1D5A25560058225F /* Campsite.swift in Sources */,
 				F9D5AC831D5A1825007E7005 /* AppDelegate.swift in Sources */,
 				F9FD98CE1D62693D009786A0 /* CampsiteDetailViewController.swift in Sources */,
