@@ -33,7 +33,6 @@
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
-            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -277,7 +276,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47N-ng-2Qp">
-                                        <rect key="frame" x="8" y="13.5" width="46" height="33"/>
+                                        <rect key="frame" x="8" y="13" width="46" height="33"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                         <state key="normal" title="&lt; Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -302,8 +301,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sOd-wG-Nd4">
-                                <rect key="frame" x="20" y="68" width="560" height="121"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sOd-wG-Nd4">
+                                <rect key="frame" x="0.0" y="60" width="600" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="Bef-81-m0H"/>
                                     <constraint firstAttribute="height" constant="130" id="QTv-FM-t9i"/>
@@ -314,67 +313,54 @@
                                     </mask>
                                 </variation>
                             </mapView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="9Mh-1g-DCF">
-                                <rect key="frame" x="20" y="199" width="60" height="54"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KYX-8X-lZM">
+                                <rect key="frame" x="28" y="198" width="544" height="58"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sitename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tC-ZD-Azy">
-                                        <rect key="frame" x="38" y="0.0" width="23" height="7"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Located 5 miles from Somewhere, Colorado, USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-rN-WQQ">
+                                        <rect key="frame" x="135" y="0.0" width="276" height="12"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Distance to nearest town " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-rN-WQQ">
-                                        <rect key="frame" x="0.0" y="7" width="60" height="7"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coordinates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-76-EoP">
+                                        <rect key="frame" x="238" y="17" width="69" height="12"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Nearest town" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iq8-cF-suo">
-                                        <rect key="frame" x="28" y="14" width="32" height="7"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number of sites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iV-MU-LDa">
+                                        <rect key="frame" x="227" y="34" width="91" height="12"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-90-ZRb">
-                                        <rect key="frame" x="47" y="21" width="14" height="6"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="5"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Le-uO-SBW">
-                                        <rect key="frame" x="40" y="27" width="21" height="6"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="5"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Number of sites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iV-MU-LDa">
-                                        <rect key="frame" x="22" y="33" width="38" height="7"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="5"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxB-lB-O2n">
-                                        <rect key="frame" x="45" y="40" width="16" height="7"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="5"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oh3-Mf-MHN">
-                                        <rect key="frame" x="41" y="47" width="19" height="7"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="5"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VLI-L6-QtU">
+                                        <rect key="frame" x="226" y="51" width="92" height="8"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxB-lB-O2n">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="8"/>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oh3-Mf-MHN">
+                                                <rect key="frame" x="47" y="0.0" width="46" height="8"/>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRz-dD-4hY">
-                                <rect key="frame" x="0.0" y="261" width="600" height="81"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRz-dD-4hY">
+                                <rect key="frame" x="20" y="269" width="560" height="81"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U7H-wP-y5u">
-                                        <rect key="frame" x="8" y="8" width="584" height="65"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U7H-wP-y5u">
+                                        <rect key="frame" x="8" y="8" width="544" height="70"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Camped here? Leave a review!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p0v-iy-CLc">
-                                                <rect key="frame" x="0.0" y="0.0" width="584" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="544" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Nvk-Ls-HJj"/>
                                                 </constraints>
@@ -382,7 +368,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hUo-d1-d1l">
-                                                <rect key="frame" x="0.0" y="35" width="584" height="30"/>
+                                                <rect key="frame" x="0.0" y="40" width="544" height="30"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="KLQ-fn-iJs">
                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
@@ -429,14 +415,14 @@
                                                         </constraints>
                                                     </stackView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="4Rw-IF-Ipq">
-                                                        <rect key="frame" x="113" y="0.0" width="346" height="30"/>
+                                                        <rect key="frame" x="113" y="0.0" width="306" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="PcW-gR-Xng"/>
                                                             <constraint firstAttribute="height" constant="30" id="e1I-Ey-7QT"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvt-Sw-CS3">
-                                                        <rect key="frame" x="484" y="0.0" width="100" height="30"/>
+                                                        <rect key="frame" x="444" y="0.0" width="100" height="30"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="100" id="zO0-S6-1W6"/>
@@ -460,7 +446,6 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="U7H-wP-y5u" firstAttribute="leading" secondItem="vRz-dD-4hY" secondAttribute="leading" constant="8" id="1nC-NH-TB8"/>
                                     <constraint firstAttribute="trailing" secondItem="U7H-wP-y5u" secondAttribute="trailing" constant="8" id="qeY-OE-HNv"/>
@@ -596,7 +581,6 @@
                                                             <rect key="frame" x="8" y="132.5" width="552" height="98.5"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="Qld-0h-l3z" firstAttribute="leading" secondItem="2Ew-th-B7i" secondAttribute="leading" constant="8" id="0Ou-dW-aVu"/>
                                                         <constraint firstItem="zAw-jN-GGT" firstAttribute="leading" secondItem="Tap-6x-dkd" secondAttribute="trailing" constant="2" id="1iP-aT-zja"/>
@@ -656,7 +640,6 @@
                                                     </variation>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.033039583574128811" green="0.35403714005235598" blue="0.0053548412311462392" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="2Ew-th-B7i" firstAttribute="leading" secondItem="wHT-fZ-hhd" secondAttribute="leadingMargin" constant="8" id="T65-RQ-Dzf"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2Ew-th-B7i" secondAttribute="trailing" constant="8" id="WFV-vG-ACX"/>
@@ -683,47 +666,46 @@
                         <constraints>
                             <constraint firstItem="qeN-4Z-dsl" firstAttribute="leading" secondItem="Xib-CO-3Wu" secondAttribute="leading" id="5hr-IX-9TK"/>
                             <constraint firstItem="sOd-wG-Nd4" firstAttribute="top" secondItem="prz-B6-7de" secondAttribute="bottom" id="7D8-x3-CYh"/>
+                            <constraint firstItem="sOd-wG-Nd4" firstAttribute="top" secondItem="mpt-hU-W5H" secondAttribute="bottom" id="CSO-Ge-UbT"/>
                             <constraint firstAttribute="trailing" secondItem="mpt-hU-W5H" secondAttribute="trailing" id="E0H-V1-ahX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KYX-8X-lZM" secondAttribute="trailing" constant="8" id="EWy-F9-Mbk"/>
                             <constraint firstItem="sOd-wG-Nd4" firstAttribute="leading" secondItem="Xib-CO-3Wu" secondAttribute="leadingMargin" id="Gdn-CU-KED"/>
-                            <constraint firstItem="sOd-wG-Nd4" firstAttribute="top" secondItem="mpt-hU-W5H" secondAttribute="bottom" constant="8" id="JX1-L0-lUH"/>
-                            <constraint firstItem="vRz-dD-4hY" firstAttribute="leading" secondItem="Xib-CO-3Wu" secondAttribute="leading" id="LUW-ID-0wz"/>
-                            <constraint firstItem="9Mh-1g-DCF" firstAttribute="top" secondItem="prz-B6-7de" secondAttribute="bottom" constant="10" id="PrJ-8G-qsH"/>
+                            <constraint firstItem="vRz-dD-4hY" firstAttribute="top" secondItem="KYX-8X-lZM" secondAttribute="bottom" constant="8" id="HSw-Gt-dD8"/>
+                            <constraint firstItem="sOd-wG-Nd4" firstAttribute="top" secondItem="mpt-hU-W5H" secondAttribute="bottom" id="JX1-L0-lUH"/>
+                            <constraint firstItem="vRz-dD-4hY" firstAttribute="leading" secondItem="Xib-CO-3Wu" secondAttribute="leading" constant="20" id="LUW-ID-0wz"/>
                             <constraint firstAttribute="trailing" secondItem="sOd-wG-Nd4" secondAttribute="trailing" id="S2F-Ax-PYQ"/>
                             <constraint firstItem="mpt-hU-W5H" firstAttribute="leading" secondItem="Xib-CO-3Wu" secondAttribute="leading" id="Swe-Hx-5fI"/>
-                            <constraint firstAttribute="trailing" secondItem="vRz-dD-4hY" secondAttribute="trailing" id="U9L-v9-V4R"/>
+                            <constraint firstItem="KYX-8X-lZM" firstAttribute="leading" secondItem="Xib-CO-3Wu" secondAttribute="leadingMargin" constant="8" id="Sww-E9-tiR"/>
+                            <constraint firstAttribute="trailing" secondItem="vRz-dD-4hY" secondAttribute="trailing" constant="20" id="U9L-v9-V4R"/>
                             <constraint firstItem="sOd-wG-Nd4" firstAttribute="leading" secondItem="Xib-CO-3Wu" secondAttribute="leading" id="WuP-re-Ei3"/>
-                            <constraint firstItem="9Mh-1g-DCF" firstAttribute="top" secondItem="sOd-wG-Nd4" secondAttribute="bottom" constant="10" id="Z2O-Qc-80X"/>
-                            <constraint firstItem="9Mh-1g-DCF" firstAttribute="centerX" secondItem="Xib-CO-3Wu" secondAttribute="centerX" id="a2N-fJ-WaT"/>
+                            <constraint firstAttribute="trailing" secondItem="sOd-wG-Nd4" secondAttribute="trailing" id="YiN-vy-mXu"/>
+                            <constraint firstItem="KYX-8X-lZM" firstAttribute="top" secondItem="sOd-wG-Nd4" secondAttribute="bottom" constant="8" id="cNX-3C-gFn"/>
                             <constraint firstItem="mpt-hU-W5H" firstAttribute="top" secondItem="Xib-CO-3Wu" secondAttribute="top" id="cWp-gg-kOn"/>
                             <constraint firstItem="sOd-wG-Nd4" firstAttribute="trailing" secondItem="Xib-CO-3Wu" secondAttribute="trailingMargin" id="eFJ-BC-Szs"/>
-                            <constraint firstItem="9Mh-1g-DCF" firstAttribute="centerX" secondItem="Xib-CO-3Wu" secondAttribute="centerX" id="fS6-xr-l2O"/>
                             <constraint firstItem="vpd-5T-iHf" firstAttribute="top" secondItem="qeN-4Z-dsl" secondAttribute="bottom" id="jwd-oZ-B4b"/>
+                            <constraint firstItem="sOd-wG-Nd4" firstAttribute="leading" secondItem="Xib-CO-3Wu" secondAttribute="leading" id="lPb-7L-zU9"/>
                             <constraint firstAttribute="trailing" secondItem="qeN-4Z-dsl" secondAttribute="trailing" id="nfK-76-p93"/>
-                            <constraint firstItem="qeN-4Z-dsl" firstAttribute="top" secondItem="vRz-dD-4hY" secondAttribute="bottom" constant="8" id="qQH-AH-SMd"/>
-                            <constraint firstItem="9Mh-1g-DCF" firstAttribute="centerY" secondItem="Xib-CO-3Wu" secondAttribute="centerY" id="tM1-O9-xdO"/>
-                            <constraint firstItem="9Mh-1g-DCF" firstAttribute="top" secondItem="sOd-wG-Nd4" secondAttribute="bottom" constant="10" id="wrA-Lz-oKq"/>
+                            <constraint firstItem="qeN-4Z-dsl" firstAttribute="top" secondItem="vRz-dD-4hY" secondAttribute="bottom" id="qQH-AH-SMd"/>
+                            <constraint firstItem="KYX-8X-lZM" firstAttribute="top" secondItem="sOd-wG-Nd4" secondAttribute="bottom" constant="8" id="zev-vN-ibq"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="7D8-x3-CYh"/>
+                                <exclude reference="Gdn-CU-KED"/>
+                                <exclude reference="JX1-L0-lUH"/>
                                 <exclude reference="S2F-Ax-PYQ"/>
                                 <exclude reference="WuP-re-Ei3"/>
-                                <exclude reference="PrJ-8G-qsH"/>
-                                <exclude reference="Z2O-Qc-80X"/>
-                                <exclude reference="a2N-fJ-WaT"/>
-                                <exclude reference="fS6-xr-l2O"/>
-                                <exclude reference="tM1-O9-xdO"/>
+                                <exclude reference="eFJ-BC-Szs"/>
+                                <exclude reference="cNX-3C-gFn"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="countryLbl" destination="4Le-uO-SBW" id="zWS-Uh-Ojt"/>
-                        <outlet property="distanceToTownLbl" destination="4fm-rN-WQQ" id="jfl-vT-q7j"/>
-                        <outlet property="nearestTownLbl" destination="Iq8-cF-suo" id="R4V-vK-eoZ"/>
+                        <outlet property="coordinatesLbl" destination="fAs-76-EoP" id="vKC-AH-9vP"/>
+                        <outlet property="locationLbl" destination="4fm-rN-WQQ" id="hlP-BU-ht6"/>
                         <outlet property="numberOfSitesLbl" destination="1iV-MU-LDa" id="cSR-RP-8HL"/>
                         <outlet property="phoneLbl" destination="QxB-lB-O2n" id="74e-jm-Ukj"/>
-                        <outlet property="sitenameLbl" destination="8tC-ZD-Azy" id="9Xl-WR-O4F"/>
-                        <outlet property="stateLbl" destination="BiE-90-ZRb" id="FLh-TH-Hpy"/>
+                        <outlet property="sitenameLbl" destination="mu7-2k-ybJ" id="rY7-6i-dkb"/>
                         <outlet property="tableView" destination="qeN-4Z-dsl" id="uaA-9i-aMl"/>
                         <outlet property="websiteLbl" destination="Oh3-Mf-MHN" id="T9b-LY-dfw"/>
                     </connections>
