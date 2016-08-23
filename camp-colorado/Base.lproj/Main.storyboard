@@ -235,20 +235,21 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="gVh-KL-Hbn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yu6-wT-AbV">
                                         <rect key="frame" x="569" y="20" width="23" height="23"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="23" id="9GG-FV-5Ct"/>
-                                            <constraint firstAttribute="width" constant="23" id="I4r-jb-nDL"/>
+                                            <constraint firstAttribute="height" constant="23" id="ftV-nc-sdz"/>
+                                            <constraint firstAttribute="width" constant="23" id="qe1-Zg-N7l"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" title="Button" image="account"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.033039583570000003" green="0.35403714009999998" blue="0.0053548412310000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="gVh-KL-Hbn" secondAttribute="trailing" constant="8" id="3Db-l1-60A"/>
                                     <constraint firstItem="4Zu-Ev-zbX" firstAttribute="centerY" secondItem="tz2-dZ-9k6" secondAttribute="centerY" id="5sb-qN-bwq"/>
-                                    <constraint firstItem="gVh-KL-Hbn" firstAttribute="top" secondItem="tz2-dZ-9k6" secondAttribute="top" constant="20" id="C7m-4w-Z1W"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yu6-wT-AbV" secondAttribute="trailing" constant="8" id="KVe-9T-Nah"/>
                                     <constraint firstAttribute="height" constant="60" id="fGm-eR-biy"/>
+                                    <constraint firstItem="Yu6-wT-AbV" firstAttribute="top" secondItem="tz2-dZ-9k6" secondAttribute="top" constant="20" id="lFn-dr-Cbb"/>
                                     <constraint firstItem="4Zu-Ev-zbX" firstAttribute="centerX" secondItem="tz2-dZ-9k6" secondAttribute="centerX" id="wAB-BL-jeu"/>
                                 </constraints>
                             </view>
@@ -327,23 +328,24 @@
                                             <action selector="backButtonPressed" destination="bQT-hX-wyp" eventType="touchUpInside" id="ych-zF-F50"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="91R-Mo-EBl">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmV-f0-2oQ">
                                         <rect key="frame" x="569" y="20" width="23" height="23"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="23" id="JL7-JT-eqC"/>
-                                            <constraint firstAttribute="width" constant="23" id="Vz7-v1-1z9"/>
+                                            <constraint firstAttribute="height" constant="23" id="6ET-vh-oIi"/>
+                                            <constraint firstAttribute="width" constant="23" id="MZA-Zo-o13"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" title="Button" image="account"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.033039583570000003" green="0.35403714009999998" blue="0.0053548412310000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2KC-aC-gny"/>
+                                    <constraint firstItem="tmV-f0-2oQ" firstAttribute="top" secondItem="mpt-hU-W5H" secondAttribute="top" constant="20" id="4Fd-L3-QPN"/>
                                     <constraint firstItem="mu7-2k-ybJ" firstAttribute="centerX" secondItem="mpt-hU-W5H" secondAttribute="centerX" id="5ws-zI-NTG"/>
                                     <constraint firstItem="47N-ng-2Qp" firstAttribute="centerY" secondItem="mpt-hU-W5H" secondAttribute="centerY" id="BdS-VV-XQe"/>
-                                    <constraint firstItem="91R-Mo-EBl" firstAttribute="top" secondItem="mpt-hU-W5H" secondAttribute="top" constant="20" id="C0A-JH-0fM"/>
+                                    <constraint firstAttribute="trailing" secondItem="tmV-f0-2oQ" secondAttribute="trailing" constant="8" id="aiJ-78-mQN"/>
                                     <constraint firstItem="47N-ng-2Qp" firstAttribute="top" secondItem="mpt-hU-W5H" secondAttribute="top" constant="8" id="bhz-9h-hWC"/>
                                     <constraint firstItem="mu7-2k-ybJ" firstAttribute="centerY" secondItem="mpt-hU-W5H" secondAttribute="centerY" id="gP1-75-ESz"/>
-                                    <constraint firstAttribute="trailing" secondItem="91R-Mo-EBl" secondAttribute="trailing" constant="8" id="s0t-Vy-tMU"/>
                                     <constraint firstItem="47N-ng-2Qp" firstAttribute="leading" secondItem="mpt-hU-W5H" secondAttribute="leading" constant="8" id="z4z-11-oUE"/>
                                 </constraints>
                                 <variation key="default">
@@ -763,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNK-Nt-FZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="337"/>
+            <point key="canvasLocation" x="1127" y="291"/>
         </scene>
     </scenes>
     <resources>

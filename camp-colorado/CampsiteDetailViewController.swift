@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -41,10 +42,21 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
         tableView.dataSource = self
         tableView.estimatedRowHeight = 270
         
-        let review1 = Review(username: "apg", rating: 3, reviewText: "Cool place. Yadda yadda yadda yadda yadda yadda yadda.")
-        let review2 = Review(username: "apg", rating: 3, reviewText: "Cool place. Yadda yadda yadda yadda yadda.")
-        reviews.append(review1)
-        reviews.append(review2)
+        DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            
+            self.reviews = []
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    if let reviewDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let review = Review(reviewKey: key, dictionary: reviewDict)
+                        self.reviews.append(review)
+                    }
+                }
+            }
+            
+            self.tableView.reloadData()
+        })
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
