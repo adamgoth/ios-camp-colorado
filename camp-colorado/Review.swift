@@ -11,6 +11,7 @@ import Foundation
 class Review {
     private var _campsiteId: Int!
     private var _reviewKey: String!
+    private var _reviewDatetime: Double!
     private var _username: String!
     private var _rating: Int!
     private var _reviewText: String!
@@ -23,6 +24,10 @@ class Review {
     
     var reviewKey: String {
         return _reviewKey
+    }
+    
+    var reviewDatetime: Double {
+        return _reviewDatetime
     }
     
     var username: String {
@@ -54,6 +59,10 @@ class Review {
     
     init(reviewKey: String, dictionary: Dictionary<String, AnyObject>) {
         self._reviewKey = reviewKey
+        
+        if let reviewDatetime = dictionary["reviewDatetime"] as? Double {
+            self._reviewDatetime = reviewDatetime
+        }
         
         if let username = dictionary["username"] as? String {
             self._username = username

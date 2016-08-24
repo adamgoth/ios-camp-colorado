@@ -10,7 +10,8 @@ import UIKit
 
 class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
     
-    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var usernameLbl: UILabel!
+    @IBOutlet weak var reviewDatetimeLbl: UILabel!
     @IBOutlet weak var helpfulImg: UIImageView!
     @IBOutlet weak var reviewTxt: UITextView!
     @IBOutlet weak var reviewImg: UIImageView?
@@ -35,7 +36,8 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
     
     func configureCell(review: Review, img: UIImage?) {
         self.review = review
-        self.username.text = "\(review.username)"
+        self.usernameLbl.text = "\(review.username)"
+        self.reviewDatetimeLbl.text = "\(NSDate(timeIntervalSince1970: review.reviewDatetime).dayMonthTime()!)"
         self.reviewTxt.text = "\(review.reviewText)"
         
         switch review.rating {
@@ -78,4 +80,12 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
         }
     }
 
+}
+
+extension NSDate {
+    func dayMonthTime() -> String? {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM d, h:mm a"
+        return dateFormatter.stringFromDate(self)
+    }
 }

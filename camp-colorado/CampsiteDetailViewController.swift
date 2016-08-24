@@ -19,9 +19,18 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var numberOfSitesLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var websiteLbl: UILabel!
+    @IBOutlet weak var reviewStar1: UIButton!
+    @IBOutlet weak var reviewStar2: UIButton!
+    @IBOutlet weak var reviewStar3: UIButton!
+    @IBOutlet weak var reviewStar4: UIButton!
+    @IBOutlet weak var reviewStar5: UIButton!
+    @IBOutlet weak var reviewTextField: UITextField!
     
     var annotation: CampsiteAnnotation!
     var reviews: [Review] = []
+    var starsSelected: Bool = false
+    var starRating: Int = 0
+    var username: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +66,14 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
             
             self.tableView.reloadData()
         })
+        
+        DataService.ds.ref_current_user.child("username").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if let name = snapshot.value as? String {
+                self.username = name
+            }
+        })
+        
+        print(NSDate().timeIntervalSince1970)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -87,8 +104,87 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
+    @IBAction func makeReview(sender: AnyObject) {
+        if starsSelected {
+            if let text = reviewTextField.text where text != "" {
+                self.postToFirebase()
+            }
+        }
+    }
+    
+    func postToFirebase() {
+        var review: Dictionary<String, AnyObject> = [
+            "reviewText": reviewTextField.text!,
+            "helpful": 0,
+            "rating": starRating,
+            "reviewDatetime": NSDate().timeIntervalSince1970
+        ]
+        
+        if username != "" {
+            review["username"] = username
+        }
+        
+        let firebasePost = DataService.ds.ref_reviews.child("\(annotation.campsiteId)").childByAutoId()
+        firebasePost.setValue(review)
+        
+        reviewTextField.text = ""
+        starRating = 0
+        starsSelected = false
+    }
+    
+    @IBAction func reviewStar1Pressed(sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar2.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        reviewStar3.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        reviewStar4.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        starsSelected = true
+        starRating = 1
+    }
+    
+    @IBAction func reviewStar2Pressed(sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar2.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar3.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        reviewStar4.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        starsSelected = true
+        starRating = 2
+    }
+    
+    @IBAction func reviewStar3Pressed(sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar2.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar3.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar4.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        starsSelected = true
+        starRating = 3
+    }
+    
+    @IBAction func reviewStar4Pressed(sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar2.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar3.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar4.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+        starsSelected = true
+        starRating = 4
+    }
+    
+    @IBAction func reviewStar5Pressed(sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar2.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar3.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar4.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        reviewStar5.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+        starsSelected = true
+        starRating = 5
+    }
+    
 
     @IBAction func backButtonPressed() {
         dismissViewControllerAnimated(true, completion: nil)
     }
+
 }
