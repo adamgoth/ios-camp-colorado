@@ -108,7 +108,11 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
         if starsSelected {
             if let text = reviewTextField.text where text != "" {
                 self.postToFirebase()
+            } else {
+                showErrorAlert("No Review Text", message: "Use must leave text in your review")
             }
+        } else {
+            showErrorAlert("No Rating Selected", message: "Use the stars to add a rating to your review")
         }
     }
     
@@ -130,6 +134,13 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
         reviewTextField.text = ""
         starRating = 0
         starsSelected = false
+    }
+    
+    func showErrorAlert(alert: String, message: String) {
+        let alert = UIAlertController(title: alert, message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
     }
     
     @IBAction func reviewStar1Pressed(sender: AnyObject) {
