@@ -72,8 +72,7 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
                 self.username = name
             }
         })
-        
-        print(NSDate().timeIntervalSince1970)
+
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -191,6 +190,10 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
         reviewStar5.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
         starsSelected = true
         starRating = 5
+    }
+    
+    @IBAction func accountPressed(sender: AnyObject) {
+        performSegueWithIdentifier("showAccount", sender: self)
     }
     
 

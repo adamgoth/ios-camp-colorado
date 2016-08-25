@@ -149,6 +149,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let distanceInMiles = distanceInMeters * 0.000621371
         return Int(round(distanceInMiles))
     }
+    
+    @IBAction func accountPressed(sender: AnyObject) {
+        performSegueWithIdentifier("showAccount", sender: self)
+    }
 
 }
 
