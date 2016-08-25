@@ -37,9 +37,24 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
 
         sitenameLbl.text = annotation.sitename
         coordinatesLbl.text = "Latitude: \(annotation.latitude)   Longitude: \(annotation.longitude)"
-        numberOfSitesLbl.text = "Number of campsites: \(annotation.numberOfSites)"
-        phoneLbl.text = annotation.phone
-        websiteLbl.text = annotation.website
+        
+        if annotation.numberOfSites != "" {
+            numberOfSitesLbl.text = "Number of campsites: \(annotation.numberOfSites)"
+        } else {
+            numberOfSitesLbl.hidden = true
+        }
+        
+        if annotation.phone != "" {
+            phoneLbl.text = annotation.phone
+        } else {
+            phoneLbl.hidden = true
+        }
+        
+        if annotation.website != "" {
+            websiteLbl.text = annotation.website
+        } else {
+            websiteLbl.hidden = true
+        }
         
         if annotation.distanceToNearestTown != "" && annotation.nearestTown != "" {
             locationLbl.text = "Located \(annotation.distanceToNearestTown) miles from \(annotation.nearestTown), \(annotation.state), \(annotation.country)"
