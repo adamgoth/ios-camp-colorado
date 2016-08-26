@@ -79,6 +79,9 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maroon-bells" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-rM-hO2">
+                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsF-Zp-OnI">
                                 <rect key="frame" x="150" y="115" width="300" height="370"/>
                                 <subviews>
@@ -89,12 +92,12 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sbM-L1-Dpv">
-                                                        <rect key="frame" x="4" y="11" width="293" height="177"/>
+                                                        <rect key="frame" x="4" y="11" width="293" height="184"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="First time here? Sign up!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWy-yn-9ZZ">
                                                                 <rect key="frame" x="50" y="0.0" width="193" height="24"/>
                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="We1-jN-r7M">
@@ -106,7 +109,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR8-ta-X2H">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16n-Ud-wf5">
@@ -122,13 +125,13 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xYq-MC-lhU">
                                                                         <rect key="frame" x="6" y="35" width="287" height="30"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0v-Fy-w9o">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0v-Fy-w9o">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="klk-WJ-4vk">
+                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="klk-WJ-4vk">
                                                                                 <rect key="frame" x="87" y="0.0" width="200" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="200" id="HRg-eB-8lg"/>
@@ -144,7 +147,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXF-tE-SMN">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-Oo-Is2">
@@ -160,8 +163,12 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9i-xk-Cir">
-                                                                <rect key="frame" x="93" y="144" width="108" height="33"/>
+                                                                <rect key="frame" x="87" y="144" width="120" height="40"/>
                                                                 <color key="backgroundColor" red="0.033039583570000003" green="0.35403714009999998" blue="0.0053548412310000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="Eb4-Es-7uk"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="oPf-gl-C2d"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                                                 <state key="normal" title="Create Account">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -173,22 +180,21 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="bQh-16-KlY"/>
                                                     <constraint firstAttribute="width" constant="300" id="xHV-qW-GR1"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHx-yu-5Le">
+                                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHx-yu-5Le">
                                                 <rect key="frame" x="0.0" y="220" width="300" height="150"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L8a-bN-2Lz">
-                                                        <rect key="frame" x="7" y="4" width="287" height="142"/>
+                                                        <rect key="frame" x="7" y="4" width="287" height="149"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcu-PG-g6q">
                                                                 <rect key="frame" x="42" y="0.0" width="203" height="24"/>
                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-K0-pdX">
@@ -200,7 +206,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6w-hZ-JBq">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50h-kW-q8g">
@@ -216,13 +222,13 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YE2-NF-NJt">
                                                                         <rect key="frame" x="0.0" y="35" width="287" height="30"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edH-9d-G1d">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edH-9d-G1d">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-Vt-19H">
+                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-Vt-19H">
                                                                                 <rect key="frame" x="87" y="0.0" width="200" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="200" id="Og0-bZ-Kfh"/>
@@ -235,8 +241,12 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnm-ib-Juk">
-                                                                <rect key="frame" x="119" y="109" width="49" height="33"/>
+                                                                <rect key="frame" x="84" y="109" width="120" height="40"/>
                                                                 <color key="backgroundColor" red="0.033039583570000003" green="0.35403714009999998" blue="0.0053548412310000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="7pj-Az-3U8"/>
+                                                                    <constraint firstAttribute="width" constant="120" id="j2S-q8-BLX"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                                                 <state key="normal" title="Sign In">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,7 +258,6 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="Gb5-pX-5bY"/>
                                                     <constraint firstAttribute="height" constant="150" id="roj-7Z-Vsh"/>
@@ -257,7 +266,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="idZ-yc-F01" secondAttribute="trailing" id="1y1-uk-gIP"/>
                                     <constraint firstAttribute="bottom" secondItem="idZ-yc-F01" secondAttribute="bottom" id="YRQ-vi-G6I"/>
@@ -268,13 +276,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zpx-rM-hO2" firstAttribute="top" secondItem="u4S-7Z-SAb" secondAttribute="bottom" id="4dv-YC-EIq"/>
                             <constraint firstItem="u4S-7Z-SAb" firstAttribute="leading" secondItem="TnL-pW-lM0" secondAttribute="leading" id="6dm-kF-a9p"/>
                             <constraint firstItem="aVZ-Al-fdU" firstAttribute="top" secondItem="XsF-Zp-OnI" secondAttribute="bottom" id="7g2-cR-N3H"/>
+                            <constraint firstItem="zpx-rM-hO2" firstAttribute="leading" secondItem="TnL-pW-lM0" secondAttribute="leading" id="Ado-eL-e6f"/>
                             <constraint firstItem="XsF-Zp-OnI" firstAttribute="leading" secondItem="TnL-pW-lM0" secondAttribute="leading" id="B39-jB-qay"/>
                             <constraint firstItem="u4S-7Z-SAb" firstAttribute="top" secondItem="TnL-pW-lM0" secondAttribute="top" id="EVd-zf-5se"/>
+                            <constraint firstAttribute="trailing" secondItem="zpx-rM-hO2" secondAttribute="trailing" id="Jaw-V2-88R"/>
                             <constraint firstItem="XsF-Zp-OnI" firstAttribute="top" secondItem="u4S-7Z-SAb" secondAttribute="bottom" id="U7C-vR-vmu"/>
                             <constraint firstItem="XsF-Zp-OnI" firstAttribute="centerX" secondItem="TnL-pW-lM0" secondAttribute="centerX" id="WIj-Qy-o9z"/>
                             <constraint firstAttribute="trailing" secondItem="XsF-Zp-OnI" secondAttribute="trailing" id="Z22-nl-PkO"/>
+                            <constraint firstItem="aVZ-Al-fdU" firstAttribute="top" secondItem="zpx-rM-hO2" secondAttribute="bottom" id="g9Y-Qf-tH6"/>
                             <constraint firstAttribute="trailing" secondItem="u4S-7Z-SAb" secondAttribute="trailing" id="qa2-gR-bYJ"/>
                             <constraint firstItem="XsF-Zp-OnI" firstAttribute="centerY" secondItem="TnL-pW-lM0" secondAttribute="centerY" id="z5a-l5-DOQ"/>
                         </constraints>
@@ -1050,6 +1062,7 @@
         <image name="camera" width="50" height="50"/>
         <image name="empty-star" width="32" height="32"/>
         <image name="full-star" width="32" height="32"/>
+        <image name="maroon-bells" width="1024" height="682"/>
         <image name="thumbsup" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
