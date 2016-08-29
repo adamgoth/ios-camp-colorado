@@ -10,22 +10,15 @@ import UIKit
 
 class AccountViewController: UIViewController {
     
-    @IBOutlet weak var usernameLbl: UILabel?
+    @IBOutlet weak var usernameLbl: UILabel!
     
-    var username: String?
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let user = username {
-            usernameLbl?.text = user
-        }
+        usernameLbl?.text = user.username
         
-        DataService.ds.ref_current_user.child("username").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            if let name = snapshot.value as? String {
-                self.username = name
-            }
-        })
     }
 
     @IBAction func backButtonPressed(sender: AnyObject) {

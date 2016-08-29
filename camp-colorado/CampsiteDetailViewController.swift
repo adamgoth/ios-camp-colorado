@@ -27,10 +27,10 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var reviewTextField: UITextField!
     
     var annotation: CampsiteAnnotation!
+    var user: User!
     var reviews: [Review] = []
     var starsSelected: Bool = false
     var starRating: Int = 0
-    var username: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,13 +81,6 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
             
             self.tableView.reloadData()
         })
-        
-        DataService.ds.ref_current_user.child("username").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            if let name = snapshot.value as? String {
-                self.username = name
-            }
-        })
-
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -118,29 +111,21 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    @IBAction func makeReview(sender: AnyObject) {
-        if starsSelected {
-            if let text = reviewTextField.text where text != "" {
-                self.postToFirebase()
-            } else {
-                showErrorAlert("No Review Text", message: "Use must leave text in your review")
-            }
-        } else {
-            showErrorAlert("No Rating Selected", message: "Use the stars to add a rating to your review")
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? AccountViewController {
+            destination.user = user
         }
     }
     
     func postToFirebase() {
         var review: Dictionary<String, AnyObject> = [
+            "username": user.username,
             "reviewText": reviewTextField.text!,
             "helpful": 0,
             "rating": starRating,
             "reviewDatetime": NSDate().timeIntervalSince1970
         ]
-        
-        if username != "" {
-            review["username"] = username
-        }
+
         
         let firebasePost = DataService.ds.ref_reviews.child("\(annotation.campsiteId)").childByAutoId()
         firebasePost.setValue(review)
@@ -155,6 +140,18 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
         let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func makeReview(sender: AnyObject) {
+        if starsSelected {
+            if let text = reviewTextField.text where text != "" {
+                self.postToFirebase()
+            } else {
+                showErrorAlert("No Review Text", message: "Use must leave text in your review")
+            }
+        } else {
+            showErrorAlert("No Rating Selected", message: "Use the stars to add a rating to your review")
+        }
     }
     
     @IBAction func reviewStar1Pressed(sender: AnyObject) {

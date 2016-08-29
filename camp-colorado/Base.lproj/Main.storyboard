@@ -12,13 +12,13 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-Italic.ttf">
             <string>NotoSans-Italic</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
-            <string>NotoSans</string>
-            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
@@ -95,8 +95,8 @@
                                                         <rect key="frame" x="4" y="11" width="293" height="184"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="First time here? Sign up!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWy-yn-9ZZ">
-                                                                <rect key="frame" x="50" y="0.0" width="193" height="24"/>
-                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                                <rect key="frame" x="44" y="0.0" width="206" height="24"/>
+                                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -189,16 +189,16 @@
                                                 <rect key="frame" x="0.0" y="220" width="300" height="150"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L8a-bN-2Lz">
-                                                        <rect key="frame" x="7" y="4" width="287" height="149"/>
+                                                        <rect key="frame" x="7" y="4" width="288" height="149"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcu-PG-g6q">
-                                                                <rect key="frame" x="42" y="0.0" width="203" height="24"/>
-                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                                <rect key="frame" x="35" y="0.0" width="218" height="24"/>
+                                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-K0-pdX">
-                                                                <rect key="frame" x="0.0" y="34" width="287" height="65"/>
+                                                                <rect key="frame" x="0.0" y="34" width="288" height="65"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2HE-bc-hE8">
                                                                         <rect key="frame" x="34" y="0.0" width="254" height="30"/>
@@ -220,16 +220,16 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YE2-NF-NJt">
-                                                                        <rect key="frame" x="0.0" y="35" width="287" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="35" width="288" height="30"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edH-9d-G1d">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edH-9d-G1d">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="83" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-Vt-19H">
-                                                                                <rect key="frame" x="87" y="0.0" width="200" height="30"/>
+                                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-Vt-19H">
+                                                                                <rect key="frame" x="88" y="0.0" width="200" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="200" id="Og0-bZ-Kfh"/>
                                                                                 </constraints>
@@ -479,6 +479,9 @@
                             <constraint firstItem="9H8-eJ-M0F" firstAttribute="top" secondItem="oPr-FD-RmQ" secondAttribute="top" id="eK8-qt-kqh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="usernameLbl" destination="wvJ-8w-TVJ" id="QcZ-lP-4ck"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0t-nF-rCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

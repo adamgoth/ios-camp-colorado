@@ -18,11 +18,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let regionRadius: CLLocationDistance = 1000
     let initialLocation = CLLocation(latitude: 39.12921, longitude: -105.693681)
     
-    
     var campsites = [Campsite]()
     var selectedAnnotation: CampsiteAnnotation!
     var distanceFromUser: CLLocationDistance = 0.0
     var userCurrentLocation: CLLocation?
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         centerMapOnLocation(initialLocation)
         
         parseCampsitesCSV()
+        getUserObject()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -87,6 +88,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destination = segue.destinationViewController as? CampsiteDetailViewController {
             destination.annotation = selectedAnnotation
+            destination.user = user
+        }
+        
+        if let destination = segue.destinationViewController as? AccountViewController {
+            destination.user = user
         }
     }
 
@@ -126,7 +132,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         for campsite in campsites {
             let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
             let anno = CampsiteAnnotation(sitename: campsite.sitename, campsiteId: campsite.campsiteId, latitude: campsite.latitude, longitude: campsite.longitude, state: campsite.state, country: campsite.country, nearestTown: campsite.nearestTown, distanceToNearestTown: campsite.distanceToNearestTown, numberOfSites: campsite.numberOfSites, phone: campsite.phone, website: campsite.website)
-            print(userCurrentLocation)
             if let userLocation = userCurrentLocation {
                 let distance = getDistanceFromUser(userLocation, locationB: location)
                 anno.subtitle = "\(distance) miles away"
@@ -148,6 +153,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let distanceInMeters = locationA.distanceFromLocation(locationB)
         let distanceInMiles = distanceInMeters * 0.000621371
         return Int(round(distanceInMiles))
+    }
+    
+    func getUserObject() {
+        DataService.ds.ref_current_user.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if let user = snapshot.value as? Dictionary<String, AnyObject> {
+                self.user = User(username: "\(user["username"]!)")
+            } else {
+                print("no user")
+            }
+        })
     }
     
     @IBAction func accountPressed(sender: AnyObject) {

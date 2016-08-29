@@ -13,6 +13,7 @@
 		F9513B891D6345EA00BFDB8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9513B881D6345EA00BFDB8B /* LoginViewController.swift */; };
 		F95A5F8C1D5B60640027D3FC /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95A5F8B1D5B60640027D3FC /* csv.swift */; };
 		F95A5F8E1D5B631C0027D3FC /* campsites-colorado.csv in Resources */ = {isa = PBXBuildFile; fileRef = F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */; };
+		F9A02DDA1D73773300C9B342 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A02DD91D73773300C9B342 /* User.swift */; };
 		F9A376CA1D5A25560058225F /* Campsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A376C91D5A25560058225F /* Campsite.swift */; };
 		F9BCB5D01D65E4AF004C2AA5 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BCB5CC1D65E4AF004C2AA5 /* NotoSans-Bold.ttf */; };
 		F9BCB5D11D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BCB5CD1D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf */; };
@@ -41,6 +42,7 @@
 		F9513B881D6345EA00BFDB8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F95A5F8B1D5B60640027D3FC /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "campsites-colorado.csv"; sourceTree = "<group>"; };
+		F9A02DD91D73773300C9B342 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F9A376C91D5A25560058225F /* Campsite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campsite.swift; sourceTree = "<group>"; };
 		F9BCB5CC1D65E4AF004C2AA5 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		F9BCB5CD1D65E4AF004C2AA5 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				F9A376C91D5A25560058225F /* Campsite.swift */,
 				F9FD98CF1D62735A009786A0 /* CampsiteAnnotation.swift */,
 				F94E95D41D676F7A00B52D46 /* Review.swift */,
+				F9A02DD91D73773300C9B342 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				F9513B891D6345EA00BFDB8B /* LoginViewController.swift in Sources */,
 				F95A5F8C1D5B60640027D3FC /* csv.swift in Sources */,
 				F9D5AC851D5A1825007E7005 /* ViewController.swift in Sources */,
+				F9A02DDA1D73773300C9B342 /* User.swift in Sources */,
 				F9FD98D01D62735A009786A0 /* CampsiteAnnotation.swift in Sources */,
 				F94E95D51D676F7A00B52D46 /* Review.swift in Sources */,
 				F9A376CA1D5A25560058225F /* Campsite.swift in Sources */,
