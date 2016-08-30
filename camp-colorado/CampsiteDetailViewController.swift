@@ -10,8 +10,9 @@ import UIKit
 import MapKit
 import Firebase
 
-class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
     
+    @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sitenameLbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
@@ -26,6 +27,7 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var reviewStar5: UIButton!
     @IBOutlet weak var reviewTextField: UITextField!
     
+    let regionRadius: CLLocationDistance = 1000
     var annotation: CampsiteAnnotation!
     var user: User!
     var reviews: [Review] = []
@@ -34,6 +36,12 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        map.delegate = self
+        let location = CLLocation(latitude: annotation.latitude, longitude: annotation.longitude)
+        annotation.coordinate = location.coordinate
+        map.addAnnotation(annotation)
+        centerMapOnLocation(location)
 
         sitenameLbl.text = annotation.sitename
         coordinatesLbl.text = "Latitude: \(annotation.latitude)   Longitude: \(annotation.longitude)"
@@ -81,6 +89,11 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
             
             self.tableView.reloadData()
         })
+    }
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 0.5, regionRadius * 0.5)
+        map.setRegion(coordinateRegion, animated: true)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
