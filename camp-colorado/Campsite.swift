@@ -21,6 +21,7 @@ class Campsite {
     private var _numberOfSites: String!
     private var _phone: String!
     private var _website: String!
+    private var _distanceFromUser: Int?
     
     var campsiteId: Int {
         return _campsiteId
@@ -79,6 +80,15 @@ class Campsite {
             _website = ""
         }
         return _website
+    }
+    
+    var distanceFromUser: Int? {
+        get {
+            return _distanceFromUser
+        }
+        set {
+            _distanceFromUser = newValue
+        }
     }
     
     init(campsiteId: Int, sitename: String, latitude: CLLocationDegrees, longitude: CLLocationDegrees, state: String, country: String, nearestTown: String, distanceToNearestTown: String, numberOfSites: String, phone: String, website: String) {

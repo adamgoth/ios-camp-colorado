@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B9CF842827414BDA1A077CAB /* Pods_camp_colorado.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEE0D200283C709E0E8488C /* Pods_camp_colorado.framework */; };
+		F91038351D75BFD800B7C6B5 /* CampsiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91038341D75BFD800B7C6B5 /* CampsiteCell.swift */; };
 		F94E95D31D6746EA00B52D46 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E95D21D6746EA00B52D46 /* ReviewCell.swift */; };
 		F94E95D51D676F7A00B52D46 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E95D41D676F7A00B52D46 /* Review.swift */; };
 		F9513B891D6345EA00BFDB8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9513B881D6345EA00BFDB8B /* LoginViewController.swift */; };
@@ -37,6 +38,7 @@
 		2264B4780133B8187B232A6C /* Pods-camp-colorado.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-colorado.debug.xcconfig"; path = "Pods/Target Support Files/Pods-camp-colorado/Pods-camp-colorado.debug.xcconfig"; sourceTree = "<group>"; };
 		2CEE0D200283C709E0E8488C /* Pods_camp_colorado.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_camp_colorado.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9704D41BED8EB2A67C02C8 /* Pods-camp-colorado.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camp-colorado.release.xcconfig"; path = "Pods/Target Support Files/Pods-camp-colorado/Pods-camp-colorado.release.xcconfig"; sourceTree = "<group>"; };
+		F91038341D75BFD800B7C6B5 /* CampsiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampsiteCell.swift; sourceTree = "<group>"; };
 		F94E95D21D6746EA00B52D46 /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		F94E95D41D676F7A00B52D46 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		F9513B881D6345EA00BFDB8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				F94E95D21D6746EA00B52D46 /* ReviewCell.swift */,
 				F9C583DF1D6A0CC8004DA9D9 /* CustomView.swift */,
+				F91038341D75BFD800B7C6B5 /* CampsiteCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				F9A02DDA1D73773300C9B342 /* User.swift in Sources */,
 				F9FD98D01D62735A009786A0 /* CampsiteAnnotation.swift in Sources */,
 				F94E95D51D676F7A00B52D46 /* Review.swift in Sources */,
+				F91038351D75BFD800B7C6B5 /* CampsiteCell.swift in Sources */,
 				F9A376CA1D5A25560058225F /* Campsite.swift in Sources */,
 				F9D5AC831D5A1825007E7005 /* AppDelegate.swift in Sources */,
 				F9C583E01D6A0CC8004DA9D9 /* CustomView.swift in Sources */,

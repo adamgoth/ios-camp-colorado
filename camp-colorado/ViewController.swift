@@ -9,9 +9,10 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
     
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
     
     let locationManager = CLLocationManager()
     
@@ -28,15 +29,19 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         map.delegate = self
-        centerMapOnLocation(initialLocation)
+        tableView.delegate = self
+        tableView.dataSource = self
         
+        centerMapOnLocation(initialLocation)
         parseCampsitesCSV()
         getUserObject()
     }
     
     override func viewDidAppear(animated: Bool) {
         locationAuthStatus()
+        addUserDistances()
         createAnnotations()
+        self.tableView.reloadData()
     }
     
     func locationAuthStatus() {
@@ -121,6 +126,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 let phone = row["phone"]!
                 let website = row["website"]!
                 let campsite = Campsite(campsiteId: campsiteId, sitename: sitename, latitude: latitude, longitude: longitude, state: state, country: country, nearestTown: nearestTown, distanceToNearestTown: distanceToNearestTown, numberOfSites: numberOfSites, phone: phone, website: website)
+                
                 campsites.append(campsite)
             }
         } catch let err as NSError {
@@ -128,7 +134,19 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    func addUserDistances() {
+        for campsite in campsites {
+            if let userLocation = userCurrentLocation {
+                let distance = getDistanceFromUser(userLocation, locationB: CLLocation(latitude: campsite.latitude, longitude: campsite.longitude))
+                campsite.distanceFromUser = distance
+            }
+        }
+        campsites.sortInPlace({ $0.distanceFromUser < $1.distanceFromUser })
+    }
+    
     func createAnnotations() {
+        let allAnnotations = self.map.annotations
+        map.removeAnnotations(allAnnotations)
         for campsite in campsites {
             let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
             let anno = CampsiteAnnotation(sitename: campsite.sitename, campsiteId: campsite.campsiteId, latitude: campsite.latitude, longitude: campsite.longitude, state: campsite.state, country: campsite.country, nearestTown: campsite.nearestTown, distanceToNearestTown: campsite.distanceToNearestTown, numberOfSites: campsite.numberOfSites, phone: campsite.phone, website: campsite.website)
@@ -163,6 +181,30 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 print("no user")
             }
         })
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return campsites.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let campsite = campsites[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCellWithIdentifier("CampsiteCell") as? CampsiteCell {
+            cell.configureCell(campsite)
+            return cell
+        } else {
+            return CampsiteCell()
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let campsite = campsites[indexPath.row]
+        print(campsite.sitename)
     }
     
     @IBAction func accountPressed(sender: AnyObject) {
