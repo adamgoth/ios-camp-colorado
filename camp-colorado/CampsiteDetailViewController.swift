@@ -10,22 +10,33 @@ import UIKit
 import MapKit
 import Firebase
 
-class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
+class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var map: MKMapView!
-    @IBOutlet weak var tableView: UITableView!
+    //detail outlets
     @IBOutlet weak var sitenameLbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var coordinatesLbl: UILabel!
     @IBOutlet weak var numberOfSitesLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var websiteLbl: UILabel!
+    //new review outlets
     @IBOutlet weak var reviewStar1: UIButton!
     @IBOutlet weak var reviewStar2: UIButton!
     @IBOutlet weak var reviewStar3: UIButton!
     @IBOutlet weak var reviewStar4: UIButton!
     @IBOutlet weak var reviewStar5: UIButton!
     @IBOutlet weak var reviewTextField: UITextField!
+    //review display outlets
+    @IBOutlet weak var usernameLbl: UILabel!
+    @IBOutlet weak var reviewDatetimeLbl: UILabel!
+    @IBOutlet weak var helpfulImg: UIImageView!
+    @IBOutlet weak var reviewTxt: UITextView!
+    @IBOutlet weak var reviewStarDisplay1: UIImageView!
+    @IBOutlet weak var reviewStarDisplay2: UIImageView!
+    @IBOutlet weak var reviewStarDisplay3: UIImageView!
+    @IBOutlet weak var reviewStarDisplay4: UIImageView!
+    @IBOutlet weak var reviewStarDisplay5: UIImageView!
     
     let regionRadius: CLLocationDistance = 1000
     var annotation: CampsiteAnnotation!
@@ -70,10 +81,6 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
             "\(annotation.state), \(annotation.country)"
         }
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.estimatedRowHeight = 270
-        
         DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             
             self.reviews = []
@@ -86,42 +93,62 @@ class CampsiteDetailViewController: UIViewController, UITableViewDelegate, UITab
                     }
                 }
             }
-            
-            self.tableView.reloadData()
         })
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if self.reviews.count > 0 {
+            self.reviews.sortInPlace({ $0.reviewDatetime > $1.reviewDatetime })
+            let displayReview = reviews[0]
+            usernameLbl.text = displayReview.username
+            reviewDatetimeLbl.text = "\(NSDate(timeIntervalSince1970: displayReview.reviewDatetime).dayMonthTime()!)"
+            reviewTxt.text = "\(displayReview.reviewText)"
+            
+            switch displayReview.rating {
+            case 1:
+                reviewStarDisplay1.image = UIImage(named: "full-star")
+                reviewStarDisplay2.image = UIImage(named: "empty-star")
+                reviewStarDisplay3.image = UIImage(named: "empty-star")
+                reviewStarDisplay4.image = UIImage(named: "empty-star")
+                reviewStarDisplay5.image = UIImage(named: "empty-star")
+            case 2:
+                reviewStarDisplay1.image = UIImage(named: "full-star")
+                reviewStarDisplay2.image = UIImage(named: "full-star")
+                reviewStarDisplay3.image = UIImage(named: "empty-star")
+                reviewStarDisplay4.image = UIImage(named: "empty-star")
+                reviewStarDisplay5.image = UIImage(named: "empty-star")
+            case 3:
+                reviewStarDisplay1.image = UIImage(named: "full-star")
+                reviewStarDisplay2.image = UIImage(named: "full-star")
+                reviewStarDisplay3.image = UIImage(named: "full-star")
+                reviewStarDisplay4.image = UIImage(named: "empty-star")
+                reviewStarDisplay5.image = UIImage(named: "empty-star")
+            case 4:
+                reviewStarDisplay1.image = UIImage(named: "full-star")
+                reviewStarDisplay2.image = UIImage(named: "full-star")
+                reviewStarDisplay3.image = UIImage(named: "full-star")
+                reviewStarDisplay4.image = UIImage(named: "full-star")
+                reviewStarDisplay5.image = UIImage(named: "empty-star")
+            case 5:
+                reviewStarDisplay1.image = UIImage(named: "full-star")
+                reviewStarDisplay2.image = UIImage(named: "full-star")
+                reviewStarDisplay3.image = UIImage(named: "full-star")
+                reviewStarDisplay4.image = UIImage(named: "full-star")
+                reviewStarDisplay5.image = UIImage(named: "full-star")
+            default:
+                reviewStarDisplay1.image = UIImage(named: "empty-star")
+                reviewStarDisplay2.image = UIImage(named: "empty-star")
+                reviewStarDisplay3.image = UIImage(named: "empty-star")
+                reviewStarDisplay4.image = UIImage(named: "empty-star")
+                reviewStarDisplay5.image = UIImage(named: "empty-star")
+            }
+        }
     }
     
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 0.5, regionRadius * 0.5)
         map.setRegion(coordinateRegion, animated: true)
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviews.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let review = reviews[indexPath.row]
-        
-        if let cell = tableView.dequeueReusableCellWithIdentifier("ReviewCell") as? ReviewCell {
-            cell.configureCell(review, img: nil)
-            return cell
-        } else {
-            return ReviewCell()
-        }
-    }
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let review = reviews[indexPath.row]
-        
-        if review.imageUrl == nil {
-            return 180
-        } else {
-            return tableView.estimatedRowHeight
-        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
