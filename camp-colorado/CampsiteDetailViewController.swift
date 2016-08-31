@@ -152,6 +152,11 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? ReviewsViewController {
+            destination.annotation = annotation
+            destination.user = user
+        }
+        
         if let destination = segue.destinationViewController as? AccountViewController {
             destination.user = user
         }
@@ -242,6 +247,10 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         reviewStar5.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
         starsSelected = true
         starRating = 5
+    }
+    
+    @IBAction func allReviewsPressed(sender: AnyObject) {
+        performSegueWithIdentifier("showAllReviews", sender: self)
     }
     
     @IBAction func accountPressed(sender: AnyObject) {

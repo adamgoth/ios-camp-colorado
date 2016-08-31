@@ -11,6 +11,7 @@ import Firebase
 
 class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var sitenameLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var annotation: CampsiteAnnotation!
@@ -23,6 +24,8 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = 270
+        
+        sitenameLbl.text = annotation.sitename
         
         DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             
@@ -37,6 +40,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
             }
             
+            self.reviews.sortInPlace({ $0.reviewDatetime > $1.reviewDatetime })
             self.tableView.reloadData()
         })
     }
@@ -67,6 +71,20 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             return tableView.estimatedRowHeight
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? AccountViewController {
+            destination.user = user
+        }
+    }
+    
+    @IBAction func showAccountPressed(sender: AnyObject) {
+        performSegueWithIdentifier("showAccount", sender: self)
+    }
+    
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 }
