@@ -378,8 +378,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="53t-ba-YEG">
                                 <rect key="frame" x="0.0" y="60" width="600" height="540"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-hS-YTO">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-hS-YTO">
+                                        <rect key="frame" x="8" y="0.0" width="584" height="270"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="305" id="kQ9-ln-er1"/>
                                         </constraints>
@@ -449,14 +449,19 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Q1o-Kr-591" firstAttribute="top" secondItem="mg3-hS-YTO" secondAttribute="bottom" id="0Fg-nH-5La"/>
-                                    <constraint firstItem="Q1o-Kr-591" firstAttribute="top" secondItem="mg3-hS-YTO" secondAttribute="bottom" id="IBw-rz-ep2"/>
-                                    <constraint firstAttribute="trailing" secondItem="mg3-hS-YTO" secondAttribute="trailing" id="R1V-9c-hNE"/>
-                                    <constraint firstItem="mg3-hS-YTO" firstAttribute="top" secondItem="53t-ba-YEG" secondAttribute="top" id="dSs-VX-XgI"/>
+                                    <constraint firstItem="Q1o-Kr-591" firstAttribute="top" secondItem="mg3-hS-YTO" secondAttribute="bottom" constant="8" id="IBw-rz-ep2"/>
+                                    <constraint firstAttribute="trailing" secondItem="mg3-hS-YTO" secondAttribute="trailing" constant="8" id="R1V-9c-hNE"/>
+                                    <constraint firstItem="mg3-hS-YTO" firstAttribute="top" secondItem="53t-ba-YEG" secondAttribute="top" constant="8" id="dSs-VX-XgI"/>
                                     <constraint firstItem="Q1o-Kr-591" firstAttribute="leading" secondItem="53t-ba-YEG" secondAttribute="leading" id="jnZ-Ww-icR"/>
-                                    <constraint firstItem="mg3-hS-YTO" firstAttribute="leading" secondItem="53t-ba-YEG" secondAttribute="leading" id="mOy-GC-ISy"/>
+                                    <constraint firstItem="mg3-hS-YTO" firstAttribute="leading" secondItem="53t-ba-YEG" secondAttribute="leading" constant="8" id="mOy-GC-ISy"/>
                                     <constraint firstAttribute="bottom" secondItem="Q1o-Kr-591" secondAttribute="bottom" id="nM1-Rn-hHA"/>
                                     <constraint firstAttribute="trailing" secondItem="Q1o-Kr-591" secondAttribute="trailing" id="vsg-zQ-oTb"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0Fg-nH-5La"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1481,6 +1486,6 @@
         <image name="thumbsup" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EZB-U4-Bgc"/>
+        <segue reference="Ykq-0u-Oci"/>
     </inferredMetricsTieBreakers>
 </document>
