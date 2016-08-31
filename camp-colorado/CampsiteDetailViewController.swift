@@ -28,6 +28,9 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var reviewStar5: UIButton!
     @IBOutlet weak var reviewTextField: UITextField!
     //review display outlets
+    @IBOutlet weak var beTheFirstView: UIView!
+    @IBOutlet weak var reviewDisplayView: UIView!
+    @IBOutlet weak var seeAllReviewsBtn: UIButton!
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var reviewDatetimeLbl: UILabel!
     @IBOutlet weak var helpfulImg: UIImageView!
@@ -99,6 +102,9 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         if self.reviews.count > 0 {
+            reviewDisplayView.hidden = false
+            seeAllReviewsBtn.hidden = false
+            beTheFirstView.hidden = true
             self.reviews.sortInPlace({ $0.reviewDatetime > $1.reviewDatetime })
             let displayReview = reviews[0]
             usernameLbl.text = displayReview.username
@@ -143,6 +149,10 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
                 reviewStarDisplay4.image = UIImage(named: "empty-star")
                 reviewStarDisplay5.image = UIImage(named: "empty-star")
             }
+        } else {
+            reviewDisplayView.hidden = true
+            seeAllReviewsBtn.hidden = true
+            beTheFirstView.hidden = false
         }
     }
     
