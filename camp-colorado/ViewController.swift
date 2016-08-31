@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
-        centerMapOnLocation(initialLocation)
+        centerMapOnLocation(initialLocation, degrees: 500.0)
         parseCampsitesCSV()
         getUserObject()
     }
@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        print(map.region.center)
+        print(map.region.span)
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -82,6 +82,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return view
     }
+
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        let location = createLocationFromCoordinates(view.annotation!.coordinate.latitude, longitude: view.annotation!.coordinate.longitude)
+        if map.region.span.latitudeDelta > 0.7 {
+            centerMapOnLocation(location, degrees: 50.0)
+        }
+    }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
@@ -101,8 +108,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
 
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 600.0, regionRadius * 600.0)
+    func centerMapOnLocation(location: CLLocation, degrees: CLLocationDegrees) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * degrees, regionRadius * degrees)
         map.setRegion(coordinateRegion, animated: true)
     }
     
@@ -204,7 +211,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let campsite = campsites[indexPath.row]
-        print(campsite.sitename)
+        let anno = map.annotations.filter({$0.title! == campsite.sitename})[0]
+        let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
+        map.selectAnnotation(anno, animated: true)
+        centerMapOnLocation(location, degrees: 50.0)
     }
     
     @IBAction func accountPressed(sender: AnyObject) {
