@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     let locationManager = CLLocationManager()
     
@@ -32,15 +33,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
+        searchBar.layer.cornerRadius = 5.0
+        searchBar.clipsToBounds = true
+        
         centerMapOnLocation(initialLocation, degrees: 500.0)
         parseCampsitesCSV()
+        createAnnotations()
         getUserObject()
     }
     
     override func viewDidAppear(animated: Bool) {
         locationAuthStatus()
         addUserDistances()
-        createAnnotations()
         self.tableView.reloadData()
     }
     
@@ -162,7 +166,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 anno.subtitle = "\(distance) miles away"
             } else {
                 
-                anno.subtitle = "Distance from user unknown"
+                anno.subtitle = "\(campsite.numberOfSites) campsites"
             }
             anno.coordinate = location.coordinate
             anno.title = campsite.sitename
@@ -215,6 +219,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
         map.selectAnnotation(anno, animated: true)
         centerMapOnLocation(location, degrees: 50.0)
+    }
+    
+    @IBAction func userLocationPressed(sender: AnyObject) {
+        centerMapOnLocation(userCurrentLocation!, degrees: 50.0)
     }
     
     @IBAction func accountPressed(sender: AnyObject) {
