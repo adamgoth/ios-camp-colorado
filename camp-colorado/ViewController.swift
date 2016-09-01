@@ -97,6 +97,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
             selectedAnnotation = view.annotation as? CampsiteAnnotation
+            if userCurrentLocation != nil {
+                let userLocation = createLocationFromCoordinates(userCurrentLocation!.coordinate.latitude, longitude: userCurrentLocation!.coordinate.longitude)
+                let campsiteLocation = createLocationFromCoordinates(selectedAnnotation.latitude, longitude: selectedAnnotation.longitude)
+                let distance = getDistanceFromUser(userLocation, locationB: campsiteLocation)
+                selectedAnnotation.distanceFromUser = distance
+            }
             performSegueWithIdentifier("showCampsiteDetail", sender: self)
         }
     }
@@ -160,13 +166,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         map.removeAnnotations(allAnnotations)
         for campsite in campsites {
             let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
-            let anno = CampsiteAnnotation(sitename: campsite.sitename, campsiteId: campsite.campsiteId, latitude: campsite.latitude, longitude: campsite.longitude, state: campsite.state, country: campsite.country, nearestTown: campsite.nearestTown, distanceToNearestTown: campsite.distanceToNearestTown, numberOfSites: campsite.numberOfSites, phone: campsite.phone, website: campsite.website)
+            let anno = CampsiteAnnotation(sitename: campsite.sitename, campsiteId: campsite.campsiteId, latitude: campsite.latitude, longitude: campsite.longitude, state: campsite.state, country: campsite.country, nearestTown: campsite.nearestTown, distanceToNearestTown: campsite.distanceToNearestTown, numberOfSites: campsite.numberOfSites, phone: campsite.phone, website: campsite.website, distanceFromUser: campsite.distanceFromUser)
             if let userLocation = userCurrentLocation {
                 let distance = getDistanceFromUser(userLocation, locationB: location)
                 anno.subtitle = "\(distance) miles away"
-            } else {
-                
+            } else if campsite.numberOfSites != "" {
                 anno.subtitle = "\(campsite.numberOfSites) campsites"
+            } else {
+                anno.subtitle = ""
             }
             anno.coordinate = location.coordinate
             anno.title = campsite.sitename

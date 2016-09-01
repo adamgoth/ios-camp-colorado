@@ -15,6 +15,7 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var map: MKMapView!
     //detail outlets
     @IBOutlet weak var sitenameLbl: UILabel!
+    @IBOutlet weak var distanceFromUserlbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var coordinatesLbl: UILabel!
     @IBOutlet weak var numberOfSitesLbl: UILabel!
@@ -82,6 +83,12 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
             locationLbl.text = "Located \(annotation.distanceToNearestTown) miles from \(annotation.nearestTown), \(annotation.state), \(annotation.country)"
         } else {
             "\(annotation.state), \(annotation.country)"
+        }
+        
+        if annotation.distanceFromUser != nil {
+            distanceFromUserlbl.text = "\(annotation.distanceFromUser!) miles away"
+        } else {
+            distanceFromUserlbl.hidden = true
         }
         
         DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in

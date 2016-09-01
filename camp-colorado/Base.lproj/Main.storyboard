@@ -48,6 +48,7 @@
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
+            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -433,7 +434,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sitename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="xiJ-74-hLc">
                                                                     <rect key="frame" x="8" y="8" width="584" height="24"/>
                                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-I1-uEe">
@@ -442,7 +443,7 @@
                                                                         <constraint firstAttribute="width" constant="77" id="rOH-Ac-Aye"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="13"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <variation key="default">
                                                                         <mask key="constraints">
@@ -694,44 +695,50 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gg6-RR-tWw">
                                 <rect key="frame" x="20" y="236" width="560" height="64"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="554-vX-qq6">
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="554-vX-qq6">
                                         <rect key="frame" x="0.0" y="-10" width="560" height="64"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uqe-hV-9Fz">
-                                                <rect key="frame" x="197" y="0.0" width="167" height="8"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100 miles away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MH3-LE-HXo">
+                                                <rect key="frame" x="237" y="0.0" width="86" height="9"/>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uqe-hV-9Fz">
+                                                <rect key="frame" x="197" y="10" width="167" height="8"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="KP5-OQ-Ta8">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="KP5-OQ-Ta8">
                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="8"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="iTU-xd-dLw">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="iTU-xd-dLw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="16" height="8"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="16" id="SLN-fc-Gh7"/>
                                                                     <constraint firstAttribute="height" constant="16" id="jJK-nl-nyb"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="zX8-s7-Y70">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="zX8-s7-Y70">
                                                                 <rect key="frame" x="18" y="0.0" width="16" height="8"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="16" id="fYn-Ty-XId"/>
                                                                     <constraint firstAttribute="width" constant="16" id="vz0-Vw-45W"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="XaZ-ge-MqJ">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="XaZ-ge-MqJ">
                                                                 <rect key="frame" x="36" y="0.0" width="16" height="8"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="16" id="Dfh-9J-Wiu"/>
                                                                     <constraint firstAttribute="width" constant="16" id="Xt9-Rn-N2w"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="MwJ-Cu-EN5">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="MwJ-Cu-EN5">
                                                                 <rect key="frame" x="54" y="0.0" width="16" height="8"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="16" id="GpK-8W-5bQ"/>
                                                                     <constraint firstAttribute="height" constant="16" id="TS4-oc-VCj"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="CKu-lH-Kau">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="full-star" translatesAutoresizingMaskIntoConstraints="NO" id="CKu-lH-Kau">
                                                                 <rect key="frame" x="72" y="0.0" width="16" height="8"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="16" id="DaN-Cm-Hye"/>
@@ -740,7 +747,7 @@
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgO-Yy-wT9">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3 reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgO-Yy-wT9">
                                                         <rect key="frame" x="113" y="0.0" width="54" height="8"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -749,31 +756,31 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Located 5 miles from Somewhere, Colorado, USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-rN-WQQ">
-                                                <rect key="frame" x="143" y="12" width="276" height="7"/>
+                                                <rect key="frame" x="143" y="19" width="276" height="9"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Latitude: 104   Longitude: 95" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-76-EoP">
-                                                <rect key="frame" x="200" y="23" width="161" height="8"/>
+                                                <rect key="frame" x="200" y="28" width="161" height="8"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 campsites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iV-MU-LDa">
-                                                <rect key="frame" x="243" y="34" width="74" height="8"/>
+                                                <rect key="frame" x="243" y="37" width="74" height="9"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="407.616.1042" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxB-lB-O2n">
-                                                <rect key="frame" x="243" y="46" width="76" height="7"/>
+                                                <rect key="frame" x="243" y="47" width="76" height="8"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="https://www.campsite.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oh3-Mf-MHN">
-                                                <rect key="frame" x="205" y="57" width="152" height="8"/>
+                                                <rect key="frame" x="205" y="56" width="152" height="9"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1127,13 +1134,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Have you been here?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iJ-dv-chc">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="27"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Be the first to review it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFe-S0-LFm">
                                                         <rect key="frame" x="0.0" y="27" width="200" height="24"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1233,6 +1240,7 @@
                     <connections>
                         <outlet property="beTheFirstView" destination="l11-ef-QR1" id="5Bh-tY-szr"/>
                         <outlet property="coordinatesLbl" destination="fAs-76-EoP" id="vKC-AH-9vP"/>
+                        <outlet property="distanceFromUserlbl" destination="MH3-LE-HXo" id="dsb-mA-4GS"/>
                         <outlet property="helpfulImg" destination="wuA-TB-UwA" id="ZcW-J4-rbW"/>
                         <outlet property="locationLbl" destination="4fm-rN-WQQ" id="hlP-BU-ht6"/>
                         <outlet property="map" destination="sOd-wG-Nd4" id="FkM-ob-hWA"/>

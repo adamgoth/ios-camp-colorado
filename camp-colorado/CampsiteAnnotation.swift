@@ -21,8 +21,9 @@ class CampsiteAnnotation: MKPointAnnotation {
     var numberOfSites: String
     var phone: String
     var website: String
+    var distanceFromUser: Int?
     
-    init(sitename: String, campsiteId: Int, latitude: CLLocationDegrees, longitude: CLLocationDegrees, state: String, country: String, nearestTown: String, distanceToNearestTown: String, numberOfSites: String, phone: String, website: String) {
+    init(sitename: String, campsiteId: Int, latitude: CLLocationDegrees, longitude: CLLocationDegrees, state: String, country: String, nearestTown: String, distanceToNearestTown: String, numberOfSites: String, phone: String, website: String, distanceFromUser: Int?) {
         self.sitename = sitename
         self.campsiteId = campsiteId
         self.latitude = latitude
@@ -34,5 +35,6 @@ class CampsiteAnnotation: MKPointAnnotation {
         self.numberOfSites = numberOfSites
         self.phone = phone
         self.website = website
+        self.distanceFromUser = distanceFromUser
     }
 }
