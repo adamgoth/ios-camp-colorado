@@ -67,7 +67,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let review = reviews[indexPath.row]
         
         if review.imageUrl == nil {
-            return 180
+            return 170
         } else {
             return tableView.estimatedRowHeight
         }

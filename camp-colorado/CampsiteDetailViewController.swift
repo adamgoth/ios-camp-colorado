@@ -93,73 +93,13 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
             distanceFromUserLbl.hidden = true
         }
         
-        DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
-            
-            self.reviews = []
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for snap in snapshots {
-                    if let reviewDict = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key
-                        let review = Review(reviewKey: key, dictionary: reviewDict)
-                        self.reviews.append(review)
-                    }
-                }
-            }
-        })
+        fetchReviews()
         
     }
     
     override func viewDidAppear(animated: Bool) {
         if self.reviews.count > 0 {
-            reviewDisplayView.hidden = false
-            seeAllReviewsBtn.hidden = false
-            beTheFirstView.hidden = true
-            ratingAndNumberView.hidden = false
-            numberOfReviewsLbl.text = "\(self.reviews.count) reviews"
-            self.reviews.sortInPlace({ $0.reviewDatetime > $1.reviewDatetime })
-            let displayReview = reviews[0]
-            usernameLbl.text = displayReview.username
-            reviewDatetimeLbl.text = "\(NSDate(timeIntervalSince1970: displayReview.reviewDatetime).dayMonthTime()!)"
-            reviewTxt.text = "\(displayReview.reviewText)"
-            
-            switch displayReview.rating {
-            case 1:
-                reviewStarDisplay1.image = UIImage(named: "full-star")
-                reviewStarDisplay2.image = UIImage(named: "empty-star")
-                reviewStarDisplay3.image = UIImage(named: "empty-star")
-                reviewStarDisplay4.image = UIImage(named: "empty-star")
-                reviewStarDisplay5.image = UIImage(named: "empty-star")
-            case 2:
-                reviewStarDisplay1.image = UIImage(named: "full-star")
-                reviewStarDisplay2.image = UIImage(named: "full-star")
-                reviewStarDisplay3.image = UIImage(named: "empty-star")
-                reviewStarDisplay4.image = UIImage(named: "empty-star")
-                reviewStarDisplay5.image = UIImage(named: "empty-star")
-            case 3:
-                reviewStarDisplay1.image = UIImage(named: "full-star")
-                reviewStarDisplay2.image = UIImage(named: "full-star")
-                reviewStarDisplay3.image = UIImage(named: "full-star")
-                reviewStarDisplay4.image = UIImage(named: "empty-star")
-                reviewStarDisplay5.image = UIImage(named: "empty-star")
-            case 4:
-                reviewStarDisplay1.image = UIImage(named: "full-star")
-                reviewStarDisplay2.image = UIImage(named: "full-star")
-                reviewStarDisplay3.image = UIImage(named: "full-star")
-                reviewStarDisplay4.image = UIImage(named: "full-star")
-                reviewStarDisplay5.image = UIImage(named: "empty-star")
-            case 5:
-                reviewStarDisplay1.image = UIImage(named: "full-star")
-                reviewStarDisplay2.image = UIImage(named: "full-star")
-                reviewStarDisplay3.image = UIImage(named: "full-star")
-                reviewStarDisplay4.image = UIImage(named: "full-star")
-                reviewStarDisplay5.image = UIImage(named: "full-star")
-            default:
-                reviewStarDisplay1.image = UIImage(named: "empty-star")
-                reviewStarDisplay2.image = UIImage(named: "empty-star")
-                reviewStarDisplay3.image = UIImage(named: "empty-star")
-                reviewStarDisplay4.image = UIImage(named: "empty-star")
-                reviewStarDisplay5.image = UIImage(named: "empty-star")
-            }
+            getLatestReview()
         } else {
             reviewDisplayView.hidden = true
             seeAllReviewsBtn.hidden = true
@@ -184,7 +124,7 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     }
     
     func postToFirebase() {
-        var review: Dictionary<String, AnyObject> = [
+        let review: Dictionary<String, AnyObject> = [
             "username": user.username,
             "reviewText": reviewTextField.text!,
             "helpful": 0,
@@ -208,15 +148,92 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    func fetchReviews() {
+        DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            
+            self.reviews = []
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    if let reviewDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let review = Review(reviewKey: key, dictionary: reviewDict)
+                        self.reviews.append(review)
+                    }
+                }
+            }
+        })
+    }
+    
+    func getLatestReview() {
+        reviewDisplayView.hidden = false
+        seeAllReviewsBtn.hidden = false
+        beTheFirstView.hidden = true
+        ratingAndNumberView.hidden = false
+        numberOfReviewsLbl.text = "\(self.reviews.count) reviews"
+        self.reviews.sortInPlace({ $0.reviewDatetime > $1.reviewDatetime })
+        let displayReview = reviews[0]
+        usernameLbl.text = displayReview.username
+        reviewDatetimeLbl.text = "\(NSDate(timeIntervalSince1970: displayReview.reviewDatetime).dayMonthTime()!)"
+        reviewTxt.text = "\(displayReview.reviewText)"
+        
+        switch displayReview.rating {
+        case 1:
+            reviewStarDisplay1.image = UIImage(named: "full-star")
+            reviewStarDisplay2.image = UIImage(named: "empty-star")
+            reviewStarDisplay3.image = UIImage(named: "empty-star")
+            reviewStarDisplay4.image = UIImage(named: "empty-star")
+            reviewStarDisplay5.image = UIImage(named: "empty-star")
+        case 2:
+            reviewStarDisplay1.image = UIImage(named: "full-star")
+            reviewStarDisplay2.image = UIImage(named: "full-star")
+            reviewStarDisplay3.image = UIImage(named: "empty-star")
+            reviewStarDisplay4.image = UIImage(named: "empty-star")
+            reviewStarDisplay5.image = UIImage(named: "empty-star")
+        case 3:
+            reviewStarDisplay1.image = UIImage(named: "full-star")
+            reviewStarDisplay2.image = UIImage(named: "full-star")
+            reviewStarDisplay3.image = UIImage(named: "full-star")
+            reviewStarDisplay4.image = UIImage(named: "empty-star")
+            reviewStarDisplay5.image = UIImage(named: "empty-star")
+        case 4:
+            reviewStarDisplay1.image = UIImage(named: "full-star")
+            reviewStarDisplay2.image = UIImage(named: "full-star")
+            reviewStarDisplay3.image = UIImage(named: "full-star")
+            reviewStarDisplay4.image = UIImage(named: "full-star")
+            reviewStarDisplay5.image = UIImage(named: "empty-star")
+        case 5:
+            reviewStarDisplay1.image = UIImage(named: "full-star")
+            reviewStarDisplay2.image = UIImage(named: "full-star")
+            reviewStarDisplay3.image = UIImage(named: "full-star")
+            reviewStarDisplay4.image = UIImage(named: "full-star")
+            reviewStarDisplay5.image = UIImage(named: "full-star")
+        default:
+            reviewStarDisplay1.image = UIImage(named: "empty-star")
+            reviewStarDisplay2.image = UIImage(named: "empty-star")
+            reviewStarDisplay3.image = UIImage(named: "empty-star")
+            reviewStarDisplay4.image = UIImage(named: "empty-star")
+            reviewStarDisplay5.image = UIImage(named: "empty-star")
+        }
+    }
+    
     @IBAction func makeReview(sender: AnyObject) {
         if starsSelected {
             if let text = reviewTextField.text where text != "" {
                 self.postToFirebase()
+                reviewTextField.text = ""
+                reviewTextField.endEditing(true)
+                reviewStar1.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+                reviewStar2.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+                reviewStar3.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+                reviewStar4.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+                reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+                performSegueWithIdentifier("showAllReviews", sender: self)
+                
             } else {
-                showErrorAlert("No Review Text", message: "Use must leave text in your review")
+                showErrorAlert("Nothing to say?", message: "Tell us about your visit")
             }
         } else {
-            showErrorAlert("No Rating Selected", message: "Use the stars to add a rating to your review")
+            showErrorAlert("Did you enjoy this campsite?", message: "Use the stars to add a rating to your review")
         }
     }
     
