@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var tableView: UITableView!
@@ -21,10 +21,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let initialLocation = CLLocation(latitude: 39.12921, longitude: -105.693681)
     
     var campsites = [Campsite]()
+    var filteredCampsites = [Campsite]()
     var selectedAnnotation: CampsiteAnnotation!
     var distanceFromUser: CLLocationDistance = 0.0
     var userCurrentLocation: CLLocation?
     var user: User!
+    var inSearchMode = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.Done
         searchBar.layer.cornerRadius = 5.0
         searchBar.clipsToBounds = true
         
@@ -206,11 +210,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return campsites.count
+        if inSearchMode {
+            return filteredCampsites.count
+        } else {
+            return campsites.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let campsite = campsites[indexPath.row]
+        
+        var campsite: Campsite
+        
+        if inSearchMode {
+            campsite = filteredCampsites[indexPath.row]
+        } else {
+            campsite = campsites[indexPath.row]
+        }
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("CampsiteCell") as? CampsiteCell {
             cell.configureCell(campsite)
@@ -218,14 +233,44 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             return CampsiteCell()
         }
+
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let campsite = campsites[indexPath.row]
+        
+        var campsite: Campsite
+        
+        if inSearchMode {
+            campsite = filteredCampsites[indexPath.row]
+        } else {
+            campsite = campsites[indexPath.row]
+        }
         let anno = map.annotations.filter({$0.title! == campsite.sitename})[0]
         let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
         map.selectAnnotation(anno, animated: true)
         centerMapOnLocation(location, degrees: 50.0)
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
+    
+    func hideKeyboardWithSearchBar(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            view.endEditing(true)
+            performSelector(#selector(ViewController.hideKeyboardWithSearchBar(_:)), withObject: searchBar, afterDelay: 0)
+            tableView.reloadData()
+        } else {
+            inSearchMode = true
+            let lower = searchBar.text!.lowercaseString
+            filteredCampsites = campsites.filter({$0.sitename.lowercaseString.rangeOfString(lower) != nil})
+            tableView.reloadData()
+        }
     }
     
     @IBAction func userLocationPressed(sender: AnyObject) {
