@@ -15,7 +15,9 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var map: MKMapView!
     //detail outlets
     @IBOutlet weak var sitenameLbl: UILabel!
-    @IBOutlet weak var distanceFromUserlbl: UILabel!
+    @IBOutlet weak var distanceFromUserLbl: UILabel!
+    @IBOutlet weak var ratingAndNumberView: UIStackView!
+    @IBOutlet weak var numberOfReviewsLbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var coordinatesLbl: UILabel!
     @IBOutlet weak var numberOfSitesLbl: UILabel!
@@ -86,9 +88,9 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         }
         
         if annotation.distanceFromUser != nil {
-            distanceFromUserlbl.text = "\(annotation.distanceFromUser!) miles away"
+            distanceFromUserLbl.text = "\(annotation.distanceFromUser!) miles away"
         } else {
-            distanceFromUserlbl.hidden = true
+            distanceFromUserLbl.hidden = true
         }
         
         DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
@@ -112,6 +114,8 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
             reviewDisplayView.hidden = false
             seeAllReviewsBtn.hidden = false
             beTheFirstView.hidden = true
+            ratingAndNumberView.hidden = false
+            numberOfReviewsLbl.text = "\(self.reviews.count) reviews"
             self.reviews.sortInPlace({ $0.reviewDatetime > $1.reviewDatetime })
             let displayReview = reviews[0]
             usernameLbl.text = displayReview.username
