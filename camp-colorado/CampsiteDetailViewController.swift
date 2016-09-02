@@ -50,6 +50,7 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     var reviews: [Review] = []
     var starsSelected: Bool = false
     var starRating: Int = 0
+    var averageRating: Double = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,6 +100,12 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         if self.reviews.count > 0 {
+            calculateAverageRating()
+            reviewDisplayView.hidden = false
+            seeAllReviewsBtn.hidden = false
+            beTheFirstView.hidden = true
+            ratingAndNumberView.hidden = false
+            numberOfReviewsLbl.text = "\(self.reviews.count) reviews, \(averageRating) average rating"
             getLatestReview()
         } else {
             reviewDisplayView.hidden = true
@@ -165,11 +172,6 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     }
     
     func getLatestReview() {
-        reviewDisplayView.hidden = false
-        seeAllReviewsBtn.hidden = false
-        beTheFirstView.hidden = true
-        ratingAndNumberView.hidden = false
-        numberOfReviewsLbl.text = "\(self.reviews.count) reviews"
         self.reviews.sortInPlace({ $0.reviewDatetime > $1.reviewDatetime })
         let displayReview = reviews[0]
         usernameLbl.text = displayReview.username
@@ -214,6 +216,14 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
             reviewStarDisplay4.image = UIImage(named: "empty-star")
             reviewStarDisplay5.image = UIImage(named: "empty-star")
         }
+    }
+    
+    func calculateAverageRating() {
+        let total = self.reviews.reduce(0) { $0 + $1.rating }
+        let reviews = self.reviews.count
+        let averaged = Double(total)/Double(reviews)
+        print(averaged)
+        averageRating = averaged
     }
     
     @IBAction func makeReview(sender: AnyObject) {
