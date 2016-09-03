@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var accountBtn: UIButton!
     
     let locationManager = CLLocationManager()
     
@@ -25,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedAnnotation: CampsiteAnnotation!
     var distanceFromUser: CLLocationDistance = 0.0
     var userCurrentLocation: CLLocation?
-    var user: User!
+    var user: User?
     var inSearchMode = false
 
     override func viewDidLoad() {
@@ -198,7 +199,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func getUserObject() {
         DataService.ds.ref_current_user.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             if let user = snapshot.value as? Dictionary<String, AnyObject> {
-                self.user = User(username: "\(user["username"]!)")
+                self.user = User(username: "\(user["username"]!)", userCreatedAt: "\(user["userCreatedAt"]!)")
+                self.accountBtn.hidden = false
+                print(user["username"])
             } else {
                 print("no user")
             }

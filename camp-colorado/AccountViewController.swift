@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class AccountViewController: UIViewController {
     
     @IBOutlet weak var usernameLbl: UILabel!
+    
     
     var user: User!
 
@@ -18,6 +20,17 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
 
         usernameLbl?.text = user.username
+        
+    }
+    
+    @IBAction func signOutPressed(sender: AnyObject) {
+        do {
+            try FIRAuth.auth()?.signOut()
+            NSUserDefaults.standardUserDefaults().removeObjectForKey(KEY_UID)
+            self.view.window!.rootViewController?.dismissViewControllerAnimated(true, completion: nil)
+        } catch {
+            print("Signout unsuccessful")
+        }
         
     }
 

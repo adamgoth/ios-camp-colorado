@@ -9,16 +9,28 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var signInEmail: UITextField!
     @IBOutlet weak var signInPassword: UITextField!
     @IBOutlet weak var signUpEmail: UITextField!
     @IBOutlet weak var signUpPassword: UITextField!
     @IBOutlet weak var signUpUsername: UITextField!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signInEmail.delegate = self
+        signInPassword.delegate = self
+        signUpEmail.delegate = self
+        signUpPassword.delegate = self
+        signUpUsername.delegate = self
+        
+        signInEmail.returnKeyType = UIReturnKeyType.Done
+        signInPassword.returnKeyType = UIReturnKeyType.Done
+        signUpEmail.returnKeyType = UIReturnKeyType.Done
+        signUpPassword.returnKeyType = UIReturnKeyType.Done
+        signUpUsername.returnKeyType = UIReturnKeyType.Done
 
     }
     
@@ -35,6 +47,11 @@ class LoginViewController: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
+    
     @IBAction func signInPressed() {
         if let email = signInEmail.text where email != "", let pwd = signInPassword.text where pwd != "" {
             FIRAuth.auth()?.signInWithEmail(email, password: pwd) { (user, error) in
@@ -43,8 +60,8 @@ class LoginViewController: UIViewController {
                 } else {
                     NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
                     print("User logged in")
+                    self.performSegueWithIdentifier(SEGUE_LOGIN, sender: nil)
                 }
-                self.performSegueWithIdentifier(SEGUE_LOGIN, sender: nil)
             }
         } else {
             showErrorAlert("Email and Password Required", message: "You must enter an email and password")
@@ -57,17 +74,21 @@ class LoginViewController: UIViewController {
                 if error != nil {
                     print(error)
                 } else {
-                    NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
                     FIRAuth.auth()?.signInWithEmail(email, password: pwd) { (user, error) in
-                        print("Account created, user signed in")
-                        let userData = ["provider": user!.providerID, "username": username]
-                        DataService.ds.createFirebaseUser(user!.uid, user: userData)
+                        if error != nil {
+                            print(error)
+                        } else {
+                            print("Account created, user signed in")
+                            let userData = ["provider": user!.providerID, "username": username, "userCreatedAt": "\(NSDate().timeIntervalSince1970)"]
+                            DataService.ds.createFirebaseUser(user!.uid, user: userData)
+                            NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
+                            self.performSegueWithIdentifier(SEGUE_LOGIN, sender: nil)
+                        }
                     }
-                    self.performSegueWithIdentifier(SEGUE_LOGIN, sender: nil)
                 }
             }
         } else {
-            showErrorAlert("Could Not Create Account", message: "No soup for you!")
+            showErrorAlert("Could Not Create Account", message: "Did you fill out all fields?")
         }
     }
     

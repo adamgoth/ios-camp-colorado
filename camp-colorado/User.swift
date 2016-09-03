@@ -11,6 +11,7 @@ import Foundation
 class User {
     private var _username: String!
     private var _userKey: String!
+    private var _userCreatedAt: String!
     
     var username: String {
         return _username
@@ -20,7 +21,12 @@ class User {
         return _userKey
     }
     
-    init(username: String) {
+    var userCreatedAt: String {
+        return _userCreatedAt
+    }
+    
+    init(username: String, userCreatedAt: String) {
         self._username = username
+        self._userCreatedAt = userCreatedAt
     }
 }
