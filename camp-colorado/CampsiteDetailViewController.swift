@@ -298,11 +298,11 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func allReviewsPressed(sender: AnyObject) {
-        performSegueWithIdentifier("showAllReviews", sender: self)
+        performSegueWithIdentifier(SEGUE_SHOW_ALL_REVIEWS, sender: self)
     }
     
     @IBAction func accountPressed(sender: AnyObject) {
-        performSegueWithIdentifier("showAccount", sender: self)
+        performSegueWithIdentifier(SEGUE_SHOW_ACCOUNT, sender: self)
     }
     
 

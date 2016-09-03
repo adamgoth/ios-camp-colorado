@@ -108,7 +108,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let distance = getDistanceFromUser(userLocation, locationB: campsiteLocation)
                 selectedAnnotation.distanceFromUser = distance
             }
-            performSegueWithIdentifier("showCampsiteDetail", sender: self)
+            performSegueWithIdentifier(SEGUE_CAMPSITE_DETAIL, sender: self)
         }
     }
     
@@ -281,7 +281,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func accountPressed(sender: AnyObject) {
-        performSegueWithIdentifier("showAccount", sender: self)
+        performSegueWithIdentifier(SEGUE_SHOW_ACCOUNT, sender: self)
     }
 
 }
