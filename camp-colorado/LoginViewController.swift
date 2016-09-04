@@ -16,6 +16,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpEmail: UITextField!
     @IBOutlet weak var signUpPassword: UITextField!
     @IBOutlet weak var signUpUsername: UITextField!
+    @IBOutlet weak var signInView: UIView!
+    @IBOutlet weak var signUpView: UIView!
+    @IBOutlet weak var createAccountView: UIView!
+    @IBOutlet weak var backToSignInView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +70,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         } else {
             showErrorAlert("Email and Password Required", message: "You must enter an email and password")
         }
+    }
+    
+    @IBAction func signUpPressed() {
+        signInView.hidden = true
+        signUpView.hidden = true
+        createAccountView.hidden = false
+        backToSignInView.hidden = false
+    }
+    
+    @IBAction func backToSignInPressed() {
+        signInView.hidden = false
+        signUpView.hidden = false
+        createAccountView.hidden = true
+        backToSignInView.hidden = true
     }
     
     @IBAction func createAccountPressed() {
