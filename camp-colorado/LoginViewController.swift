@@ -60,7 +60,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if let email = signInEmail.text where email != "", let pwd = signInPassword.text where pwd != "" {
             FIRAuth.auth()?.signInWithEmail(email, password: pwd) { (user, error) in
                 if error != nil {
-                    print(error)
+                    if error!.code == 17009 {
+                        self.showErrorAlert("Invalid Password", message: "Please try again")
+                    }
                 } else {
                     NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
                     print("User logged in")
@@ -90,7 +92,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if let email = signUpEmail.text where email != "", let pwd = signUpPassword.text where pwd != "", let username = signUpUsername.text where username != "" {
             FIRAuth.auth()?.createUserWithEmail(email, password: pwd) { (user, error) in
                 if error != nil {
-                    print(error)
+                    if error!.code == 17026 {
+                        self.showErrorAlert("Invalid Password", message: "Your password must be six characters long or more")
+                    } else if error!.code == 17007 {
+                        self.showErrorAlert("Email In Use", message: "This email address is already in use")
+                    }
                 } else {
                     FIRAuth.auth()?.signInWithEmail(email, password: pwd) { (user, error) in
                         if error != nil {
