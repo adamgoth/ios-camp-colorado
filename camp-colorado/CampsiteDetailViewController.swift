@@ -23,6 +23,11 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var numberOfSitesLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var websiteLbl: UILabel!
+    @IBOutlet weak var averageRatingStar1: UIImageView!
+    @IBOutlet weak var averageRatingStar2: UIImageView!
+    @IBOutlet weak var averageRatingStar3: UIImageView!
+    @IBOutlet weak var averageRatingStar4: UIImageView!
+    @IBOutlet weak var averageRatingStar5: UIImageView!
     //new review outlets
     @IBOutlet weak var reviewStar1: UIButton!
     @IBOutlet weak var reviewStar2: UIButton!
@@ -224,6 +229,27 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         let averaged = Double(total)/Double(reviews)
         print(averaged)
         averageRating = averaged
+        if averageRating >= 4.5 {
+            averageRatingStar1.image = UIImage(named: "full-star")
+            averageRatingStar2.image = UIImage(named: "full-star")
+            averageRatingStar3.image = UIImage(named: "full-star")
+            averageRatingStar4.image = UIImage(named: "full-star")
+            averageRatingStar5.image = UIImage(named: "full-star")
+        } else if averageRating >= 3.5 {
+            averageRatingStar1.image = UIImage(named: "full-star")
+            averageRatingStar2.image = UIImage(named: "full-star")
+            averageRatingStar3.image = UIImage(named: "full-star")
+            averageRatingStar4.image = UIImage(named: "full-star")
+        } else if averageRating >= 2.5 {
+            averageRatingStar1.image = UIImage(named: "full-star")
+            averageRatingStar2.image = UIImage(named: "full-star")
+            averageRatingStar3.image = UIImage(named: "full-star")
+        } else if averageRating >= 1.5 {
+            averageRatingStar1.image = UIImage(named: "full-star")
+            averageRatingStar2.image = UIImage(named: "full-star")
+        } else if averageRating >= 0.5 {
+            averageRatingStar1.image = UIImage(named: "full-star")
+        }
     }
     
     @IBAction func makeReview(sender: AnyObject) {
