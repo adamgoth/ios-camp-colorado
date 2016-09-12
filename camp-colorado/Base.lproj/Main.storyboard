@@ -728,6 +728,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="signUpDateLbl" destination="jw3-ol-9sI" id="P31-jk-qim"/>
                         <outlet property="usernameLbl" destination="wvJ-8w-TVJ" id="QcZ-lP-4ck"/>
                     </connections>
                 </viewController>

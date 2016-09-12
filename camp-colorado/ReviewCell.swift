@@ -81,11 +81,3 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
     }
 
 }
-
-extension NSDate {
-    func dayMonthTime() -> String? {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "EEEE, MMMM d, h:mm a"
-        return dateFormatter.stringFromDate(self)
-    }
-}

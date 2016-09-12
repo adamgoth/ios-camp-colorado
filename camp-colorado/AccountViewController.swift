@@ -12,7 +12,7 @@ import Firebase
 class AccountViewController: UIViewController {
     
     @IBOutlet weak var usernameLbl: UILabel!
-    
+    @IBOutlet weak var signUpDateLbl: UILabel!
     
     var user: User!
 
@@ -20,6 +20,7 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
 
         usernameLbl?.text = user.username
+        signUpDateLbl?.text = "\(NSDate(timeIntervalSince1970: Double(user.userCreatedAt)!).dayMonthYear()!)"
         
     }
     
