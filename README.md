@@ -10,6 +10,6 @@ An app for discovering campsites. This app will show your location on a map alon
 ## Get running locally
 
 1. Clone the repo.
-2. `pod install`. (?)
+2. Run `pod install` from project directory. 
 3. Open the project in Xcode: i.e. `open ios/camp-colorado.xcodeproj`.
 4. In Xcode, select an emulator (i.e. iPhone 6s) and hit the play button.
