@@ -87,7 +87,7 @@ class Review {
             self._helpful = helpful
         }
         
-        self._reviewRef = DataService.ds.ref_reviews.child("\(self._campsiteId)").child(self._reviewKey)
+        self._reviewRef = DataService.ds.ref_reviews.child("\(self._campsiteId!)").child(self._reviewKey)
     }
     
     func adjustHelpfulCount(_ addHelpful: Bool) {
