@@ -32,24 +32,24 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(ReviewCell.helpfulTapped(_:)))
         tap.numberOfTapsRequired = 1
         helpfulImg.addGestureRecognizer(tap)
-        helpfulImg.userInteractionEnabled = true
+        helpfulImg.isUserInteractionEnabled = true
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func configureCell(review: Review, img: UIImage?) {
+    func configureCell(_ review: Review, img: UIImage?) {
         self.review = review
         self.usernameLbl.text = "\(review.username)"
-        self.reviewDatetimeLbl.text = "\(NSDate(timeIntervalSince1970: review.reviewDatetime).dayMonthTime()!)"
+        self.reviewDatetimeLbl.text = "\(Date(timeIntervalSince1970: review.reviewDatetime).dayMonthTime()!)"
         self.reviewTxt.text = "\(review.reviewText)"
         
         helpfulRef = DataService.ds.ref_current_user.child("helpful").child(review.reviewKey)
         
-        helpfulRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+        helpfulRef.observeSingleEvent(of: .value, with: { snapshot in
             if (snapshot.value as? NSNull) != nil {
                 self.helpfulImg.image = UIImage(named: "thumbsup")
             } else {
@@ -111,10 +111,10 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
         }
     }
     
-    @IBAction func helpfulTapped(sender: UITapGestureRecognizer) {
+    @IBAction func helpfulTapped(_ sender: UITapGestureRecognizer) {
         helpfulRef = DataService.ds.ref_current_user.child("helpful").child(review.reviewKey)
         
-        helpfulRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+        helpfulRef.observeSingleEvent(of: .value, with: { snapshot in
             if (snapshot.value as? NSNull) != nil {
                 self.helpfulImg.image = UIImage(named: "thumbsup-tapped")
                 self.review.adjustHelpfulCount(true)

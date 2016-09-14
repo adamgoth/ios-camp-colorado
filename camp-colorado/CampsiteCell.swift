@@ -20,13 +20,13 @@ class CampsiteCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func configureCell(campsite: Campsite) {
+    func configureCell(_ campsite: Campsite) {
         self.campsite = campsite
         self.sitenameLbl.text = campsite.sitename
         if campsite.distanceFromUser != nil {

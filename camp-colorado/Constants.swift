@@ -17,16 +17,16 @@ let SEGUE_SHOW_ACCOUNT = "showAccount"
 let SEGUE_CAMPSITE_DETAIL = "showCampsiteDetail"
 let SEGUE_SHOW_ALL_REVIEWS = "showAllReviews"
 
-extension NSDate {
+extension Date {
     func dayMonthTime() -> String? {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMMM d, h:mm a"
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
     
     func dayMonthYear() -> String? {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMMM d, y"
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
 }

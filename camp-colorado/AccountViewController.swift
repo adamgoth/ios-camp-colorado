@@ -20,22 +20,22 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
 
         usernameLbl?.text = user.username
-        signUpDateLbl?.text = "\(NSDate(timeIntervalSince1970: Double(user.userCreatedAt)!).dayMonthYear()!)"
+        signUpDateLbl?.text = "\(Date(timeIntervalSince1970: Double(user.userCreatedAt)!).dayMonthYear()!)"
         
     }
     
-    @IBAction func signOutPressed(sender: AnyObject) {
+    @IBAction func signOutPressed(_ sender: AnyObject) {
         do {
             try FIRAuth.auth()?.signOut()
-            NSUserDefaults.standardUserDefaults().removeObjectForKey(KEY_UID)
-            self.view.window!.rootViewController?.dismissViewControllerAnimated(true, completion: nil)
+            UserDefaults.standard.removeObject(forKey: KEY_UID)
+            self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
         } catch {
             print("Signout unsuccessful")
         }
         
     }
 
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -10,18 +10,18 @@ import Foundation
 import MapKit
 
 class Campsite {
-    private var _campsiteId: Int!
-    private var _sitename: String!
-    private var _latitude: CLLocationDegrees!
-    private var _longitude: CLLocationDegrees!
-    private var _state: String!
-    private var _country: String!
-    private var _nearestTown: String!
-    private var _distanceToNearestTown: String!
-    private var _numberOfSites: String!
-    private var _phone: String!
-    private var _website: String!
-    private var _distanceFromUser: Int?
+    fileprivate var _campsiteId: Int!
+    fileprivate var _sitename: String!
+    fileprivate var _latitude: CLLocationDegrees!
+    fileprivate var _longitude: CLLocationDegrees!
+    fileprivate var _state: String!
+    fileprivate var _country: String!
+    fileprivate var _nearestTown: String!
+    fileprivate var _distanceToNearestTown: String!
+    fileprivate var _numberOfSites: String!
+    fileprivate var _phone: String!
+    fileprivate var _website: String!
+    fileprivate var _distanceFromUser: Int?
     
     var campsiteId: Int {
         return _campsiteId

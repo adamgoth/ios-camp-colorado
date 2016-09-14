@@ -30,43 +30,44 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         signUpPassword.delegate = self
         signUpUsername.delegate = self
         
-        signInEmail.returnKeyType = UIReturnKeyType.Done
-        signInPassword.returnKeyType = UIReturnKeyType.Done
-        signUpEmail.returnKeyType = UIReturnKeyType.Done
-        signUpPassword.returnKeyType = UIReturnKeyType.Done
-        signUpUsername.returnKeyType = UIReturnKeyType.Done
+        signInEmail.returnKeyType = UIReturnKeyType.done
+        signInPassword.returnKeyType = UIReturnKeyType.done
+        signUpEmail.returnKeyType = UIReturnKeyType.done
+        signUpPassword.returnKeyType = UIReturnKeyType.done
+        signUpUsername.returnKeyType = UIReturnKeyType.done
 
     }
     
-    override func viewDidAppear(animated: Bool) {
-        if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
-            self.performSegueWithIdentifier(SEGUE_LOGIN, sender: nil)
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.value(forKey: KEY_UID) != nil {
+            self.performSegue(withIdentifier: SEGUE_LOGIN, sender: nil)
         }
     }
     
-    func showErrorAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+    func showErrorAlert(_ title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.endEditing(true)
         return true
     }
     
     @IBAction func signInPressed() {
-        if let email = signInEmail.text where email != "", let pwd = signInPassword.text where pwd != "" {
-            FIRAuth.auth()?.signInWithEmail(email, password: pwd) { (user, error) in
+        if let email = signInEmail.text , email != "", let pwd = signInPassword.text , pwd != "" {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd) { (user, error) in
                 if error != nil {
-                    if error!.code == 17009 {
+                    /*if error. == 17009 {
                         self.showErrorAlert("Invalid Password", message: "Please try again")
-                    }
+                    }*/
+                    print(error)
                 } else {
-                    NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
+                    UserDefaults.standard.setValue(user!.uid, forKey: KEY_UID)
                     print("User logged in")
-                    self.performSegueWithIdentifier(SEGUE_LOGIN, sender: nil)
+                    self.performSegue(withIdentifier: SEGUE_LOGIN, sender: nil)
                 }
             }
         } else {
@@ -75,38 +76,39 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signUpPressed() {
-        signInView.hidden = true
-        signUpView.hidden = true
-        createAccountView.hidden = false
-        backToSignInView.hidden = false
+        signInView.isHidden = true
+        signUpView.isHidden = true
+        createAccountView.isHidden = false
+        backToSignInView.isHidden = false
     }
     
     @IBAction func backToSignInPressed() {
-        signInView.hidden = false
-        signUpView.hidden = false
-        createAccountView.hidden = true
-        backToSignInView.hidden = true
+        signInView.isHidden = false
+        signUpView.isHidden = false
+        createAccountView.isHidden = true
+        backToSignInView.isHidden = true
     }
     
     @IBAction func createAccountPressed() {
-        if let email = signUpEmail.text where email != "", let pwd = signUpPassword.text where pwd != "", let username = signUpUsername.text where username != "" {
-            FIRAuth.auth()?.createUserWithEmail(email, password: pwd) { (user, error) in
+        if let email = signUpEmail.text , email != "", let pwd = signUpPassword.text , pwd != "", let username = signUpUsername.text , username != "" {
+            FIRAuth.auth()?.createUser(withEmail: email, password: pwd) { (user, error) in
                 if error != nil {
-                    if error!.code == 17026 {
+                    /*if error!.code == 17026 {
                         self.showErrorAlert("Invalid Password", message: "Your password must be six characters long or more")
                     } else if error!.code == 17007 {
                         self.showErrorAlert("Email In Use", message: "This email address is already in use")
-                    }
+                    }*/
+                    print(error)
                 } else {
-                    FIRAuth.auth()?.signInWithEmail(email, password: pwd) { (user, error) in
+                    FIRAuth.auth()?.signIn(withEmail: email, password: pwd) { (user, error) in
                         if error != nil {
                             print(error)
                         } else {
                             print("Account created, user signed in")
-                            let userData = ["provider": user!.providerID, "username": username, "userCreatedAt": "\(NSDate().timeIntervalSince1970)"]
-                            DataService.ds.createFirebaseUser(user!.uid, user: userData)
-                            NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
-                            self.performSegueWithIdentifier(SEGUE_LOGIN, sender: nil)
+                            let userData = ["provider": user!.providerID, "username": username, "userCreatedAt": "\(Date().timeIntervalSince1970)"]
+                            DataService.ds.createFirebaseUser(user!.uid, user: userData as Dictionary<String, AnyObject>)
+                            UserDefaults.standard.setValue(user!.uid, forKey: KEY_UID)
+                            self.performSegue(withIdentifier: SEGUE_LOGIN, sender: nil)
                         }
                     }
                 }

@@ -46,6 +46,7 @@
 		F9513B881D6345EA00BFDB8B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F95A5F8B1D5B60640027D3FC /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		F95A5F8D1D5B631C0027D3FC /* campsites-colorado.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "campsites-colorado.csv"; sourceTree = "<group>"; };
+		F99EFF2C1D8981B1000391D3 /* camp-colorado.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "camp-colorado.entitlements"; sourceTree = "<group>"; };
 		F9A02DD91D73773300C9B342 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F9A376C91D5A25560058225F /* Campsite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campsite.swift; sourceTree = "<group>"; };
 		F9BCB5CC1D65E4AF004C2AA5 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 		F9D5AC811D5A1825007E7005 /* camp-colorado */ = {
 			isa = PBXGroup;
 			children = (
+				F99EFF2C1D8981B1000391D3 /* camp-colorado.entitlements */,
 				F9BCB5CB1D65E49A004C2AA5 /* Resources */,
 				F9E3DA721D648D16005B7E8C /* Services */,
 				F9E3DA6F1D648B73005B7E8C /* Util */,
@@ -248,6 +250,12 @@
 					F9D5AC7E1D5A1825007E7005 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M685F39Y73;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -472,6 +480,7 @@
 			baseConfigurationReference = 2264B4780133B8187B232A6C /* Pods-camp-colorado.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "camp-colorado/camp-colorado.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "camp-colorado/Info.plist";
@@ -479,6 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adamgoth.camp-colorado";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -487,6 +497,7 @@
 			baseConfigurationReference = AD9704D41BED8EB2A67C02C8 /* Pods-camp-colorado.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "camp-colorado/camp-colorado.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "camp-colorado/Info.plist";
@@ -494,6 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adamgoth.camp-colorado";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

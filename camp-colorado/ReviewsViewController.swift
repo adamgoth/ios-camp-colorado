@@ -27,7 +27,7 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         sitenameLbl.text = annotation.sitename
         
-        DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+        DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observe(FIRDataEventType.value, with: { (snapshot) in
             
             self.reviews = []
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -40,31 +40,31 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
             }
             
-            self.reviews.sortInPlace({ $0.reviewDatetime > $1.reviewDatetime })
+            self.reviews.sort(by: { $0.reviewDatetime > $1.reviewDatetime })
             self.tableView.reloadData()
         })
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reviews.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let review = reviews[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let review = reviews[(indexPath as NSIndexPath).row]
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier("ReviewCell") as? ReviewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell") as? ReviewCell {
             cell.configureCell(review, img: nil)
             return cell
         } else {
             return ReviewCell()
         }
     }
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let review = reviews[indexPath.row]
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let review = reviews[(indexPath as NSIndexPath).row]
         
         if review.imageUrl == nil {
             return 170
@@ -73,18 +73,18 @@ class ReviewsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destination = segue.destinationViewController as? AccountViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AccountViewController {
             destination.user = user
         }
     }
     
-    @IBAction func showAccountPressed(sender: AnyObject) {
-        performSegueWithIdentifier("showAccount", sender: self)
+    @IBAction func showAccountPressed(_ sender: AnyObject) {
+        performSegue(withIdentifier: "showAccount", sender: self)
     }
     
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
 
 }
