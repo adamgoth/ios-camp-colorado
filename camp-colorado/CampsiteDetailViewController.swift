@@ -137,6 +137,7 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     
     func postToFirebase() {
         let review: Dictionary<String, AnyObject> = [
+            "campsiteId": annotation.campsiteId,
             "username": user.username,
             "reviewText": reviewTextField.text!,
             "helpful": 0,

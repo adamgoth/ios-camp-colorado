@@ -762,8 +762,8 @@
                                             <action selector="accountPressed:" destination="bQT-hX-wyp" eventType="touchUpInside" id="bPY-Df-Xoe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47N-ng-2Qp">
-                                        <rect key="frame" x="8" y="18" width="46" height="33"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47N-ng-2Qp">
+                                        <rect key="frame" x="8" y="18" width="48" height="30"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
                                         <state key="normal" title="&lt; Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -772,8 +772,8 @@
                                             <action selector="backButtonPressed" destination="bQT-hX-wyp" eventType="touchUpInside" id="ych-zF-F50"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sitename" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mu7-2k-ybJ">
-                                        <rect key="frame" x="175" y="20" width="250" height="27.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sitename" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mu7-2k-ybJ">
+                                        <rect key="frame" x="175" y="20" width="250" height="23.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="w3j-DG-pLa"/>
                                         </constraints>
@@ -1151,8 +1151,8 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ge8-Xe-vIH">
-                                                <rect key="frame" x="8" y="50" width="544" height="90"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ge8-Xe-vIH">
+                                                <rect key="frame" x="8" y="48" width="544" height="92"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="87" id="NXw-tx-o9Y"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="kZu-JM-qHh"/>
@@ -1505,10 +1505,14 @@
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbsup" translatesAutoresizingMaskIntoConstraints="NO" id="Uap-Dx-yFs">
                                                             <rect key="frame" x="531" y="4" width="29" height="29"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="29" id="y2Y-6y-Scg"/>
                                                                 <constraint firstAttribute="width" constant="29" id="zvx-ww-Isx"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="wlp-sZ-VLn" appends="YES" id="FD8-Yp-yke"/>
+                                                            </connections>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Was this review helpful?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7s-k7-TDS">
                                                             <rect key="frame" x="443" y="34" width="117" height="21"/>
@@ -1564,8 +1568,8 @@
                                                                 </imageView>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Review" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPl-eW-Wm9">
-                                                            <rect key="frame" x="8" y="32" width="78" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date of Review" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPl-eW-Wm9">
+                                                            <rect key="frame" x="8" y="29" width="81.5" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="1nF-gQ-LGR"/>
                                                                 <constraint firstAttribute="height" constant="16" id="eYr-tY-8TN"/>
@@ -1668,6 +1672,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="helpfulImg" destination="Uap-Dx-yFs" id="9hv-Du-LYJ"/>
+                                            <outlet property="helpfulNumberLbl" destination="C7s-k7-TDS" id="exg-Mx-kYB"/>
                                             <outlet property="reviewDatetimeLbl" destination="oPl-eW-Wm9" id="PSI-3g-IXm"/>
                                             <outlet property="reviewImg" destination="ikS-2s-BTH" id="ya0-A4-J8i"/>
                                             <outlet property="reviewStar1" destination="K1U-og-S6V" id="S2Y-Jx-Nga"/>
@@ -1711,6 +1716,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ew-qm-MmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wlp-sZ-VLn"/>
             </objects>
             <point key="canvasLocation" x="1893" y="337"/>
         </scene>
@@ -1721,7 +1727,7 @@
         <image name="empty-star" width="32" height="32"/>
         <image name="full-star" width="32" height="32"/>
         <image name="maroon-bells" width="1024" height="682"/>
-        <image name="thumbsup" width="200" height="200"/>
+        <image name="thumbsup" width="128" height="128"/>
         <image name="user-location" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>

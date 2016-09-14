@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class Review {
     private var _campsiteId: Int!
@@ -17,6 +18,8 @@ class Review {
     private var _reviewText: String!
     private var _imageUrl: String?
     private var _helpful: Int!
+    
+    private var _reviewRef: FIRDatabaseReference!
     
     var campsiteId: Int {
         return _campsiteId
@@ -64,6 +67,10 @@ class Review {
             self._reviewDatetime = reviewDatetime
         }
         
+        if let campsiteId = dictionary["campsiteId"] as? Int {
+            self._campsiteId = campsiteId
+        }
+        
         if let username = dictionary["username"] as? String {
             self._username = username
         }
@@ -79,5 +86,17 @@ class Review {
         if let helpful = dictionary["helpful"] as? Int {
             self._helpful = helpful
         }
+        
+        self._reviewRef = DataService.ds.ref_reviews.child("\(self._campsiteId)").child(self._reviewKey)
+    }
+    
+    func adjustHelpfulCount(addHelpful: Bool) {
+        if addHelpful {
+            _helpful = _helpful + 1
+        } else {
+            _helpful = _helpful - 1
+        }
+        
+        _reviewRef.child("helpful").setValue(_helpful)
     }
 }

@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
     
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var reviewDatetimeLbl: UILabel!
     @IBOutlet weak var helpfulImg: UIImageView!
+    @IBOutlet weak var helpfulNumberLbl: UILabel!
     @IBOutlet weak var reviewTxt: UITextView!
     @IBOutlet weak var reviewImg: UIImageView?
     @IBOutlet weak var reviewStar1: UIImageView!
@@ -22,10 +24,15 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
     @IBOutlet weak var reviewStar5: UIImageView!
     
     var review: Review!
+    var helpfulRef: FIRDatabaseReference!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ReviewCell.helpfulTapped(_:)))
+        tap.numberOfTapsRequired = 1
+        helpfulImg.addGestureRecognizer(tap)
+        helpfulImg.userInteractionEnabled = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -39,6 +46,18 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
         self.usernameLbl.text = "\(review.username)"
         self.reviewDatetimeLbl.text = "\(NSDate(timeIntervalSince1970: review.reviewDatetime).dayMonthTime()!)"
         self.reviewTxt.text = "\(review.reviewText)"
+        
+        helpfulRef = DataService.ds.ref_current_user.child("helpful").child(review.reviewKey)
+        
+        helpfulRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            if (snapshot.value as? NSNull) != nil {
+                self.helpfulImg.image = UIImage(named: "thumbsup")
+            } else {
+                self.helpfulImg.image = UIImage(named: "thumbsup-tapped")
+            }
+        })
+        
+        setHelpfulLbl()
         
         switch review.rating {
         case 1:
@@ -78,6 +97,36 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
             reviewStar4.image = UIImage(named: "empty-star")
             reviewStar5.image = UIImage(named: "empty-star")
         }
+    }
+    
+    func setHelpfulLbl() {
+        if self.review.helpful > 0 {
+            if self.review.helpful == 1 {
+                helpfulNumberLbl.text = "\(review.helpful) like"
+            } else {
+                helpfulNumberLbl.text = "\(review.helpful) likes"
+            }
+        } else {
+            helpfulNumberLbl.text = "Was this review helpful?"
+        }
+    }
+    
+    @IBAction func helpfulTapped(sender: UITapGestureRecognizer) {
+        helpfulRef = DataService.ds.ref_current_user.child("helpful").child(review.reviewKey)
+        
+        helpfulRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            if (snapshot.value as? NSNull) != nil {
+                self.helpfulImg.image = UIImage(named: "thumbsup-tapped")
+                self.review.adjustHelpfulCount(true)
+                self.helpfulRef.setValue(true)
+            } else {
+                self.helpfulImg.image = UIImage(named: "thumbsup")
+                self.review.adjustHelpfulCount(false)
+                self.helpfulRef.removeValue()
+            }
+        })
+        
+        setHelpfulLbl()
     }
 
 }
