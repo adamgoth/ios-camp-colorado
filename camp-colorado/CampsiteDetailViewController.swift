@@ -72,19 +72,19 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         if annotation.numberOfSites != "" {
             numberOfSitesLbl.text = "Number of campsites: \(annotation.numberOfSites)"
         } else {
-            numberOfSitesLbl.hidden = true
+            numberOfSitesLbl.isHidden = true
         }
         
         if annotation.phone != "" {
             phoneLbl.text = annotation.phone
         } else {
-            phoneLbl.hidden = true
+            phoneLbl.isHidden = true
         }
         
         if annotation.website != "" {
             websiteLbl.text = annotation.website
         } else {
-            websiteLbl.hidden = true
+            websiteLbl.isHidden = true
         }
         
         if annotation.distanceToNearestTown != "" && annotation.nearestTown != "" {
@@ -96,53 +96,53 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         if annotation.distanceFromUser != nil {
             distanceFromUserLbl.text = "\(annotation.distanceFromUser!) miles away"
         } else {
-            distanceFromUserLbl.hidden = true
+            distanceFromUserLbl.isHidden = true
         }
         
         fetchReviews()
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if self.reviews.count > 0 {
             calculateAverageRating()
-            reviewDisplayView.hidden = false
-            seeAllReviewsBtn.hidden = false
-            beTheFirstView.hidden = true
-            ratingAndNumberView.hidden = false
+            reviewDisplayView.isHidden = false
+            seeAllReviewsBtn.isHidden = false
+            beTheFirstView.isHidden = true
+            ratingAndNumberView.isHidden = false
             numberOfReviewsLbl.text = "\(self.reviews.count) reviews, \(averageRating) average rating"
             getLatestReview()
         } else {
-            reviewDisplayView.hidden = true
-            seeAllReviewsBtn.hidden = true
-            beTheFirstView.hidden = false
+            reviewDisplayView.isHidden = true
+            seeAllReviewsBtn.isHidden = true
+            beTheFirstView.isHidden = false
         }
     }
     
-    func centerMapOnLocation(location: CLLocation) {
+    func centerMapOnLocation(_ location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 0.5, regionRadius * 0.5)
         map.setRegion(coordinateRegion, animated: true)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destination = segue.destinationViewController as? ReviewsViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ReviewsViewController {
             destination.annotation = annotation
             destination.user = user
         }
         
-        if let destination = segue.destinationViewController as? AccountViewController {
+        if let destination = segue.destination as? AccountViewController {
             destination.user = user
         }
     }
     
     func postToFirebase() {
         let review: Dictionary<String, AnyObject> = [
-            "campsiteId": annotation.campsiteId,
-            "username": user.username,
-            "reviewText": reviewTextField.text!,
-            "helpful": 0,
-            "rating": starRating,
-            "reviewDatetime": NSDate().timeIntervalSince1970
+            "campsiteId": annotation.campsiteId as AnyObject,
+            "username": user.username as AnyObject,
+            "reviewText": reviewTextField.text! as AnyObject,
+            "helpful": 0 as AnyObject,
+            "rating": starRating as AnyObject,
+            "reviewDatetime": Date().timeIntervalSince1970 as AnyObject
         ]
 
         
@@ -154,15 +154,15 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         starsSelected = false
     }
     
-    func showErrorAlert(alert: String, message: String) {
-        let alert = UIAlertController(title: alert, message: message, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+    func showErrorAlert(_ alert: String, message: String) {
+        let alert = UIAlertController(title: alert, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
     func fetchReviews() {
-        DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+        DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observe(FIRDataEventType.value, with: { (snapshot) in
             
             self.reviews = []
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -178,10 +178,10 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     }
     
     func getLatestReview() {
-        self.reviews.sortInPlace({ $0.reviewDatetime > $1.reviewDatetime })
+        self.reviews.sort(by: { $0.reviewDatetime > $1.reviewDatetime })
         let displayReview = reviews[0]
         usernameLbl.text = displayReview.username
-        reviewDatetimeLbl.text = "\(NSDate(timeIntervalSince1970: displayReview.reviewDatetime).dayMonthTime()!)"
+        reviewDatetimeLbl.text = "\(Date(timeIntervalSince1970: displayReview.reviewDatetime).dayMonthTime()!)"
         reviewTxt.text = "\(displayReview.reviewText)"
         
         switch displayReview.rating {
@@ -253,18 +253,18 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    @IBAction func makeReview(sender: AnyObject) {
+    @IBAction func makeReview(_ sender: AnyObject) {
         if starsSelected {
-            if let text = reviewTextField.text where text != "" {
+            if let text = reviewTextField.text , text != "" {
                 self.postToFirebase()
                 reviewTextField.text = ""
                 reviewTextField.endEditing(true)
-                reviewStar1.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-                reviewStar2.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-                reviewStar3.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-                reviewStar4.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-                reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-                performSegueWithIdentifier("showAllReviews", sender: self)
+                reviewStar1.setImage(UIImage(named: "empty-star"), for: UIControlState())
+                reviewStar2.setImage(UIImage(named: "empty-star"), for: UIControlState())
+                reviewStar3.setImage(UIImage(named: "empty-star"), for: UIControlState())
+                reviewStar4.setImage(UIImage(named: "empty-star"), for: UIControlState())
+                reviewStar5.setImage(UIImage(named: "empty-star"), for: UIControlState())
+                performSegue(withIdentifier: "showAllReviews", sender: self)
                 
             } else {
                 showErrorAlert("Nothing to say?", message: "Tell us about your visit")
@@ -274,67 +274,67 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    @IBAction func reviewStar1Pressed(sender: AnyObject) {
-        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar2.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-        reviewStar3.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-        reviewStar4.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-        reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+    @IBAction func reviewStar1Pressed(_ sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar2.setImage(UIImage(named: "empty-star"), for: UIControlState())
+        reviewStar3.setImage(UIImage(named: "empty-star"), for: UIControlState())
+        reviewStar4.setImage(UIImage(named: "empty-star"), for: UIControlState())
+        reviewStar5.setImage(UIImage(named: "empty-star"), for: UIControlState())
         starsSelected = true
         starRating = 1
     }
     
-    @IBAction func reviewStar2Pressed(sender: AnyObject) {
-        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar2.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar3.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-        reviewStar4.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-        reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+    @IBAction func reviewStar2Pressed(_ sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar2.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar3.setImage(UIImage(named: "empty-star"), for: UIControlState())
+        reviewStar4.setImage(UIImage(named: "empty-star"), for: UIControlState())
+        reviewStar5.setImage(UIImage(named: "empty-star"), for: UIControlState())
         starsSelected = true
         starRating = 2
     }
     
-    @IBAction func reviewStar3Pressed(sender: AnyObject) {
-        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar2.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar3.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar4.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
-        reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+    @IBAction func reviewStar3Pressed(_ sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar2.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar3.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar4.setImage(UIImage(named: "empty-star"), for: UIControlState())
+        reviewStar5.setImage(UIImage(named: "empty-star"), for: UIControlState())
         starsSelected = true
         starRating = 3
     }
     
-    @IBAction func reviewStar4Pressed(sender: AnyObject) {
-        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar2.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar3.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar4.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar5.setImage(UIImage(named: "empty-star"), forState: UIControlState.Normal)
+    @IBAction func reviewStar4Pressed(_ sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar2.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar3.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar4.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar5.setImage(UIImage(named: "empty-star"), for: UIControlState())
         starsSelected = true
         starRating = 4
     }
     
-    @IBAction func reviewStar5Pressed(sender: AnyObject) {
-        reviewStar1.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar2.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar3.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar4.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
-        reviewStar5.setImage(UIImage(named: "full-star"), forState: UIControlState.Normal)
+    @IBAction func reviewStar5Pressed(_ sender: AnyObject) {
+        reviewStar1.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar2.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar3.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar4.setImage(UIImage(named: "full-star"), for: UIControlState())
+        reviewStar5.setImage(UIImage(named: "full-star"), for: UIControlState())
         starsSelected = true
         starRating = 5
     }
     
-    @IBAction func allReviewsPressed(sender: AnyObject) {
-        performSegueWithIdentifier(SEGUE_SHOW_ALL_REVIEWS, sender: self)
+    @IBAction func allReviewsPressed(_ sender: AnyObject) {
+        performSegue(withIdentifier: SEGUE_SHOW_ALL_REVIEWS, sender: self)
     }
     
-    @IBAction func accountPressed(sender: AnyObject) {
-        performSegueWithIdentifier(SEGUE_SHOW_ACCOUNT, sender: self)
+    @IBAction func accountPressed(_ sender: AnyObject) {
+        performSegue(withIdentifier: SEGUE_SHOW_ACCOUNT, sender: self)
     }
     
 
     @IBAction func backButtonPressed() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
 }

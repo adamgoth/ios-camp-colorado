@@ -8,6 +8,17 @@
 
 import UIKit
 import MapKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, UISearchBarDelegate {
     
@@ -37,7 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         
         searchBar.delegate = self
-        searchBar.returnKeyType = UIReturnKeyType.Done
+        searchBar.returnKeyType = UIReturnKeyType.done
         searchBar.layer.cornerRadius = 5.0
         searchBar.clipsToBounds = true
         
@@ -47,44 +58,44 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         getUserObject()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         locationAuthStatus()
         addUserDistances()
         self.tableView.reloadData()
     }
     
     func locationAuthStatus() {
-        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             map.showsUserLocation = true
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
     }
     
-    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         if let loc = userLocation.location {
             userCurrentLocation = loc
             print(loc)
         }
     }
     
-    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         print(map.region.span)
     }
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         if annotation is MKUserLocation {
             return nil
         }
         
         let reuseId = "pin"
-        var view = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        var view = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
         
         if view == nil {
             view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             view?.canShowCallout = true
-            view?.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+            view?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         } else {
             view?.annotation = annotation
         }
@@ -92,14 +103,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return view
     }
 
-    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let location = createLocationFromCoordinates(view.annotation!.coordinate.latitude, longitude: view.annotation!.coordinate.longitude)
         if map.region.span.latitudeDelta > 0.7 {
             centerMapOnLocation(location, degrees: 50.0)
         }
     }
     
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
             selectedAnnotation = view.annotation as? CampsiteAnnotation
             if userCurrentLocation != nil {
@@ -108,28 +119,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let distance = getDistanceFromUser(userLocation, locationB: campsiteLocation)
                 selectedAnnotation.distanceFromUser = distance
             }
-            performSegueWithIdentifier(SEGUE_CAMPSITE_DETAIL, sender: self)
+            performSegue(withIdentifier: SEGUE_CAMPSITE_DETAIL, sender: self)
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destination = segue.destinationViewController as? CampsiteDetailViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CampsiteDetailViewController {
             destination.annotation = selectedAnnotation
             destination.user = user
         }
         
-        if let destination = segue.destinationViewController as? AccountViewController {
+        if let destination = segue.destination as? AccountViewController {
             destination.user = user
         }
     }
 
-    func centerMapOnLocation(location: CLLocation, degrees: CLLocationDegrees) {
+    func centerMapOnLocation(_ location: CLLocation, degrees: CLLocationDegrees) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * degrees, regionRadius * degrees)
         map.setRegion(coordinateRegion, animated: true)
     }
     
     func parseCampsitesCSV() {
-        let path = NSBundle.mainBundle().pathForResource("campsites-colorado", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "campsites-colorado", ofType: "csv")!
         
         do {
             let csv = try CSV(contentsOfURL: path)
@@ -163,7 +174,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 campsite.distanceFromUser = distance
             }
         }
-        campsites.sortInPlace({ $0.distanceFromUser < $1.distanceFromUser })
+        campsites.sort(by: { $0.distanceFromUser < $1.distanceFromUser })
     }
     
     func createAnnotations() {
@@ -186,21 +197,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func createLocationFromCoordinates(latitude: CLLocationDegrees, longitude: CLLocationDegrees) -> CLLocation {
+    func createLocationFromCoordinates(_ latitude: CLLocationDegrees, longitude: CLLocationDegrees) -> CLLocation {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
-    func getDistanceFromUser(locationA: CLLocation, locationB: CLLocation) -> Int {
-        let distanceInMeters = locationA.distanceFromLocation(locationB)
+    func getDistanceFromUser(_ locationA: CLLocation, locationB: CLLocation) -> Int {
+        let distanceInMeters = locationA.distance(from: locationB)
         let distanceInMiles = distanceInMeters * 0.000621371
         return Int(round(distanceInMiles))
     }
     
     func getUserObject() {
-        DataService.ds.ref_current_user.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        DataService.ds.ref_current_user.observeSingleEvent(of: .value, with: { (snapshot) in
             if let user = snapshot.value as? Dictionary<String, AnyObject> {
                 self.user = User(username: "\(user["username"]!)", userCreatedAt: "\(user["userCreatedAt"]!)")
-                self.accountBtn.hidden = false
+                self.accountBtn.isHidden = false
                 print(user["username"])
             } else {
                 print("no user")
@@ -208,11 +219,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if inSearchMode {
             return filteredCampsites.count
         } else {
@@ -220,17 +231,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var campsite: Campsite
         
         if inSearchMode {
-            campsite = filteredCampsites[indexPath.row]
+            campsite = filteredCampsites[(indexPath as NSIndexPath).row]
         } else {
-            campsite = campsites[indexPath.row]
+            campsite = campsites[(indexPath as NSIndexPath).row]
         }
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier("CampsiteCell") as? CampsiteCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CampsiteCell") as? CampsiteCell {
             cell.configureCell(campsite)
             return cell
         } else {
@@ -239,14 +250,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         var campsite: Campsite
         
         if inSearchMode {
-            campsite = filteredCampsites[indexPath.row]
+            campsite = filteredCampsites[(indexPath as NSIndexPath).row]
         } else {
-            campsite = campsites[indexPath.row]
+            campsite = campsites[(indexPath as NSIndexPath).row]
         }
         let anno = map.annotations.filter({$0.title! == campsite.sitename})[0]
         let location = createLocationFromCoordinates(campsite.latitude, longitude: campsite.longitude)
@@ -254,34 +265,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         centerMapOnLocation(location, degrees: 50.0)
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
     }
     
-    func hideKeyboardWithSearchBar(searchBar: UISearchBar) {
+    func hideKeyboardWithSearchBar(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
             view.endEditing(true)
-            performSelector(#selector(ViewController.hideKeyboardWithSearchBar(_:)), withObject: searchBar, afterDelay: 0)
+            perform(#selector(ViewController.hideKeyboardWithSearchBar(_:)), with: searchBar, afterDelay: 0)
             tableView.reloadData()
         } else {
             inSearchMode = true
-            let lower = searchBar.text!.lowercaseString
-            filteredCampsites = campsites.filter({$0.sitename.lowercaseString.rangeOfString(lower) != nil})
+            let lower = searchBar.text!.lowercased()
+            filteredCampsites = campsites.filter({$0.sitename.lowercased().range(of: lower) != nil})
             tableView.reloadData()
         }
     }
     
-    @IBAction func userLocationPressed(sender: AnyObject) {
+    @IBAction func userLocationPressed(_ sender: AnyObject) {
         centerMapOnLocation(userCurrentLocation!, degrees: 50.0)
     }
     
-    @IBAction func accountPressed(sender: AnyObject) {
-        performSegueWithIdentifier(SEGUE_SHOW_ACCOUNT, sender: self)
+    @IBAction func accountPressed(_ sender: AnyObject) {
+        performSegue(withIdentifier: SEGUE_SHOW_ACCOUNT, sender: self)
     }
 
 }

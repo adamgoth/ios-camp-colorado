@@ -9,9 +9,9 @@
 import Foundation
 
 class User {
-    private var _username: String!
-    private var _userKey: String!
-    private var _userCreatedAt: String!
+    fileprivate var _username: String!
+    fileprivate var _userKey: String!
+    fileprivate var _userCreatedAt: String!
     
     var username: String {
         return _username

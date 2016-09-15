@@ -10,16 +10,16 @@ import Foundation
 import Firebase
 
 class Review {
-    private var _campsiteId: Int!
-    private var _reviewKey: String!
-    private var _reviewDatetime: Double!
-    private var _username: String!
-    private var _rating: Int!
-    private var _reviewText: String!
-    private var _imageUrl: String?
-    private var _helpful: Int!
+    fileprivate var _campsiteId: Int!
+    fileprivate var _reviewKey: String!
+    fileprivate var _reviewDatetime: Double!
+    fileprivate var _username: String!
+    fileprivate var _rating: Int!
+    fileprivate var _reviewText: String!
+    fileprivate var _imageUrl: String?
+    fileprivate var _helpful: Int!
     
-    private var _reviewRef: FIRDatabaseReference!
+    fileprivate var _reviewRef: FIRDatabaseReference!
     
     var campsiteId: Int {
         return _campsiteId
@@ -87,10 +87,10 @@ class Review {
             self._helpful = helpful
         }
         
-        self._reviewRef = DataService.ds.ref_reviews.child("\(self._campsiteId)").child(self._reviewKey)
+        self._reviewRef = DataService.ds.ref_reviews.child("\(self._campsiteId!)").child(self._reviewKey)
     }
     
-    func adjustHelpfulCount(addHelpful: Bool) {
+    func adjustHelpfulCount(_ addHelpful: Bool) {
         if addHelpful {
             _helpful = _helpful + 1
         } else {
