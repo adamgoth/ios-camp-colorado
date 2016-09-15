@@ -60,9 +60,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if let email = signInEmail.text , email != "", let pwd = signInPassword.text , pwd != "" {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd) { (user, error) in
                 if error != nil {
-                    /*if error. == 17009 {
+                    if String(describing: error).range(of: "17009") != nil {
                         self.showErrorAlert("Invalid Password", message: "Please try again")
-                    }*/
+                    }
                     print(error)
                 } else {
                     UserDefaults.standard.setValue(user!.uid, forKey: KEY_UID)
@@ -93,11 +93,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if let email = signUpEmail.text , email != "", let pwd = signUpPassword.text , pwd != "", let username = signUpUsername.text , username != "" {
             FIRAuth.auth()?.createUser(withEmail: email, password: pwd) { (user, error) in
                 if error != nil {
-                    /*if error!.code == 17026 {
-                        self.showErrorAlert("Invalid Password", message: "Your password must be six characters long or more")
-                    } else if error!.code == 17007 {
+                    if String(describing: error).range(of: "17007") != nil {
                         self.showErrorAlert("Email In Use", message: "This email address is already in use")
-                    }*/
+                    } else if String(describing: error).range(of: "17008") != nil {
+                        self.showErrorAlert("Invalid Email Address", message: "This does not appear to be a valid email address format")
+                    } else if String(describing: error).range(of: "17026") != nil {
+                        self.showErrorAlert("Invalid Password", message: "Your password must be six characters long or more")
+                    }
                     print(error)
                 } else {
                     FIRAuth.auth()?.signIn(withEmail: email, password: pwd) { (user, error) in
