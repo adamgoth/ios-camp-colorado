@@ -90,7 +90,7 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         if annotation.distanceToNearestTown != "" && annotation.nearestTown != "" {
             locationLbl.text = "Located \(annotation.distanceToNearestTown) miles from \(annotation.nearestTown), \(annotation.state), \(annotation.country)"
         } else {
-            "\(annotation.state), \(annotation.country)"
+            locationLbl.text = "\(annotation.state), \(annotation.country)"
         }
         
         if annotation.distanceFromUser != nil {
@@ -124,36 +124,6 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         map.setRegion(coordinateRegion, animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? ReviewsViewController {
-            destination.annotation = annotation
-            destination.user = user
-        }
-        
-        if let destination = segue.destination as? AccountViewController {
-            destination.user = user
-        }
-    }
-    
-    func postToFirebase() {
-        let review: Dictionary<String, AnyObject> = [
-            "campsiteId": annotation.campsiteId as AnyObject,
-            "username": user.username as AnyObject,
-            "reviewText": reviewTextField.text! as AnyObject,
-            "helpful": 0 as AnyObject,
-            "rating": starRating as AnyObject,
-            "reviewDatetime": Date().timeIntervalSince1970 as AnyObject
-        ]
-
-        
-        let firebasePost = DataService.ds.ref_reviews.child("\(annotation.campsiteId)").childByAutoId()
-        firebasePost.setValue(review)
-        
-        reviewTextField.text = ""
-        starRating = 0
-        starsSelected = false
-    }
-    
     func showErrorAlert(_ alert: String, message: String) {
         let alert = UIAlertController(title: alert, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -161,6 +131,7 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         present(alert, animated: true, completion: nil)
     }
     
+    //get reviews
     func fetchReviews() {
         DataService.ds.ref_reviews.child("\(annotation.campsiteId)").observe(FIRDataEventType.value, with: { (snapshot) in
             
@@ -187,28 +158,18 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         switch displayReview.rating {
         case 1:
             reviewStarDisplay1.image = UIImage(named: "full-star")
-            reviewStarDisplay2.image = UIImage(named: "empty-star")
-            reviewStarDisplay3.image = UIImage(named: "empty-star")
-            reviewStarDisplay4.image = UIImage(named: "empty-star")
-            reviewStarDisplay5.image = UIImage(named: "empty-star")
         case 2:
             reviewStarDisplay1.image = UIImage(named: "full-star")
             reviewStarDisplay2.image = UIImage(named: "full-star")
-            reviewStarDisplay3.image = UIImage(named: "empty-star")
-            reviewStarDisplay4.image = UIImage(named: "empty-star")
-            reviewStarDisplay5.image = UIImage(named: "empty-star")
         case 3:
             reviewStarDisplay1.image = UIImage(named: "full-star")
             reviewStarDisplay2.image = UIImage(named: "full-star")
             reviewStarDisplay3.image = UIImage(named: "full-star")
-            reviewStarDisplay4.image = UIImage(named: "empty-star")
-            reviewStarDisplay5.image = UIImage(named: "empty-star")
         case 4:
             reviewStarDisplay1.image = UIImage(named: "full-star")
             reviewStarDisplay2.image = UIImage(named: "full-star")
             reviewStarDisplay3.image = UIImage(named: "full-star")
             reviewStarDisplay4.image = UIImage(named: "full-star")
-            reviewStarDisplay5.image = UIImage(named: "empty-star")
         case 5:
             reviewStarDisplay1.image = UIImage(named: "full-star")
             reviewStarDisplay2.image = UIImage(named: "full-star")
@@ -251,6 +212,26 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         } else if averageRating >= 0.5 {
             averageRatingStar1.image = UIImage(named: "full-star")
         }
+    }
+    
+    //post review
+    func postToFirebase() {
+        let review: Dictionary<String, AnyObject> = [
+            "campsiteId": annotation.campsiteId as AnyObject,
+            "username": user.username as AnyObject,
+            "reviewText": reviewTextField.text! as AnyObject,
+            "helpful": 0 as AnyObject,
+            "rating": starRating as AnyObject,
+            "reviewDatetime": Date().timeIntervalSince1970 as AnyObject
+        ]
+        
+        
+        let firebasePost = DataService.ds.ref_reviews.child("\(annotation.campsiteId)").childByAutoId()
+        firebasePost.setValue(review)
+        
+        reviewTextField.text = ""
+        starRating = 0
+        starsSelected = false
     }
     
     @IBAction func makeReview(_ sender: AnyObject) {
@@ -332,9 +313,19 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         performSegue(withIdentifier: SEGUE_SHOW_ACCOUNT, sender: self)
     }
     
-
     @IBAction func backButtonPressed() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ReviewsViewController {
+            destination.annotation = annotation
+            destination.user = user
+        }
+        
+        if let destination = segue.destination as? AccountViewController {
+            destination.user = user
+        }
     }
 
 }
