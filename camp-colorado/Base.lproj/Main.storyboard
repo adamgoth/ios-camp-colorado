@@ -953,165 +953,189 @@
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpa-85-Xwd">
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-HT-BD3" customClass="CustomView" customModule="camp_colorado" customModuleProvider="target">
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw6-zZ-dl3">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="DPl-TB-Mer"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="DPl-TB-Mer"/>
-                                                    </mask>
-                                                </variation>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbsup" translatesAutoresizingMaskIntoConstraints="NO" id="wuA-TB-UwA">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="29" id="RVg-eM-vOC"/>
-                                                    <constraint firstAttribute="width" constant="29" id="s4T-3V-o7D"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Was this review helpful?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hID-ho-dcm">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="N60-a3-ztq"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="10"/>
-                                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="N60-a3-ztq"/>
-                                                    </mask>
-                                                </variation>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cpv-7A-d8B">
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="erL-cv-FTC">
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="16" id="6oh-qm-X8i"/>
-                                                            <constraint firstAttribute="height" constant="16" id="X5G-gL-Nfn"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="fPe-Zp-IjN">
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="16" id="FhG-Os-Ryc"/>
-                                                            <constraint firstAttribute="height" constant="16" id="pzj-wf-z5p"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-VF-NH0">
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="16" id="G53-ZK-HwQ"/>
-                                                            <constraint firstAttribute="width" constant="16" id="Rwj-hl-gOf"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="SWS-uL-Qqr">
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="16" id="7r0-z4-QSV"/>
-                                                            <constraint firstAttribute="height" constant="16" id="LXC-Zu-aAY"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-qk-GYg">
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="16" id="Q4v-ki-GDr"/>
-                                                            <constraint firstAttribute="height" constant="16" id="eg3-y8-Hmj"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="734-te-rFN">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="16" id="nZM-1V-83X"/>
-                                                    <constraint firstAttribute="height" constant="21" id="u7X-PP-gbe"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="12"/>
-                                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="u7X-PP-gbe"/>
-                                                    </mask>
-                                                </variation>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ge8-Xe-vIH">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="87" id="NXw-tx-o9Y"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="kZu-JM-qHh"/>
-                                                </constraints>
-                                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="NXw-tx-o9Y"/>
-                                                    </mask>
-                                                </variation>
-                                            </textView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="wuA-TB-UwA" secondAttribute="trailing" constant="8" id="1Vp-FJ-SBs"/>
-                                            <constraint firstAttribute="bottom" secondItem="Ge8-Xe-vIH" secondAttribute="bottom" id="5t6-RP-gTf"/>
-                                            <constraint firstItem="734-te-rFN" firstAttribute="leading" secondItem="cpv-7A-d8B" secondAttribute="trailing" constant="3" id="7MA-wC-Vhp"/>
-                                            <constraint firstItem="Ge8-Xe-vIH" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="8Od-1m-1KS"/>
-                                            <constraint firstItem="cpv-7A-d8B" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="12" id="BJD-NE-b0k"/>
-                                            <constraint firstItem="cpv-7A-d8B" firstAttribute="centerX" secondItem="Byo-HT-BD3" secondAttribute="centerX" id="CXR-1L-23i"/>
-                                            <constraint firstAttribute="trailing" secondItem="wuA-TB-UwA" secondAttribute="trailing" constant="8" id="Chx-45-k8d"/>
-                                            <constraint firstItem="Ge8-Xe-vIH" firstAttribute="top" secondItem="wuA-TB-UwA" secondAttribute="bottom" constant="4" id="E6d-nx-IOa"/>
-                                            <constraint firstItem="hID-ho-dcm" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="FAB-lu-TC4"/>
-                                            <constraint firstItem="Ge8-Xe-vIH" firstAttribute="top" secondItem="hID-ho-dcm" secondAttribute="bottom" constant="2" id="GIH-CZ-vpU"/>
-                                            <constraint firstItem="Cw6-zZ-dl3" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="HQI-C2-5kx"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ge8-Xe-vIH" secondAttribute="trailing" constant="8" id="HWz-em-rTA"/>
-                                            <constraint firstItem="hID-ho-dcm" firstAttribute="top" secondItem="wuA-TB-UwA" secondAttribute="bottom" constant="1" id="LDZ-oJ-cvS"/>
-                                            <constraint firstItem="cpv-7A-d8B" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="MOW-YV-bFp"/>
-                                            <constraint firstItem="Cw6-zZ-dl3" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="Nww-4k-2Nu"/>
-                                            <constraint firstItem="734-te-rFN" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="UJH-rx-hlM"/>
-                                            <constraint firstItem="734-te-rFN" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="cqG-hd-4yD"/>
-                                            <constraint firstItem="wuA-TB-UwA" firstAttribute="leading" secondItem="hID-ho-dcm" secondAttribute="trailing" constant="2" id="faX-cs-eyj"/>
-                                            <constraint firstItem="wuA-TB-UwA" firstAttribute="leading" secondItem="cpv-7A-d8B" secondAttribute="trailing" constant="20" id="hcQ-Mq-eFY"/>
-                                            <constraint firstItem="wuA-TB-UwA" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="4" id="m3H-qB-LYl"/>
-                                            <constraint firstItem="hID-ho-dcm" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="mSf-ec-75Q"/>
-                                            <constraint firstItem="hID-ho-dcm" firstAttribute="leading" secondItem="734-te-rFN" secondAttribute="trailing" constant="3" id="mns-GW-fNd"/>
-                                            <constraint firstItem="734-te-rFN" firstAttribute="top" secondItem="Cw6-zZ-dl3" secondAttribute="bottom" constant="1" id="r6k-JK-0hn"/>
-                                            <constraint firstItem="wuA-TB-UwA" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="4" id="rz9-hQ-yeK"/>
-                                            <constraint firstItem="Ge8-Xe-vIH" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="s4f-LV-pM9"/>
-                                            <constraint firstItem="wuA-TB-UwA" firstAttribute="leading" secondItem="hID-ho-dcm" secondAttribute="trailing" constant="2" id="sST-Kb-Qqn"/>
-                                            <constraint firstItem="Cw6-zZ-dl3" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="tnS-Vs-Uqb"/>
-                                            <constraint firstItem="Cw6-zZ-dl3" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="v8b-5x-d8d"/>
-                                            <constraint firstAttribute="trailing" secondItem="hID-ho-dcm" secondAttribute="trailing" constant="8" id="vgZ-3S-lqa"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ge8-Xe-vIH" secondAttribute="trailing" constant="8" id="xje-Pp-VZE"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="HQI-C2-5kx"/>
-                                                <exclude reference="Nww-4k-2Nu"/>
-                                                <exclude reference="7MA-wC-Vhp"/>
-                                                <exclude reference="UJH-rx-hlM"/>
-                                                <exclude reference="8Od-1m-1KS"/>
-                                                <exclude reference="E6d-nx-IOa"/>
-                                                <exclude reference="xje-Pp-VZE"/>
-                                                <exclude reference="CXR-1L-23i"/>
-                                                <exclude reference="MOW-YV-bFp"/>
-                                                <exclude reference="FAB-lu-TC4"/>
-                                                <exclude reference="mSf-ec-75Q"/>
-                                                <exclude reference="mns-GW-fNd"/>
-                                                <exclude reference="1Vp-FJ-SBs"/>
-                                                <exclude reference="faX-cs-eyj"/>
-                                                <exclude reference="rz9-hQ-yeK"/>
-                                                <exclude reference="sST-Kb-Qqn"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="JGn-F7-oKv" customClass="ReviewCell" customModule="camp_colorado" customModuleProvider="target">
+                                        <frame key="frameInset" width="343" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JGn-F7-oKv" id="tLc-9q-MsU">
+                                            <frame key="frameInset" width="343" height="139"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-HT-BD3" customClass="CustomView" customModule="camp_colorado" customModuleProvider="target">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw6-zZ-dl3">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="DPl-TB-Mer"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="DPl-TB-Mer"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbsup" translatesAutoresizingMaskIntoConstraints="NO" id="wuA-TB-UwA">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="29" id="RVg-eM-vOC"/>
+                                                                <constraint firstAttribute="width" constant="29" id="s4T-3V-o7D"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Was this review helpful?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hID-ho-dcm">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="N60-a3-ztq"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="10"/>
+                                                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="N60-a3-ztq"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cpv-7A-d8B">
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="erL-cv-FTC">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="16" id="6oh-qm-X8i"/>
+                                                                        <constraint firstAttribute="height" constant="16" id="X5G-gL-Nfn"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="fPe-Zp-IjN">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="16" id="FhG-Os-Ryc"/>
+                                                                        <constraint firstAttribute="height" constant="16" id="pzj-wf-z5p"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-VF-NH0">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="16" id="G53-ZK-HwQ"/>
+                                                                        <constraint firstAttribute="width" constant="16" id="Rwj-hl-gOf"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="SWS-uL-Qqr">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="16" id="7r0-z4-QSV"/>
+                                                                        <constraint firstAttribute="height" constant="16" id="LXC-Zu-aAY"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-star" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-qk-GYg">
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="16" id="Q4v-ki-GDr"/>
+                                                                        <constraint firstAttribute="height" constant="16" id="eg3-y8-Hmj"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="734-te-rFN">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="nZM-1V-83X"/>
+                                                                <constraint firstAttribute="height" constant="21" id="u7X-PP-gbe"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="12"/>
+                                                            <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="u7X-PP-gbe"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ge8-Xe-vIH">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="87" id="NXw-tx-o9Y"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="kZu-JM-qHh"/>
+                                                            </constraints>
+                                                            <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="13"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="NXw-tx-o9Y"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </textView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="wuA-TB-UwA" secondAttribute="trailing" constant="8" id="1Vp-FJ-SBs"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ge8-Xe-vIH" secondAttribute="bottom" id="5t6-RP-gTf"/>
+                                                        <constraint firstItem="734-te-rFN" firstAttribute="leading" secondItem="cpv-7A-d8B" secondAttribute="trailing" constant="3" id="7MA-wC-Vhp"/>
+                                                        <constraint firstItem="Ge8-Xe-vIH" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="8Od-1m-1KS"/>
+                                                        <constraint firstItem="cpv-7A-d8B" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="12" id="BJD-NE-b0k"/>
+                                                        <constraint firstItem="cpv-7A-d8B" firstAttribute="centerX" secondItem="Byo-HT-BD3" secondAttribute="centerX" id="CXR-1L-23i"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wuA-TB-UwA" secondAttribute="trailing" constant="8" id="Chx-45-k8d"/>
+                                                        <constraint firstItem="Ge8-Xe-vIH" firstAttribute="top" secondItem="wuA-TB-UwA" secondAttribute="bottom" constant="4" id="E6d-nx-IOa"/>
+                                                        <constraint firstItem="hID-ho-dcm" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="FAB-lu-TC4"/>
+                                                        <constraint firstItem="Ge8-Xe-vIH" firstAttribute="top" secondItem="hID-ho-dcm" secondAttribute="bottom" constant="2" id="GIH-CZ-vpU"/>
+                                                        <constraint firstItem="Cw6-zZ-dl3" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="HQI-C2-5kx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ge8-Xe-vIH" secondAttribute="trailing" constant="8" id="HWz-em-rTA"/>
+                                                        <constraint firstItem="hID-ho-dcm" firstAttribute="top" secondItem="wuA-TB-UwA" secondAttribute="bottom" constant="1" id="LDZ-oJ-cvS"/>
+                                                        <constraint firstItem="cpv-7A-d8B" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="MOW-YV-bFp"/>
+                                                        <constraint firstItem="Cw6-zZ-dl3" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="Nww-4k-2Nu"/>
+                                                        <constraint firstItem="734-te-rFN" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="UJH-rx-hlM"/>
+                                                        <constraint firstItem="734-te-rFN" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="cqG-hd-4yD"/>
+                                                        <constraint firstItem="wuA-TB-UwA" firstAttribute="leading" secondItem="hID-ho-dcm" secondAttribute="trailing" constant="2" id="faX-cs-eyj"/>
+                                                        <constraint firstItem="wuA-TB-UwA" firstAttribute="leading" secondItem="cpv-7A-d8B" secondAttribute="trailing" constant="20" id="hcQ-Mq-eFY"/>
+                                                        <constraint firstItem="wuA-TB-UwA" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="4" id="m3H-qB-LYl"/>
+                                                        <constraint firstItem="hID-ho-dcm" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="mSf-ec-75Q"/>
+                                                        <constraint firstItem="hID-ho-dcm" firstAttribute="leading" secondItem="734-te-rFN" secondAttribute="trailing" constant="3" id="mns-GW-fNd"/>
+                                                        <constraint firstItem="734-te-rFN" firstAttribute="top" secondItem="Cw6-zZ-dl3" secondAttribute="bottom" constant="1" id="r6k-JK-0hn"/>
+                                                        <constraint firstItem="wuA-TB-UwA" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="4" id="rz9-hQ-yeK"/>
+                                                        <constraint firstItem="Ge8-Xe-vIH" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="s4f-LV-pM9"/>
+                                                        <constraint firstItem="wuA-TB-UwA" firstAttribute="leading" secondItem="hID-ho-dcm" secondAttribute="trailing" constant="2" id="sST-Kb-Qqn"/>
+                                                        <constraint firstItem="Cw6-zZ-dl3" firstAttribute="leading" secondItem="Byo-HT-BD3" secondAttribute="leading" constant="8" id="tnS-Vs-Uqb"/>
+                                                        <constraint firstItem="Cw6-zZ-dl3" firstAttribute="top" secondItem="Byo-HT-BD3" secondAttribute="top" constant="8" id="v8b-5x-d8d"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hID-ho-dcm" secondAttribute="trailing" constant="8" id="vgZ-3S-lqa"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ge8-Xe-vIH" secondAttribute="trailing" constant="8" id="xje-Pp-VZE"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="HQI-C2-5kx"/>
+                                                            <exclude reference="Nww-4k-2Nu"/>
+                                                            <exclude reference="7MA-wC-Vhp"/>
+                                                            <exclude reference="UJH-rx-hlM"/>
+                                                            <exclude reference="8Od-1m-1KS"/>
+                                                            <exclude reference="E6d-nx-IOa"/>
+                                                            <exclude reference="xje-Pp-VZE"/>
+                                                            <exclude reference="CXR-1L-23i"/>
+                                                            <exclude reference="MOW-YV-bFp"/>
+                                                            <exclude reference="FAB-lu-TC4"/>
+                                                            <exclude reference="mSf-ec-75Q"/>
+                                                            <exclude reference="mns-GW-fNd"/>
+                                                            <exclude reference="1Vp-FJ-SBs"/>
+                                                            <exclude reference="faX-cs-eyj"/>
+                                                            <exclude reference="rz9-hQ-yeK"/>
+                                                            <exclude reference="sST-Kb-Qqn"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Byo-HT-BD3" secondAttribute="trailing" id="VX3-1U-OMc"/>
+                                                <constraint firstItem="Byo-HT-BD3" firstAttribute="leading" secondItem="tLc-9q-MsU" secondAttribute="leading" id="gPZ-Tc-nen"/>
+                                                <constraint firstAttribute="bottom" secondItem="Byo-HT-BD3" secondAttribute="bottom" id="kzY-gD-1qo"/>
+                                                <constraint firstItem="Byo-HT-BD3" firstAttribute="top" secondItem="tLc-9q-MsU" secondAttribute="top" id="qFu-bh-cB8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="helpfulImg" destination="wuA-TB-UwA" id="Dgj-7k-Af4"/>
+                                            <outlet property="helpfulNumberLbl" destination="hID-ho-dcm" id="nbi-gK-Yz7"/>
+                                            <outlet property="reviewDatetimeLbl" destination="734-te-rFN" id="HTU-qX-BHg"/>
+                                            <outlet property="reviewStar1" destination="erL-cv-FTC" id="Em6-NS-psb"/>
+                                            <outlet property="reviewStar2" destination="fPe-Zp-IjN" id="4S8-jG-lcB"/>
+                                            <outlet property="reviewStar3" destination="fX4-VF-NH0" id="1Zt-Qs-YNn"/>
+                                            <outlet property="reviewStar4" destination="SWS-uL-Qqr" id="QXj-4a-PU2"/>
+                                            <outlet property="reviewStar5" destination="FlT-qk-GYg" id="GBG-jn-ciX"/>
+                                            <outlet property="reviewTxt" destination="Ge8-Xe-vIH" id="N70-L2-pIp"/>
+                                            <outlet property="usernameLbl" destination="Cw6-zZ-dl3" id="aL5-5t-zes"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Byo-HT-BD3" secondAttribute="trailing" id="3V8-8p-ran"/>
                                     <constraint firstAttribute="height" constant="140" id="BUk-6U-7CQ"/>
-                                    <constraint firstItem="Byo-HT-BD3" firstAttribute="leading" secondItem="kpa-85-Xwd" secondAttribute="leading" id="CN8-SK-8tV"/>
-                                    <constraint firstItem="Byo-HT-BD3" firstAttribute="top" secondItem="kpa-85-Xwd" secondAttribute="top" id="gLF-Di-Gif"/>
-                                    <constraint firstAttribute="bottom" secondItem="Byo-HT-BD3" secondAttribute="bottom" id="i2k-UR-tai"/>
                                 </constraints>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZ7-rP-R2g">
@@ -1255,6 +1279,7 @@
                         <outlet property="numberOfSitesLbl" destination="1iV-MU-LDa" id="cSR-RP-8HL"/>
                         <outlet property="phoneLbl" destination="QxB-lB-O2n" id="74e-jm-Ukj"/>
                         <outlet property="ratingAndNumberView" destination="uqe-hV-9Fz" id="ZiH-W8-zw7"/>
+                        <outlet property="reviewCell" destination="JGn-F7-oKv" id="Uet-um-Qqw"/>
                         <outlet property="reviewDatetimeLbl" destination="734-te-rFN" id="BC4-MS-t5w"/>
                         <outlet property="reviewDisplayView" destination="kpa-85-Xwd" id="776-js-ZLQ"/>
                         <outlet property="reviewStar1" destination="3xE-nr-Xkx" id="rdP-hK-46d"/>

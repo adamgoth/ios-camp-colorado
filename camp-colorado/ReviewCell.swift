@@ -25,6 +25,7 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
     
     var review: Review!
     var helpfulRef: FIRDatabaseReference!
+    var helpful: Bool!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,8 +52,10 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
         
         helpfulRef.observeSingleEvent(of: .value, with: { snapshot in
             if (snapshot.value as? NSNull) != nil {
+                self.helpful = false
                 self.helpfulImg.image = UIImage(named: "thumbsup")
             } else {
+                self.helpful = true
                 self.helpfulImg.image = UIImage(named: "thumbsup-tapped")
             }
         })
@@ -100,6 +103,7 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
     }
     
     func setHelpfulLbl() {
+        print(self.review.helpful)
         if self.review.helpful > 0 {
             if self.review.helpful == 1 {
                 helpfulNumberLbl.text = "\(review.helpful) like"
@@ -112,19 +116,18 @@ class ReviewCell: UITableViewCell, UINavigationControllerDelegate {
     }
     
     @IBAction func helpfulTapped(_ sender: UITapGestureRecognizer) {
-        helpfulRef = DataService.ds.ref_current_user.child("helpful").child(review.reviewKey)
         
-        helpfulRef.observeSingleEvent(of: .value, with: { snapshot in
-            if (snapshot.value as? NSNull) != nil {
-                self.helpfulImg.image = UIImage(named: "thumbsup-tapped")
-                self.review.adjustHelpfulCount(true)
-                self.helpfulRef.setValue(true)
-            } else {
-                self.helpfulImg.image = UIImage(named: "thumbsup")
-                self.review.adjustHelpfulCount(false)
-                self.helpfulRef.removeValue()
-            }
-        })
+        if helpful == false {
+            self.helpfulImg.image = UIImage(named: "thumbsup-tapped")
+            self.review.adjustHelpfulCount(true)
+            self.helpfulRef.setValue(true)
+            self.helpful = true
+        } else {
+            self.helpfulImg.image = UIImage(named: "thumbsup")
+            self.review.adjustHelpfulCount(false)
+            self.helpfulRef.removeValue()
+            self.helpful = false
+        }
         
         setHelpfulLbl()
     }

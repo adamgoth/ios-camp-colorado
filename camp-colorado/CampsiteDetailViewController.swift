@@ -38,6 +38,7 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     //review display outlets
     @IBOutlet weak var beTheFirstView: UIView!
     @IBOutlet weak var reviewDisplayView: UIView!
+    @IBOutlet weak var reviewCell: ReviewCell!
     @IBOutlet weak var seeAllReviewsBtn: UIButton!
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var reviewDatetimeLbl: UILabel!
@@ -151,7 +152,8 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     func getLatestReview() {
         self.reviews.sort(by: { $0.reviewDatetime > $1.reviewDatetime })
         let displayReview = reviews[0]
-        usernameLbl.text = displayReview.username
+        reviewCell.configureCell(displayReview, img: nil)
+        /*usernameLbl.text = displayReview.username
         reviewDatetimeLbl.text = "\(Date(timeIntervalSince1970: displayReview.reviewDatetime).dayMonthTime()!)"
         reviewTxt.text = "\(displayReview.reviewText)"
         
@@ -182,7 +184,7 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
             reviewStarDisplay3.image = UIImage(named: "empty-star")
             reviewStarDisplay4.image = UIImage(named: "empty-star")
             reviewStarDisplay5.image = UIImage(named: "empty-star")
-        }
+        }*/
     }
     
     func calculateAverageRating() {
