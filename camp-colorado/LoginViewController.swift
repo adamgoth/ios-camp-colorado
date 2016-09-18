@@ -35,7 +35,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         signUpEmail.returnKeyType = UIReturnKeyType.done
         signUpPassword.returnKeyType = UIReturnKeyType.done
         signUpUsername.returnKeyType = UIReturnKeyType.done
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -102,17 +102,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                     print(error)
                 } else {
-                    FIRAuth.auth()?.signIn(withEmail: email, password: pwd) { (user, error) in
-                        if error != nil {
-                            print(error)
+                    let usernameQuery = DataService.ds.ref_users.queryOrdered(byChild: "username").queryEqual(toValue: username)
+                    usernameQuery.observe(FIRDataEventType.value, with: { (snapshot) in
+                        if snapshot.value as? NSNull != nil {
+                            FIRAuth.auth()?.signIn(withEmail: email, password: pwd) { (user, error) in
+                                if error != nil {
+                                    print(error)
+                                } else {
+                                    print("Account created, user signed in")
+                                    let userData = ["provider": user!.providerID, "username": username, "userCreatedAt": "\(Date().timeIntervalSince1970)"]
+                                    DataService.ds.createFirebaseUser(user!.uid, user: userData as Dictionary<String, AnyObject>)
+                                    UserDefaults.standard.setValue(user!.uid, forKey: KEY_UID)
+                                    self.performSegue(withIdentifier: SEGUE_LOGIN, sender: nil)
+                                }
+                            }
                         } else {
-                            print("Account created, user signed in")
-                            let userData = ["provider": user!.providerID, "username": username, "userCreatedAt": "\(Date().timeIntervalSince1970)"]
-                            DataService.ds.createFirebaseUser(user!.uid, user: userData as Dictionary<String, AnyObject>)
-                            UserDefaults.standard.setValue(user!.uid, forKey: KEY_UID)
-                            self.performSegue(withIdentifier: SEGUE_LOGIN, sender: nil)
+                            self.showErrorAlert("Username Unavailable", message: "Please select a different username")
                         }
-                    }
+                    })
                 }
             }
         } else {

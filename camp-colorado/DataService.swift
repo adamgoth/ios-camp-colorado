@@ -14,10 +14,15 @@ class DataService {
     static let ds = DataService()
     
     fileprivate var _ref = FIRDatabase.database().reference()
+    fileprivate var _ref_users = FIRDatabase.database().reference(fromURL: "https://ios-camp-colorado.firebaseio.com/users")
     fileprivate var _ref_reviews = FIRDatabase.database().reference(fromURL: "https://ios-camp-colorado.firebaseio.com/reviews")
     
     var ref: FIRDatabaseReference {
         return _ref
+    }
+    
+    var ref_users: FIRDatabaseReference {
+        return _ref_users
     }
     
     var ref_reviews: FIRDatabaseReference {
