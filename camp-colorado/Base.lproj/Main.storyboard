@@ -379,17 +379,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tz2-dZ-9k6">
-                                <frame key="frameInset" width="600" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tz2-dZ-9k6">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Camp Colorado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zu-Ev-zbX">
-                                        <frame key="frameInset" minX="224" minY="20" width="152" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camp Colorado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zu-Ev-zbX">
                                         <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yu6-wT-AbV">
-                                        <frame key="frameInset" minX="569" minY="23" width="23" height="23"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yu6-wT-AbV">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="ftV-nc-sdz"/>
                                             <constraint firstAttribute="width" constant="23" id="qe1-Zg-N7l"/>
@@ -425,8 +422,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9S-HT-VzS">
                                         <subviews>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-hS-YTO">
-                                                <frame key="frameInset" minX="8" minY="8" width="584" height="254"/>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mg3-hS-YTO">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="305" id="kQ9-ln-er1"/>
                                                 </constraints>
@@ -436,8 +432,7 @@
                                                     </mask>
                                                 </variation>
                                             </mapView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="use-4t-IpH">
-                                                <frame key="frameInset" minX="556" minY="226" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="use-4t-IpH">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Ook-Tt-Z5b"/>
                                                     <constraint firstAttribute="height" constant="30" id="UnJ-mk-CDC"/>
@@ -460,25 +455,22 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Lc-4q-eEr">
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q1o-Kr-591">
-                                                <frame key="frameInset" minX="8" minY="52" width="584" height="210"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q1o-Kr-591">
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CampsiteCell" rowHeight="56" id="kL5-iV-5tF" customClass="CampsiteCell" customModule="camp_colorado" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="584" height="56"/>
+                                                        <rect key="frame" x="0.0" y="28" width="359" height="56"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kL5-iV-5tF" id="Ps8-EH-cOi">
-                                                            <frame key="frameInset" width="584" height="55"/>
+                                                            <frame key="frameInset" width="359" height="55"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sitename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="xiJ-74-hLc">
-                                                                    <frame key="frameInset" minX="8" minY="8" width="584" height="24"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sitename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="xiJ-74-hLc">
                                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-I1-uEe">
-                                                                    <frame key="frameInset" minX="8" minY="34" width="77" height="13.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU2-I1-uEe">
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="77" id="rOH-Ac-Aye"/>
                                                                     </constraints>
@@ -517,8 +509,7 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
-                                            <searchBar contentMode="redraw" misplaced="YES" placeholder="Search campsites by name" translatesAutoresizingMaskIntoConstraints="NO" id="TCC-ed-Iu4">
-                                                <frame key="frameInset" minX="8" width="584" height="44"/>
+                                            <searchBar contentMode="redraw" placeholder="Search campsites by name" translatesAutoresizingMaskIntoConstraints="NO" id="TCC-ed-Iu4">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="mLG-td-OiX"/>
                                                 </constraints>
@@ -633,7 +624,7 @@
                                 <frame key="frameInset" minX="70" minY="110" width="460" height="440"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="pa6-aD-QvD">
-                                        <frame key="frameInset" minX="173" minY="8" width="114" height="180"/>
+                                        <frame key="frameInset" minX="173" minY="8" width="114" height="181"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvJ-8w-TVJ">
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
@@ -1189,13 +1180,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ljm-r2-HFg">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Have you been here?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iJ-dv-chc">
-                                                        <frame key="frameInset" width="200" height="27"/>
+                                                        <frame key="frameInset" width="200" height="26"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Be the first to review it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFe-S0-LFm">
-                                                        <frame key="frameInset" minY="27" width="200" height="24"/>
+                                                        <frame key="frameInset" minY="26" width="200" height="24"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1572,10 +1563,10 @@
                                                             <exclude reference="Kkj-Kv-AqJ"/>
                                                             <exclude reference="MRy-uh-yxQ"/>
                                                             <exclude reference="enj-up-ThS"/>
-                                                            <exclude reference="4MI-uk-oLv"/>
-                                                            <exclude reference="Y8R-Ai-wSb"/>
                                                             <exclude reference="WKi-8u-7uy"/>
                                                             <exclude reference="fNf-n5-v4h"/>
+                                                            <exclude reference="4MI-uk-oLv"/>
+                                                            <exclude reference="Y8R-Ai-wSb"/>
                                                             <exclude reference="FWB-K1-JT6"/>
                                                             <exclude reference="dzq-ay-4bC"/>
                                                             <exclude reference="nRQ-jZ-xZQ"/>
@@ -1657,6 +1648,6 @@
         <image name="user-location" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wRA-5C-xQS"/>
+        <segue reference="Ykq-0u-Oci"/>
     </inferredMetricsTieBreakers>
 </document>
