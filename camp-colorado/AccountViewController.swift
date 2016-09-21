@@ -29,6 +29,7 @@ class AccountViewController: UIViewController {
             try FIRAuth.auth()?.signOut()
             UserDefaults.standard.removeObject(forKey: KEY_UID)
             self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+            print("Signout successful")
         } catch {
             print("Signout unsuccessful")
         }
