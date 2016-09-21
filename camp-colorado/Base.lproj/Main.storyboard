@@ -55,9 +55,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="maroon-bells" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-rM-hO2">
-                                <frame key="frameInset" minY="60" width="600" height="540"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maroon-bells" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-rM-hO2"/>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHx-yu-5Le">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L8a-bN-2Lz">
@@ -72,7 +70,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2HE-bc-hE8">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6w-hZ-JBq">
-                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -88,7 +86,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YE2-NF-NJt">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edH-9d-G1d">
-                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -184,13 +182,29 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WVh-Q7-QEI">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR8-ta-X2H">
-                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16n-Ud-wf5">
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="200" id="kdR-oc-fVM"/>
+                                                                    <constraint firstAttribute="width" constant="175" id="kdR-oc-fVM"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-UL-Ejc">
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9L-kM-Fas">
+                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4g3-d6-oFd">
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="175" id="wm4-HL-Xoi"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -200,13 +214,29 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xYq-MC-lhU">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0v-Fy-w9o">
-                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="klk-WJ-4vk">
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="200" id="HRg-eB-8lg"/>
+                                                                    <constraint firstAttribute="width" constant="175" id="HRg-eB-8lg"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-qH-Pdd">
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="S2a-pn-QkW">
+                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wco-SN-iFn">
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="175" id="bfk-E8-pAj"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -216,13 +246,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iG8-3q-8Vl">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXF-tE-SMN">
-                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-Oo-Is2">
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="200" id="Hym-Uh-f3x"/>
+                                                                    <constraint firstAttribute="width" constant="175" id="Hym-Uh-f3x"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -253,7 +283,7 @@
                                     <constraint firstAttribute="trailing" secondItem="sbM-L1-Dpv" secondAttribute="trailing" id="8qs-xf-Hcd"/>
                                     <constraint firstAttribute="bottom" secondItem="sbM-L1-Dpv" secondAttribute="bottom" id="DZV-m5-nr7"/>
                                     <constraint firstItem="sbM-L1-Dpv" firstAttribute="leading" secondItem="cKj-VD-kUR" secondAttribute="leading" id="Z7v-pz-Coe"/>
-                                    <constraint firstAttribute="height" constant="190" id="bQh-16-KlY"/>
+                                    <constraint firstAttribute="height" constant="270" id="bQh-16-KlY"/>
                                     <constraint firstAttribute="width" constant="300" id="xHV-qW-GR1"/>
                                 </constraints>
                             </view>
@@ -301,12 +331,12 @@
                             <constraint firstItem="zpx-rM-hO2" firstAttribute="leading" secondItem="TnL-pW-lM0" secondAttribute="leading" id="Ado-eL-e6f"/>
                             <constraint firstItem="u4S-7Z-SAb" firstAttribute="top" secondItem="TnL-pW-lM0" secondAttribute="top" id="EVd-zf-5se"/>
                             <constraint firstAttribute="trailing" secondItem="zpx-rM-hO2" secondAttribute="trailing" id="Jaw-V2-88R"/>
-                            <constraint firstItem="dHx-yu-5Le" firstAttribute="top" secondItem="u4S-7Z-SAb" secondAttribute="bottom" constant="60" id="PAi-tQ-Hb8"/>
+                            <constraint firstItem="dHx-yu-5Le" firstAttribute="top" secondItem="u4S-7Z-SAb" secondAttribute="bottom" constant="25" id="PAi-tQ-Hb8"/>
                             <constraint firstItem="adJ-xC-IfX" firstAttribute="top" secondItem="cKj-VD-kUR" secondAttribute="bottom" constant="10" id="X9F-9w-BwI"/>
                             <constraint firstItem="adJ-xC-IfX" firstAttribute="top" secondItem="dHx-yu-5Le" secondAttribute="bottom" constant="8" id="Yz7-Dh-ihb"/>
                             <constraint firstItem="FnV-an-bPO" firstAttribute="centerX" secondItem="TnL-pW-lM0" secondAttribute="centerX" id="dM3-ex-xYj"/>
                             <constraint firstItem="aVZ-Al-fdU" firstAttribute="top" secondItem="zpx-rM-hO2" secondAttribute="bottom" id="g9Y-Qf-tH6"/>
-                            <constraint firstItem="cKj-VD-kUR" firstAttribute="top" secondItem="u4S-7Z-SAb" secondAttribute="bottom" constant="60" id="hvT-p0-qi5"/>
+                            <constraint firstItem="cKj-VD-kUR" firstAttribute="top" secondItem="u4S-7Z-SAb" secondAttribute="bottom" constant="25" id="hvT-p0-qi5"/>
                             <constraint firstItem="dHx-yu-5Le" firstAttribute="centerX" secondItem="TnL-pW-lM0" secondAttribute="centerX" id="qC3-wN-ePJ"/>
                             <constraint firstAttribute="trailing" secondItem="u4S-7Z-SAb" secondAttribute="trailing" id="qa2-gR-bYJ"/>
                             <constraint firstItem="FnV-an-bPO" firstAttribute="top" secondItem="dHx-yu-5Le" secondAttribute="bottom" constant="10" id="sAq-AP-KfJ"/>
@@ -324,6 +354,8 @@
                         <outlet property="signInEmail" destination="50h-kW-q8g" id="04p-Hb-bkS"/>
                         <outlet property="signInPassword" destination="ydq-Vt-19H" id="Ua0-ua-ZkQ"/>
                         <outlet property="signInView" destination="dHx-yu-5Le" id="AsZ-Rv-vo0"/>
+                        <outlet property="signUpConfirmEmail" destination="4g3-d6-oFd" id="bZH-HB-n2u"/>
+                        <outlet property="signUpConfirmPassword" destination="wco-SN-iFn" id="BNf-SM-0bA"/>
                         <outlet property="signUpEmail" destination="16n-Ud-wf5" id="ewv-o0-AAF"/>
                         <outlet property="signUpPassword" destination="klk-WJ-4vk" id="f4I-CL-GMB"/>
                         <outlet property="signUpUsername" destination="yRN-Oo-Is2" id="zIj-su-5va"/>
@@ -1463,8 +1495,7 @@
                                                                 </imageView>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date of Review" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPl-eW-Wm9">
-                                                            <frame key="frameInset" minX="8" minY="29" width="81.5" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Review" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPl-eW-Wm9">
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="1nF-gQ-LGR"/>
                                                                 <constraint firstAttribute="height" constant="16" id="eYr-tY-8TN"/>
