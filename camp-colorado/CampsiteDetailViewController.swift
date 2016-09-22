@@ -103,23 +103,7 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         fetchReviews()
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if self.reviews.count > 0 {
-            calculateAverageRating()
-            reviewDisplayView.isHidden = false
-            seeAllReviewsBtn.isHidden = false
-            beTheFirstView.isHidden = true
-            ratingAndNumberView.isHidden = false
-            numberOfReviewsLbl.text = "\(self.reviews.count) reviews, \(averageRating) average rating"
-            getLatestReview()
-        } else {
-            reviewDisplayView.isHidden = true
-            seeAllReviewsBtn.isHidden = true
-            beTheFirstView.isHidden = false
-        }
-    }
-    
+        
     func centerMapOnLocation(_ location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 0.5, regionRadius * 0.5)
         map.setRegion(coordinateRegion, animated: true)
@@ -145,6 +129,20 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
                         self.reviews.append(review)
                     }
                 }
+                
+                if self.reviews.count > 0 {
+                    self.calculateAverageRating()
+                    self.reviewDisplayView.isHidden = false
+                    self.seeAllReviewsBtn.isHidden = false
+                    self.beTheFirstView.isHidden = true
+                    self.ratingAndNumberView.isHidden = false
+                    self.numberOfReviewsLbl.text = "\(self.reviews.count) reviews, \(self.averageRating) average rating"
+                    self.getLatestReview()
+                } else {
+                    self.reviewDisplayView.isHidden = true
+                    self.seeAllReviewsBtn.isHidden = true
+                    self.beTheFirstView.isHidden = false
+                }
             }
         })
     }
@@ -153,38 +151,6 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
         self.reviews.sort(by: { $0.reviewDatetime > $1.reviewDatetime })
         let displayReview = reviews[0]
         reviewCell.configureCell(displayReview, img: nil)
-        /*usernameLbl.text = displayReview.username
-        reviewDatetimeLbl.text = "\(Date(timeIntervalSince1970: displayReview.reviewDatetime).dayMonthTime()!)"
-        reviewTxt.text = "\(displayReview.reviewText)"
-        
-        switch displayReview.rating {
-        case 1:
-            reviewStarDisplay1.image = UIImage(named: "full-star")
-        case 2:
-            reviewStarDisplay1.image = UIImage(named: "full-star")
-            reviewStarDisplay2.image = UIImage(named: "full-star")
-        case 3:
-            reviewStarDisplay1.image = UIImage(named: "full-star")
-            reviewStarDisplay2.image = UIImage(named: "full-star")
-            reviewStarDisplay3.image = UIImage(named: "full-star")
-        case 4:
-            reviewStarDisplay1.image = UIImage(named: "full-star")
-            reviewStarDisplay2.image = UIImage(named: "full-star")
-            reviewStarDisplay3.image = UIImage(named: "full-star")
-            reviewStarDisplay4.image = UIImage(named: "full-star")
-        case 5:
-            reviewStarDisplay1.image = UIImage(named: "full-star")
-            reviewStarDisplay2.image = UIImage(named: "full-star")
-            reviewStarDisplay3.image = UIImage(named: "full-star")
-            reviewStarDisplay4.image = UIImage(named: "full-star")
-            reviewStarDisplay5.image = UIImage(named: "full-star")
-        default:
-            reviewStarDisplay1.image = UIImage(named: "empty-star")
-            reviewStarDisplay2.image = UIImage(named: "empty-star")
-            reviewStarDisplay3.image = UIImage(named: "empty-star")
-            reviewStarDisplay4.image = UIImage(named: "empty-star")
-            reviewStarDisplay5.image = UIImage(named: "empty-star")
-        }*/
     }
     
     func calculateAverageRating() {
