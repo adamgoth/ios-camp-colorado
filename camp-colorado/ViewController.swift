@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let locationManager = CLLocationManager()
     
     let regionRadius: CLLocationDistance = 1000
-    let initialLocation = CLLocation(latitude: 39.12921, longitude: -105.693681)
+    let initialLocation = CLLocation(latitude: 39.189818, longitude: -105.572249)
     
     var campsites = [Campsite]()
     var filteredCampsites = [Campsite]()
@@ -80,7 +80,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        print(map.region.span)
+        print("span: \(map.region.span)")
+        print("center: \(map.region.center)")
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
