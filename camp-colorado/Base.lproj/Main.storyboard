@@ -460,7 +460,7 @@
                                                                 <rect key="frame" x="0.0" y="28" width="359" height="56"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kL5-iV-5tF" id="Ps8-EH-cOi">
-                                                                    <frame key="frameInset" width="359" height="55"/>
+                                                                    <frame key="frameInset" width="359" height="55.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sitename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="xiJ-74-hLc">
@@ -764,9 +764,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6w2-bm-WC7">
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sOd-wG-Nd4">
-                                        <frame key="frameInset" width="1000" height="1000"/>
-                                    </mapView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sOd-wG-Nd4"/>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -997,6 +995,14 @@
                                             <frame key="frameInset" width="343" height="139"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Recent Review:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-cQ-XoY">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Xh3-QB-1oL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-HT-BD3" customClass="CustomView" customModule="camp_colorado" customModuleProvider="target">
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw6-zZ-dl3">
@@ -1150,10 +1156,13 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Byo-HT-BD3" firstAttribute="top" secondItem="sJe-cQ-XoY" secondAttribute="bottom" id="7fX-os-S77"/>
                                                 <constraint firstAttribute="trailing" secondItem="Byo-HT-BD3" secondAttribute="trailing" id="VX3-1U-OMc"/>
                                                 <constraint firstItem="Byo-HT-BD3" firstAttribute="leading" secondItem="tLc-9q-MsU" secondAttribute="leading" id="gPZ-Tc-nen"/>
+                                                <constraint firstItem="sJe-cQ-XoY" firstAttribute="top" secondItem="tLc-9q-MsU" secondAttribute="topMargin" id="hpp-Fi-WsU"/>
                                                 <constraint firstAttribute="bottom" secondItem="Byo-HT-BD3" secondAttribute="bottom" id="kzY-gD-1qo"/>
-                                                <constraint firstItem="Byo-HT-BD3" firstAttribute="top" secondItem="tLc-9q-MsU" secondAttribute="top" id="qFu-bh-cB8"/>
+                                                <constraint firstItem="sJe-cQ-XoY" firstAttribute="leading" secondItem="tLc-9q-MsU" secondAttribute="leadingMargin" id="qLV-3f-Q5L"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sJe-cQ-XoY" secondAttribute="trailing" id="zqj-40-UFa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1375,7 +1384,7 @@
                                     <constraint firstAttribute="height" constant="150" id="YIv-Vc-gNh"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReviewCell" id="hW9-Uj-oqI" customClass="ReviewCell" customModule="camp_colorado" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReviewCell" id="hW9-Uj-oqI" customClass="ReviewCell" customModule="camp_colorado" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="263"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hW9-Uj-oqI" id="6y1-ke-BLO">
