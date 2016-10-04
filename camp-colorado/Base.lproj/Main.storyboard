@@ -55,7 +55,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maroon-bells" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-rM-hO2"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garden-of-the-gods" translatesAutoresizingMaskIntoConstraints="NO" id="zpx-rM-hO2"/>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHx-yu-5Le">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L8a-bN-2Lz">
@@ -460,7 +460,7 @@
                                                                 <rect key="frame" x="0.0" y="28" width="359" height="56"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kL5-iV-5tF" id="Ps8-EH-cOi">
-                                                                    <frame key="frameInset" width="359" height="55.5"/>
+                                                                    <frame key="frameInset" width="359" height="55"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sitename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="xiJ-74-hLc">
@@ -1384,7 +1384,7 @@
                                     <constraint firstAttribute="height" constant="150" id="YIv-Vc-gNh"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReviewCell" id="hW9-Uj-oqI" customClass="ReviewCell" customModule="camp_colorado" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReviewCell" id="hW9-Uj-oqI" customClass="ReviewCell" customModule="camp_colorado" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="263"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hW9-Uj-oqI" id="6y1-ke-BLO">
@@ -1617,7 +1617,7 @@
         <image name="camera" width="50" height="50"/>
         <image name="empty-star" width="32" height="32"/>
         <image name="full-star" width="32" height="32"/>
-        <image name="maroon-bells" width="1024" height="682"/>
+        <image name="garden-of-the-gods" width="900" height="595"/>
         <image name="thumbsup" width="128" height="128"/>
         <image name="user-location" width="512" height="512"/>
     </resources>
