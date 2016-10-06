@@ -64,6 +64,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if error != nil {
                     if String(describing: error).range(of: "17009") != nil {
                         self.showErrorAlert("Invalid Password", message: "Please try again")
+                    } else if String(describing: error).range(of: "17011") != nil {
+                        self.showErrorAlert("Email Not Found", message: "Please try again or Sign Up")
                     }
                     print(error)
                 } else {
@@ -94,37 +96,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func createAccountPressed() {
         if let email = signUpEmail.text , email != "", let confirmEmail = signUpConfirmEmail.text, confirmEmail != "", let pwd = signUpPassword.text , pwd != "", let confirmPwd = signUpConfirmPassword.text, confirmPwd != "", let username = signUpUsername.text , username != "" {
             if email == confirmEmail && pwd == confirmPwd {
-                let usernameQuery = DataService.ds.ref_users.queryOrdered(byChild: "username").queryEqual(toValue: username)
+                /*let usernameQuery = DataService.ds.ref_users.queryOrdered(byChild: "username").queryEqual(toValue: username)
                 usernameQuery.observe(FIRDataEventType.value, with: { (snapshot) in
-                    if snapshot.value as? NSNull != nil {
-                        FIRAuth.auth()?.createUser(withEmail: email, password: pwd) { (user, error) in
-                            if error != nil {
-                                if String(describing: error).range(of: "17007") != nil {
-                                    self.showErrorAlert("Email In Use", message: "This email address is already in use")
-                                } else if String(describing: error).range(of: "17008") != nil {
-                                    self.showErrorAlert("Invalid Email Address", message: "This does not appear to be a valid email address format")
-                                } else if String(describing: error).range(of: "17026") != nil {
-                                    self.showErrorAlert("Invalid Password", message: "Your password must be six characters long or more")
-                                }
-                                print(error)
-                            } else {
-                                FIRAuth.auth()?.signIn(withEmail: email, password: pwd) { (user, error) in
-                                    if error != nil {
-                                        print(error)
-                                    } else {
-                                        print("Account created, user signed in")
-                                        let userData = ["provider": user!.providerID, "username": username, "userCreatedAt": "\(Date().timeIntervalSince1970)"]
-                                        DataService.ds.createFirebaseUser(user!.uid, user: userData as Dictionary<String, AnyObject>)
-                                        UserDefaults.standard.setValue(user!.uid, forKey: KEY_UID)
-                                        self.performSegue(withIdentifier: SEGUE_LOGIN, sender: nil)
-                                    }
+                    if snapshot.value as? NSNull != nil {*/
+                FIRAuth.auth()?.createUser(withEmail: email, password: pwd) { (user, error) in
+                        if error != nil {
+                            if String(describing: error).range(of: "17007") != nil {
+                                self.showErrorAlert("Email In Use", message: "This email address is already in use")
+                            } else if String(describing: error).range(of: "17008") != nil {
+                                self.showErrorAlert("Invalid Email Address", message: "This does not appear to be a valid email address format")
+                            } else if String(describing: error).range(of: "17026") != nil {
+                                self.showErrorAlert("Invalid Password", message: "Your password must be six characters long or more")
+                            }
+                            print(error)
+                        } else {
+                            FIRAuth.auth()?.signIn(withEmail: email, password: pwd) { (user, error) in
+                                if error != nil {
+                                    print(error)
+                                } else {
+                                    print("Account created, user signed in")
+                                    let userData = ["provider": user!.providerID, "username": username, "userCreatedAt": "\(Date().timeIntervalSince1970)"]
+                                    DataService.ds.createFirebaseUser(user!.uid, user: userData as Dictionary<String, AnyObject>)
+                                    UserDefaults.standard.setValue(user!.uid, forKey: KEY_UID)
+                                    self.performSegue(withIdentifier: SEGUE_LOGIN, sender: nil)
                                 }
                             }
                         }
-                    } else {
+                    }
+                    /*} else {
                         self.showErrorAlert("Username Unavailable", message: "Please select a different username")
                     }
-                })
+                })*/
             } else {
                 showErrorAlert("Does Not Match", message: "Please confirm your email and password")
             }
