@@ -1008,7 +1008,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Xh3-QB-1oL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
