@@ -10,6 +10,9 @@
         <array key="NotoSans-Bold.ttf">
             <string>NotoSans-Bold</string>
         </array>
+        <array key="NotoSans-BoldItalic.ttf">
+            <string>NotoSans-BoldItalic</string>
+        </array>
         <array key="NotoSans-Italic.ttf">
             <string>NotoSans-Italic</string>
         </array>
@@ -460,7 +463,7 @@
                                                                 <rect key="frame" x="0.0" y="28" width="359" height="56"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kL5-iV-5tF" id="Ps8-EH-cOi">
-                                                                    <frame key="frameInset" width="359" height="55"/>
+                                                                    <frame key="frameInset" width="359" height="55.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sitename" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="xiJ-74-hLc">
@@ -625,6 +628,7 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maroon-bells" translatesAutoresizingMaskIntoConstraints="NO" id="X1F-Nj-AG1"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrz-Wc-0CX">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hlE-d3-CQT">
@@ -636,13 +640,13 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-4z-5yQ">
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN6-iK-48V">
-                                                                        <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="14"/>
-                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvJ-8w-TVJ">
-                                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
-                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="21"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -650,13 +654,13 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D00-ot-hOF">
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member since:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vs-yr-NOV">
-                                                                        <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="14"/>
-                                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="14"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member since" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw3-ol-9sI">
-                                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
-                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="21"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -682,7 +686,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="hlE-d3-CQT" firstAttribute="centerX" secondItem="Wrz-Wc-0CX" secondAttribute="centerX" id="8He-zd-65t"/>
                                     <constraint firstItem="hlE-d3-CQT" firstAttribute="centerY" secondItem="Wrz-Wc-0CX" secondAttribute="centerY" id="KFa-4O-I74"/>
@@ -693,11 +696,15 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9H8-eJ-M0F" secondAttribute="trailing" id="2Xm-tM-Nww"/>
                             <constraint firstItem="Wrz-Wc-0CX" firstAttribute="leading" secondItem="oPr-FD-RmQ" secondAttribute="leadingMargin" constant="50" id="9sK-iP-bPi"/>
+                            <constraint firstAttribute="trailing" secondItem="X1F-Nj-AG1" secondAttribute="trailing" id="GGd-Pz-Goi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wrz-Wc-0CX" secondAttribute="trailing" constant="50" id="GYr-bh-BHl"/>
+                            <constraint firstItem="X1F-Nj-AG1" firstAttribute="top" secondItem="9H8-eJ-M0F" secondAttribute="bottom" id="Niy-qy-1O0"/>
                             <constraint firstItem="9H8-eJ-M0F" firstAttribute="leading" secondItem="oPr-FD-RmQ" secondAttribute="leading" id="Ox4-rd-lzy"/>
+                            <constraint firstItem="X1F-Nj-AG1" firstAttribute="leading" secondItem="oPr-FD-RmQ" secondAttribute="leading" id="VQo-wc-ix4"/>
                             <constraint firstItem="UwC-zp-frO" firstAttribute="top" secondItem="Wrz-Wc-0CX" secondAttribute="bottom" constant="50" id="cuY-OU-Oye"/>
                             <constraint firstItem="9H8-eJ-M0F" firstAttribute="top" secondItem="oPr-FD-RmQ" secondAttribute="top" id="eK8-qt-kqh"/>
                             <constraint firstItem="Wrz-Wc-0CX" firstAttribute="top" secondItem="9H8-eJ-M0F" secondAttribute="bottom" constant="50" id="f2G-s8-3v0"/>
+                            <constraint firstItem="UwC-zp-frO" firstAttribute="top" secondItem="X1F-Nj-AG1" secondAttribute="bottom" id="rGQ-3n-1KL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -707,7 +714,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0t-nF-rCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253" y="-392"/>
+            <point key="canvasLocation" x="1252" y="-392.65367316341832"/>
         </scene>
         <!--Campsite Detail View Controller-->
         <scene sceneID="FTi-Te-W4b">
@@ -764,7 +771,9 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6w2-bm-WC7">
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sOd-wG-Nd4"/>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sOd-wG-Nd4">
+                                        <frame key="frameInset" width="1000" height="1000"/>
+                                    </mapView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -992,7 +1001,7 @@
                                         <frame key="frameInset" width="343" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JGn-F7-oKv" id="tLc-9q-MsU">
-                                            <frame key="frameInset" width="343" height="139"/>
+                                            <frame key="frameInset" width="343" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Recent Review:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-cQ-XoY">
@@ -1385,10 +1394,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReviewCell" id="hW9-Uj-oqI" customClass="ReviewCell" customModule="camp_colorado" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="263"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="263"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hW9-Uj-oqI" id="6y1-ke-BLO">
-                                            <frame key="frameInset" width="375" height="263"/>
+                                            <frame key="frameInset" width="1000" height="263"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezp-zr-LM3" customClass="CustomView" customModule="camp_colorado" customModuleProvider="target">
@@ -1618,6 +1627,7 @@
         <image name="empty-star" width="32" height="32"/>
         <image name="full-star" width="32" height="32"/>
         <image name="garden-of-the-gods" width="900" height="595"/>
+        <image name="maroon-bells" width="1024" height="682"/>
         <image name="thumbsup" width="128" height="128"/>
         <image name="user-location" width="512" height="512"/>
     </resources>
