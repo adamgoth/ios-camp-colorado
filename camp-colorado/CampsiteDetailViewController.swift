@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import Firebase
 
-class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
+class CampsiteDetailViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var map: MKMapView!
     //detail outlets
@@ -61,6 +61,9 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        reviewTextField.delegate = self
+        reviewTextField.returnKeyType = UIReturnKeyType.done
+        
         map.delegate = self
         let location = CLLocation(latitude: annotation.latitude, longitude: annotation.longitude)
         annotation.coordinate = location.coordinate
@@ -107,6 +110,11 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate {
     func centerMapOnLocation(_ location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 0.5, regionRadius * 0.5)
         map.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
     }
     
     func showErrorAlert(_ alert: String, message: String) {
