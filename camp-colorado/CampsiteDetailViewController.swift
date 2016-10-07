@@ -204,6 +204,8 @@ class CampsiteDetailViewController: UIViewController, MKMapViewDelegate, UITextF
         
         let firebasePost = DataService.ds.ref_reviews.child("\(annotation.campsiteId)").childByAutoId()
         firebasePost.setValue(review)
+        let updateUserReviewCount = DataService.ds.ref_current_user.child("reviews").child(firebasePost.key)
+        updateUserReviewCount.setValue("true")
         
         reviewTextField.text = ""
         starRating = 0

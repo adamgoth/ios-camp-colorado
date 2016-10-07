@@ -12,6 +12,7 @@ class User {
     fileprivate var _username: String!
     fileprivate var _userKey: String!
     fileprivate var _userCreatedAt: String!
+    fileprivate var _reviewsCount: Int!
     
     var username: String {
         return _username
@@ -25,8 +26,18 @@ class User {
         return _userCreatedAt
     }
     
-    init(username: String, userCreatedAt: String) {
+    var reviewsCount: Int {
+        get {
+            return _reviewsCount
+        }
+        set {
+            _reviewsCount = newValue
+        }
+    }
+    
+    init(username: String, userCreatedAt: String, reviewsCount: Int) {
         self._username = username
         self._userCreatedAt = userCreatedAt
+        self._reviewsCount = reviewsCount
     }
 }

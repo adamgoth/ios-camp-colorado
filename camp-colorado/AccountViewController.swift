@@ -13,6 +13,7 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var signUpDateLbl: UILabel!
+    @IBOutlet weak var reviewsCountLbl: UILabel!
     
     var user: User!
 
@@ -21,6 +22,7 @@ class AccountViewController: UIViewController {
 
         usernameLbl?.text = user.username
         signUpDateLbl?.text = "\(Date(timeIntervalSince1970: Double(user.userCreatedAt)!).dayMonthYear()!)"
+        reviewsCountLbl?.text = "\(user.reviewsCount)"
         
     }
     

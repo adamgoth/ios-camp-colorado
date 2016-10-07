@@ -631,83 +631,90 @@
                             <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maroon-bells" translatesAutoresizingMaskIntoConstraints="NO" id="X1F-Nj-AG1"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrz-Wc-0CX">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hlE-d3-CQT">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="pa6-aD-QvD">
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aI2-mc-kCO">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-4z-5yQ">
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="pa6-aD-QvD">
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-4z-5yQ">
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN6-iK-48V">
-                                                                        <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="14"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvJ-8w-TVJ">
-                                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="21"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D00-ot-hOF">
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member since:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vs-yr-NOV">
-                                                                        <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="14"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member since" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw3-ol-9sI">
-                                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="21"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-KZ-eKn" customClass="CustomButton" customModule="camp_colorado" customModuleProvider="target">
-                                                                <color key="backgroundColor" red="1" green="0.25615502099999998" blue="0.20352933749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="3h1-QN-hQa"/>
-                                                                    <constraint firstAttribute="height" constant="40" id="7ek-rs-VSX"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
-                                                                <state key="normal" title="Sign out">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="signOutPressed:" destination="di1-Uf-eNO" eventType="touchUpInside" id="MB0-hj-aFg"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN6-iK-48V">
+                                                        <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvJ-8w-TVJ">
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="21"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D00-ot-hOF">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member since:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vs-yr-NOV">
+                                                        <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member since" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw3-ol-9sI">
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="21"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="14S-ut-YU8">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews written:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLc-Ik-clH">
+                                                        <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geZ-eK-f4w">
+                                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="21"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-KZ-eKn" customClass="CustomButton" customModule="camp_colorado" customModuleProvider="target">
+                                                <color key="backgroundColor" red="1" green="0.25615502099999998" blue="0.20352933749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="3h1-QN-hQa"/>
+                                                    <constraint firstAttribute="height" constant="40" id="7ek-rs-VSX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                <state key="normal" title="Sign out">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signOutPressed:" destination="di1-Uf-eNO" eventType="touchUpInside" id="MB0-hj-aFg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="hlE-d3-CQT" firstAttribute="centerX" secondItem="Wrz-Wc-0CX" secondAttribute="centerX" id="8He-zd-65t"/>
-                                    <constraint firstItem="hlE-d3-CQT" firstAttribute="centerY" secondItem="Wrz-Wc-0CX" secondAttribute="centerY" id="KFa-4O-I74"/>
+                                    <constraint firstItem="pa6-aD-QvD" firstAttribute="centerY" secondItem="Wrz-Wc-0CX" secondAttribute="centerY" id="3ch-LH-f4r"/>
+                                    <constraint firstItem="pa6-aD-QvD" firstAttribute="centerX" secondItem="Wrz-Wc-0CX" secondAttribute="centerX" id="SRS-ka-AVQ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9H8-eJ-M0F" secondAttribute="trailing" id="2Xm-tM-Nww"/>
-                            <constraint firstItem="Wrz-Wc-0CX" firstAttribute="leading" secondItem="oPr-FD-RmQ" secondAttribute="leadingMargin" constant="50" id="9sK-iP-bPi"/>
+                            <constraint firstItem="Wrz-Wc-0CX" firstAttribute="leading" secondItem="oPr-FD-RmQ" secondAttribute="leadingMargin" constant="20" id="9sK-iP-bPi"/>
                             <constraint firstAttribute="trailing" secondItem="X1F-Nj-AG1" secondAttribute="trailing" id="GGd-Pz-Goi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wrz-Wc-0CX" secondAttribute="trailing" constant="50" id="GYr-bh-BHl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wrz-Wc-0CX" secondAttribute="trailing" constant="20" id="GYr-bh-BHl"/>
                             <constraint firstItem="X1F-Nj-AG1" firstAttribute="top" secondItem="9H8-eJ-M0F" secondAttribute="bottom" id="Niy-qy-1O0"/>
                             <constraint firstItem="9H8-eJ-M0F" firstAttribute="leading" secondItem="oPr-FD-RmQ" secondAttribute="leading" id="Ox4-rd-lzy"/>
                             <constraint firstItem="X1F-Nj-AG1" firstAttribute="leading" secondItem="oPr-FD-RmQ" secondAttribute="leading" id="VQo-wc-ix4"/>
-                            <constraint firstItem="UwC-zp-frO" firstAttribute="top" secondItem="Wrz-Wc-0CX" secondAttribute="bottom" constant="50" id="cuY-OU-Oye"/>
+                            <constraint firstItem="UwC-zp-frO" firstAttribute="top" secondItem="Wrz-Wc-0CX" secondAttribute="bottom" constant="20" id="cuY-OU-Oye"/>
                             <constraint firstItem="9H8-eJ-M0F" firstAttribute="top" secondItem="oPr-FD-RmQ" secondAttribute="top" id="eK8-qt-kqh"/>
-                            <constraint firstItem="Wrz-Wc-0CX" firstAttribute="top" secondItem="9H8-eJ-M0F" secondAttribute="bottom" constant="50" id="f2G-s8-3v0"/>
+                            <constraint firstItem="Wrz-Wc-0CX" firstAttribute="top" secondItem="9H8-eJ-M0F" secondAttribute="bottom" constant="20" id="f2G-s8-3v0"/>
                             <constraint firstItem="UwC-zp-frO" firstAttribute="top" secondItem="X1F-Nj-AG1" secondAttribute="bottom" id="rGQ-3n-1KL"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="reviewsCountLbl" destination="geZ-eK-f4w" id="X4C-xn-cRh"/>
                         <outlet property="signUpDateLbl" destination="jw3-ol-9sI" id="P31-jk-qim"/>
                         <outlet property="usernameLbl" destination="wvJ-8w-TVJ" id="QcZ-lP-4ck"/>
                     </connections>
@@ -1394,10 +1401,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReviewCell" id="hW9-Uj-oqI" customClass="ReviewCell" customModule="camp_colorado" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="263"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="263"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hW9-Uj-oqI" id="6y1-ke-BLO">
-                                            <frame key="frameInset" width="1000" height="263"/>
+                                            <frame key="frameInset" width="375" height="263"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezp-zr-LM3" customClass="CustomView" customModule="camp_colorado" customModuleProvider="target">

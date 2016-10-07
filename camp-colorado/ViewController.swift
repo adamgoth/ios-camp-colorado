@@ -211,7 +211,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func getUserObject() {
         DataService.ds.ref_current_user.observeSingleEvent(of: .value, with: { (snapshot) in
             if let user = snapshot.value as? Dictionary<String, AnyObject> {
-                self.user = User(username: "\(user["username"]!)", userCreatedAt: "\(user["userCreatedAt"]!)")
+                self.user = User(username: "\(user["username"]!)", userCreatedAt: "\(user["userCreatedAt"]!)", reviewsCount: 0)
+                if let reviewsCount = user["reviews"] {
+                    self.user!.reviewsCount = reviewsCount.count
+                }
                 self.accountBtn.isHidden = false
                 print(user["username"])
             } else {
